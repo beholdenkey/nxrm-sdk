@@ -1,5 +1,8 @@
 # Sonatype Nexus SDK for Python
 
+> **Warning**
+> This project is still in development and is not yet ready for use. Contributions through issues and pull requests are welcome.
+
 ## Requirements
 
 Python `^3.9`
