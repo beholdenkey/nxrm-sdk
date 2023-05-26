@@ -11,26 +11,8 @@ Python `^3.9`
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install sonatype-nexus-sdk
 ```
-
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
-
-Then import the package:
-
-```python
-import nexus_sdk
-```
-
-### Setuptools
-
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
-
-```sh
-python setup.py install --user
-```
-
-(or `sudo python setup.py install` to install the package for all users)
 
 Then import the package:
 
