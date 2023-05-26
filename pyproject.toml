@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nexus-sdk-for-python"
+name = "sonatype-nexus-sdk"
 version = "0.1.0"
 description = "Python SDK for Sonatype Nexus Products"
 authors = ["Justin Bailey <justthered63@gmail.com>"]
