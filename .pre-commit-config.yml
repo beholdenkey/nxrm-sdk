@@ -1,6 +1,6 @@
 ﻿repos:
   - repo: https://github.com/beholdenkey/nexus-sdk
-    rev: '0.1.0'
+    rev: "0.1.0"
     hooks:
       - id: poetry-check
       - id: poetry-lock
