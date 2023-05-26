@@ -3,6 +3,7 @@ colorama==0.4.6
 coverage==7.2.6
 frozendict==2.3.8
 iniconfig==2.0.0
+-e git+https://github.com/beholdenkey/nexus-sdk.git@55a13f71cf597bfed43de2039ca8258550589d79#egg=nexus_sdk
 packaging==23.1
 pluggy==1.0.0
 pytest==7.3.1
