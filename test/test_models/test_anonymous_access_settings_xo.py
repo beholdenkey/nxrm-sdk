@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.anonymous_access_settings_xo import AnonymousAccessSettingsXO
 from nexus_sdk import configuration
+from nexus_sdk.model.anonymous_access_settings_xo import AnonymousAccessSettingsXO
 
 
 class TestAnonymousAccessSettingsXO(unittest.TestCase):

@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.apt_hosted_repositories_attributes import AptHostedRepositoriesAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.apt_hosted_repositories_attributes import (
+    AptHostedRepositoriesAttributes,
+)
 
 
 class TestAptHostedRepositoriesAttributes(unittest.TestCase):

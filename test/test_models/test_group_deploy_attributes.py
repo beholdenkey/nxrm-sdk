@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.group_deploy_attributes import GroupDeployAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.group_deploy_attributes import GroupDeployAttributes
 
 
 class TestGroupDeployAttributes(unittest.TestCase):
     """GroupDeployAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

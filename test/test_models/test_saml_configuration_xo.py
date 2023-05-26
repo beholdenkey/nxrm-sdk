@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.saml_configuration_xo import SamlConfigurationXO
 from nexus_sdk import configuration
+from nexus_sdk.model.saml_configuration_xo import SamlConfigurationXO
 
 
 class TestSamlConfigurationXO(unittest.TestCase):
     """SamlConfigurationXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

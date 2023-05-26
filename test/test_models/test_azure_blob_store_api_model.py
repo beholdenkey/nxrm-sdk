@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.azure_blob_store_api_model import AzureBlobStoreApiModel
 from nexus_sdk import configuration
+from nexus_sdk.model.azure_blob_store_api_model import AzureBlobStoreApiModel
 
 
 class TestAzureBlobStoreApiModel(unittest.TestCase):

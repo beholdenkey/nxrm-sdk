@@ -12,8 +12,8 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
+from nexus_sdk import api_client, configuration, schemas
 from nexus_sdk.paths.v1_security_ssl_truststore import post  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -23,6 +23,7 @@ class TestV1SecuritySslTruststore(ApiTestMixin, unittest.TestCase):
     V1SecuritySslTruststore unit test stubs
         Add a certificate to the trust store.  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,7 +36,5 @@ class TestV1SecuritySslTruststore(ApiTestMixin, unittest.TestCase):
     response_status = 201
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

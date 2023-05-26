@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.content_selector_api_response import ContentSelectorApiResponse
 from nexus_sdk import configuration
+from nexus_sdk.model.content_selector_api_response import ContentSelectorApiResponse
 
 
 class TestContentSelectorApiResponse(unittest.TestCase):
     """ContentSelectorApiResponse unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

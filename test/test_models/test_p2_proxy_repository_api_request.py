@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.p2_proxy_repository_api_request import P2ProxyRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.p2_proxy_repository_api_request import P2ProxyRepositoryApiRequest
 
 
 class TestP2ProxyRepositoryApiRequest(unittest.TestCase):
     """P2ProxyRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

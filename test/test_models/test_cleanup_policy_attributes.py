@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.cleanup_policy_attributes import CleanupPolicyAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.cleanup_policy_attributes import CleanupPolicyAttributes
 
 
 class TestCleanupPolicyAttributes(unittest.TestCase):
     """CleanupPolicyAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

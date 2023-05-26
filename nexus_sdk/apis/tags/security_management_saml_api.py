@@ -10,10 +10,10 @@
 """
 
 from nexus_sdk.paths.v1_security_saml.delete import DeleteSamlConfiguration
-from nexus_sdk.paths.v1_security_saml_metadata.get import GetMetadata
-from nexus_sdk.paths.v1_security_saml_pem.get import GetPublicCertificateInPemFormat
 from nexus_sdk.paths.v1_security_saml.get import GetSamlConfiguration
 from nexus_sdk.paths.v1_security_saml.put import PutSamlConfiguration
+from nexus_sdk.paths.v1_security_saml_metadata.get import GetMetadata
+from nexus_sdk.paths.v1_security_saml_pem.get import GetPublicCertificateInPemFormat
 
 
 class SecurityManagementSAMLApi(
@@ -28,4 +28,5 @@ class SecurityManagementSAMLApi(
 
     Do not edit the class manually.
     """
+
     pass

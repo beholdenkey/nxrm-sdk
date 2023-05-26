@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.pypi_group_repository_api_request import PypiGroupRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.pypi_group_repository_api_request import (
+    PypiGroupRepositoryApiRequest,
+)
 
 
 class TestPypiGroupRepositoryApiRequest(unittest.TestCase):
     """PypiGroupRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

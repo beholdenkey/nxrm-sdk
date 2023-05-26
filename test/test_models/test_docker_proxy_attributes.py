@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.docker_proxy_attributes import DockerProxyAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.docker_proxy_attributes import DockerProxyAttributes
 
 
 class TestDockerProxyAttributes(unittest.TestCase):
     """DockerProxyAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

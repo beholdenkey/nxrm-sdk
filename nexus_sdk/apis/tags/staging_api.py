@@ -22,4 +22,5 @@ class StagingApi(
 
     Do not edit the class manually.
     """
+
     pass

@@ -22,4 +22,5 @@ class FormatsApi(
 
     Do not edit the class manually.
     """
+
     pass

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.result import Result
 from nexus_sdk import configuration
+from nexus_sdk.model.result import Result
 
 
 class TestResult(unittest.TestCase):
     """Result unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

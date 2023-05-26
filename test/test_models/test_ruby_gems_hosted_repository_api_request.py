@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.ruby_gems_hosted_repository_api_request import RubyGemsHostedRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.ruby_gems_hosted_repository_api_request import (
+    RubyGemsHostedRepositoryApiRequest,
+)
 
 
 class TestRubyGemsHostedRepositoryApiRequest(unittest.TestCase):
     """RubyGemsHostedRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

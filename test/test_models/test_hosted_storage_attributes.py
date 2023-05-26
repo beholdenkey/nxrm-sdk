@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.hosted_storage_attributes import HostedStorageAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.hosted_storage_attributes import HostedStorageAttributes
 
 
 class TestHostedStorageAttributes(unittest.TestCase):
     """HostedStorageAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

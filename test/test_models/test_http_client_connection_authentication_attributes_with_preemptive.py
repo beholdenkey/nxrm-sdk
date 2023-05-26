@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.http_client_connection_authentication_attributes_with_preemptive import HttpClientConnectionAuthenticationAttributesWithPreemptive
 from nexus_sdk import configuration
+from nexus_sdk.model.http_client_connection_authentication_attributes_with_preemptive import (
+    HttpClientConnectionAuthenticationAttributesWithPreemptive,
+)
 
 
 class TestHttpClientConnectionAuthenticationAttributesWithPreemptive(unittest.TestCase):
     """HttpClientConnectionAuthenticationAttributesWithPreemptive unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,17 +12,22 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
-from nexus_sdk.paths.v1_blobstores_group_convert_name_new_name_for_original import post  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
+from nexus_sdk import api_client, configuration, schemas
+from nexus_sdk.paths.v1_blobstores_group_convert_name_new_name_for_original import (  # noqa: E501
+    post,
+)
 
 from .. import ApiTestMixin
 
 
-class TestV1BlobstoresGroupConvertNameNewNameForOriginal(ApiTestMixin, unittest.TestCase):
+class TestV1BlobstoresGroupConvertNameNewNameForOriginal(
+    ApiTestMixin, unittest.TestCase
+):
     """
     V1BlobstoresGroupConvertNameNewNameForOriginal unit test stubs
         Convert a blob store to a group blob store  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,7 +40,5 @@ class TestV1BlobstoresGroupConvertNameNewNameForOriginal(ApiTestMixin, unittest.
     response_status = 200
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

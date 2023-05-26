@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.create_ldap_server_xo import CreateLdapServerXo
 from nexus_sdk import configuration
+from nexus_sdk.model.create_ldap_server_xo import CreateLdapServerXo
 
 
 class TestCreateLdapServerXo(unittest.TestCase):
     """CreateLdapServerXo unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

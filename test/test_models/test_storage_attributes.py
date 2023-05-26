@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.storage_attributes import StorageAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.storage_attributes import StorageAttributes
 
 
 class TestStorageAttributes(unittest.TestCase):
     """StorageAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

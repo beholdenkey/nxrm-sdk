@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.group_blob_store_api_create_request import GroupBlobStoreApiCreateRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.group_blob_store_api_create_request import (
+    GroupBlobStoreApiCreateRequest,
+)
 
 
 class TestGroupBlobStoreApiCreateRequest(unittest.TestCase):
     """GroupBlobStoreApiCreateRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

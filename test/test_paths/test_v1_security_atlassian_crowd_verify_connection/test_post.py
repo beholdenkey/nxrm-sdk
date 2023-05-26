@@ -12,8 +12,10 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
-from nexus_sdk.paths.v1_security_atlassian_crowd_verify_connection import post  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
+from nexus_sdk import api_client, configuration, schemas
+from nexus_sdk.paths.v1_security_atlassian_crowd_verify_connection import (  # noqa: E501
+    post,
+)
 
 from .. import ApiTestMixin
 
@@ -23,6 +25,7 @@ class TestV1SecurityAtlassianCrowdVerifyConnection(ApiTestMixin, unittest.TestCa
     V1SecurityAtlassianCrowdVerifyConnection unit test stubs
         Verify connection using supplied Atlassian Crowd settings  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +38,5 @@ class TestV1SecurityAtlassianCrowdVerifyConnection(ApiTestMixin, unittest.TestCa
     response_status = 204
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

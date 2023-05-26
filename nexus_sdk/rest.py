@@ -11,15 +11,14 @@
 
 import logging
 import ssl
-from urllib.parse import urlencode
 import typing
+from urllib.parse import urlencode
 
 import certifi
 import urllib3
 from urllib3._collections import HTTPHeaderDict
 
 from nexus_sdk.exceptions import ApiException, ApiValueError
-
 
 logger = logging.getLogger(__name__)
 

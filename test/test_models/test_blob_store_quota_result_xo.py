@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.blob_store_quota_result_xo import BlobStoreQuotaResultXO
 from nexus_sdk import configuration
+from nexus_sdk.model.blob_store_quota_result_xo import BlobStoreQuotaResultXO
 
 
 class TestBlobStoreQuotaResultXO(unittest.TestCase):

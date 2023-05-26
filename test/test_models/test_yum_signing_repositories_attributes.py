@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.yum_signing_repositories_attributes import YumSigningRepositoriesAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.yum_signing_repositories_attributes import (
+    YumSigningRepositoriesAttributes,
+)
 
 
 class TestYumSigningRepositoriesAttributes(unittest.TestCase):
     """YumSigningRepositoriesAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

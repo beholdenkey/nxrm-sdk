@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.conda_proxy_repository_api_request import CondaProxyRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.conda_proxy_repository_api_request import (
+    CondaProxyRepositoryApiRequest,
+)
 
 
 class TestCondaProxyRepositoryApiRequest(unittest.TestCase):
     """CondaProxyRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

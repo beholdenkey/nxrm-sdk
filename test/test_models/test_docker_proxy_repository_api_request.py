@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.docker_proxy_repository_api_request import DockerProxyRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.docker_proxy_repository_api_request import (
+    DockerProxyRepositoryApiRequest,
+)
 
 
 class TestDockerProxyRepositoryApiRequest(unittest.TestCase):
     """DockerProxyRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

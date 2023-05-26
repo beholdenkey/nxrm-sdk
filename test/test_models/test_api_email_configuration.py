@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_email_configuration import ApiEmailConfiguration
 from nexus_sdk import configuration
+from nexus_sdk.model.api_email_configuration import ApiEmailConfiguration
 
 
 class TestApiEmailConfiguration(unittest.TestCase):

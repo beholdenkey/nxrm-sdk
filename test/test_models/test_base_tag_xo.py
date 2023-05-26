@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.base_tag_xo import BaseTagXO
 from nexus_sdk import configuration
+from nexus_sdk.model.base_tag_xo import BaseTagXO
 
 
 class TestBaseTagXO(unittest.TestCase):

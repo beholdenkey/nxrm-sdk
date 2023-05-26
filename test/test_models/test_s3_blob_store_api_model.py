@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.s3_blob_store_api_model import S3BlobStoreApiModel
 from nexus_sdk import configuration
+from nexus_sdk.model.s3_blob_store_api_model import S3BlobStoreApiModel
 
 
 class TestS3BlobStoreApiModel(unittest.TestCase):
     """S3BlobStoreApiModel unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.replication_connection_xo import ReplicationConnectionXO
 from nexus_sdk import configuration
+from nexus_sdk.model.replication_connection_xo import ReplicationConnectionXO
 
 
 class TestReplicationConnectionXO(unittest.TestCase):
     """ReplicationConnectionXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

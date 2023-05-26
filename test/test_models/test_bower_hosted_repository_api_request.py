@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.bower_hosted_repository_api_request import BowerHostedRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.bower_hosted_repository_api_request import (
+    BowerHostedRepositoryApiRequest,
+)
 
 
 class TestBowerHostedRepositoryApiRequest(unittest.TestCase):
     """BowerHostedRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

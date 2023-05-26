@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.apt_hosted_api_repository import AptHostedApiRepository
 from nexus_sdk import configuration
+from nexus_sdk.model.apt_hosted_api_repository import AptHostedApiRepository
 
 
 class TestAptHostedApiRepository(unittest.TestCase):

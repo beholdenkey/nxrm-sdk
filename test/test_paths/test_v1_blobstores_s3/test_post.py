@@ -12,8 +12,8 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
+from nexus_sdk import api_client, configuration, schemas
 from nexus_sdk.paths.v1_blobstores_s3 import post  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -23,6 +23,7 @@ class TestV1BlobstoresS3(ApiTestMixin, unittest.TestCase):
     V1BlobstoresS3 unit test stubs
         Create an S3 blob store  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +36,5 @@ class TestV1BlobstoresS3(ApiTestMixin, unittest.TestCase):
     response_status = 201
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

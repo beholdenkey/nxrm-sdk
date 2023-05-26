@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_email_validation import ApiEmailValidation
 from nexus_sdk import configuration
+from nexus_sdk.model.api_email_validation import ApiEmailValidation
 
 
 class TestApiEmailValidation(unittest.TestCase):

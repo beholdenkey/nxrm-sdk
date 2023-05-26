@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.r_proxy_repository_api_request import RProxyRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.r_proxy_repository_api_request import RProxyRepositoryApiRequest
 
 
 class TestRProxyRepositoryApiRequest(unittest.TestCase):
     """RProxyRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

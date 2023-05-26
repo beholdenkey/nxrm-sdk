@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.azure_blob_store_api_bucket_configuration import AzureBlobStoreApiBucketConfiguration
 from nexus_sdk import configuration
+from nexus_sdk.model.azure_blob_store_api_bucket_configuration import (
+    AzureBlobStoreApiBucketConfiguration,
+)
 
 
 class TestAzureBlobStoreApiBucketConfiguration(unittest.TestCase):

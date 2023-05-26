@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.apt_signing_repositories_attributes import AptSigningRepositoriesAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.apt_signing_repositories_attributes import (
+    AptSigningRepositoriesAttributes,
+)
 
 
 class TestAptSigningRepositoriesAttributes(unittest.TestCase):

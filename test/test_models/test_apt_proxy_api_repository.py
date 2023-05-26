@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.apt_proxy_api_repository import AptProxyApiRepository
 from nexus_sdk import configuration
+from nexus_sdk.model.apt_proxy_api_repository import AptProxyApiRepository
 
 
 class TestAptProxyApiRepository(unittest.TestCase):

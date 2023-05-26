@@ -24,4 +24,5 @@ class LifecycleApi(
 
     Do not edit the class manually.
     """
+
     pass

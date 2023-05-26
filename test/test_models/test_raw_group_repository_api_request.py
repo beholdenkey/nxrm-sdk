@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.raw_group_repository_api_request import RawGroupRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.raw_group_repository_api_request import (
+    RawGroupRepositoryApiRequest,
+)
 
 
 class TestRawGroupRepositoryApiRequest(unittest.TestCase):
     """RawGroupRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

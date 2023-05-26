@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.read_only_state import ReadOnlyState
 from nexus_sdk import configuration
+from nexus_sdk.model.read_only_state import ReadOnlyState
 
 
 class TestReadOnlyState(unittest.TestCase):
     """ReadOnlyState unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

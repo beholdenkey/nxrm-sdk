@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.npm_attributes import NpmAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.npm_attributes import NpmAttributes
 
 
 class TestNpmAttributes(unittest.TestCase):
     """NpmAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

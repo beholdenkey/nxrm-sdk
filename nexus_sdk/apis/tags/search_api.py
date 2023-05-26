@@ -10,8 +10,8 @@
 """
 
 from nexus_sdk.paths.v1_search.get import Search
-from nexus_sdk.paths.v1_search_assets_download.get import SearchAndDownloadAssets
 from nexus_sdk.paths.v1_search_assets.get import SearchAssets
+from nexus_sdk.paths.v1_search_assets_download.get import SearchAndDownloadAssets
 
 
 class SearchApi(
@@ -24,4 +24,5 @@ class SearchApi(
 
     Do not edit the class manually.
     """
+
     pass

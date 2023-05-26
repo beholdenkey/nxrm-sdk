@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.generic_blob_store_api_response import GenericBlobStoreApiResponse
 from nexus_sdk import configuration
+from nexus_sdk.model.generic_blob_store_api_response import GenericBlobStoreApiResponse
 
 
 class TestGenericBlobStoreApiResponse(unittest.TestCase):
     """GenericBlobStoreApiResponse unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.raw_attributes import RawAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.raw_attributes import RawAttributes
 
 
 class TestRawAttributes(unittest.TestCase):
     """RawAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

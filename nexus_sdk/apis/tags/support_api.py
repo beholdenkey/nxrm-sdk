@@ -22,4 +22,5 @@ class SupportApi(
 
     Do not edit the class manually.
     """
+
     pass

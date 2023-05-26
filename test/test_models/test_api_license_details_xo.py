@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_license_details_xo import ApiLicenseDetailsXO
 from nexus_sdk import configuration
+from nexus_sdk.model.api_license_details_xo import ApiLicenseDetailsXO
 
 
 class TestApiLicenseDetailsXO(unittest.TestCase):

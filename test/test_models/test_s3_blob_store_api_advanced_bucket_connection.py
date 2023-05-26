@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.s3_blob_store_api_advanced_bucket_connection import S3BlobStoreApiAdvancedBucketConnection
 from nexus_sdk import configuration
+from nexus_sdk.model.s3_blob_store_api_advanced_bucket_connection import (
+    S3BlobStoreApiAdvancedBucketConnection,
+)
 
 
 class TestS3BlobStoreApiAdvancedBucketConnection(unittest.TestCase):
     """S3BlobStoreApiAdvancedBucketConnection unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

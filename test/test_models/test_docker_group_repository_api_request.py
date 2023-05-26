@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.docker_group_repository_api_request import DockerGroupRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.docker_group_repository_api_request import (
+    DockerGroupRepositoryApiRequest,
+)
 
 
 class TestDockerGroupRepositoryApiRequest(unittest.TestCase):
     """DockerGroupRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

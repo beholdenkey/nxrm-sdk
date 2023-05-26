@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_certificate import ApiCertificate
 from nexus_sdk import configuration
+from nexus_sdk.model.api_certificate import ApiCertificate
 
 
 class TestApiCertificate(unittest.TestCase):

@@ -20,9 +20,11 @@ from nexus_sdk.api_client import ApiClient
 from nexus_sdk.configuration import Configuration
 
 # import exceptions
-from nexus_sdk.exceptions import OpenApiException
-from nexus_sdk.exceptions import ApiAttributeError
-from nexus_sdk.exceptions import ApiTypeError
-from nexus_sdk.exceptions import ApiValueError
-from nexus_sdk.exceptions import ApiKeyError
-from nexus_sdk.exceptions import ApiException
+from nexus_sdk.exceptions import (
+    ApiAttributeError,
+    ApiException,
+    ApiKeyError,
+    ApiTypeError,
+    ApiValueError,
+    OpenApiException,
+)

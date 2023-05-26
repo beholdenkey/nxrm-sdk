@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.support_zip_xo import SupportZipXO
 from nexus_sdk import configuration
+from nexus_sdk.model.support_zip_xo import SupportZipXO
 
 
 class TestSupportZipXO(unittest.TestCase):
     """SupportZipXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_privilege import ApiPrivilege
 from nexus_sdk import configuration
+from nexus_sdk.model.api_privilege import ApiPrivilege
 
 
 class TestApiPrivilege(unittest.TestCase):

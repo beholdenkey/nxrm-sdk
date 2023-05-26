@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_privilege_application_request import ApiPrivilegeApplicationRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.api_privilege_application_request import (
+    ApiPrivilegeApplicationRequest,
+)
 
 
 class TestApiPrivilegeApplicationRequest(unittest.TestCase):

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.crowd_api_xo import CrowdApiXO
 from nexus_sdk import configuration
+from nexus_sdk.model.crowd_api_xo import CrowdApiXO
 
 
 class TestCrowdApiXO(unittest.TestCase):
     """CrowdApiXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

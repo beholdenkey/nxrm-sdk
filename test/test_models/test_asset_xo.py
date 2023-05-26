@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.asset_xo import AssetXO
 from nexus_sdk import configuration
+from nexus_sdk.model.asset_xo import AssetXO
 
 
 class TestAssetXO(unittest.TestCase):

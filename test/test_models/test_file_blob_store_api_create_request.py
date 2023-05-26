@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.file_blob_store_api_create_request import FileBlobStoreApiCreateRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.file_blob_store_api_create_request import (
+    FileBlobStoreApiCreateRequest,
+)
 
 
 class TestFileBlobStoreApiCreateRequest(unittest.TestCase):
     """FileBlobStoreApiCreateRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

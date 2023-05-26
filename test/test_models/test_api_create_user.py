@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_create_user import ApiCreateUser
 from nexus_sdk import configuration
+from nexus_sdk.model.api_create_user import ApiCreateUser
 
 
 class TestApiCreateUser(unittest.TestCase):

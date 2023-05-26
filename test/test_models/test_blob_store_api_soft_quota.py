@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.blob_store_api_soft_quota import BlobStoreApiSoftQuota
 from nexus_sdk import configuration
+from nexus_sdk.model.blob_store_api_soft_quota import BlobStoreApiSoftQuota
 
 
 class TestBlobStoreApiSoftQuota(unittest.TestCase):

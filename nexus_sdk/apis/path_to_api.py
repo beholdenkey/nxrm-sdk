@@ -1,195 +1,349 @@
 import typing_extensions
 
-from nexus_sdk.paths import PathValues
+from nexus_sdk.apis.paths.beta_replication_connection import BetaReplicationConnection
+from nexus_sdk.apis.paths.beta_replication_connection_name import (
+    BetaReplicationConnectionName,
+)
+from nexus_sdk.apis.paths.beta_replicationtarget_repository_enable import (
+    BetaReplicationtargetRepositoryEnable,
+)
+from nexus_sdk.apis.paths.beta_replicationtarget_repository_repository_name_enable import (
+    BetaReplicationtargetRepositoryRepositoryNameEnable,
+)
+from nexus_sdk.apis.paths.v1_assets import V1Assets
+from nexus_sdk.apis.paths.v1_assets_id import V1AssetsId
+from nexus_sdk.apis.paths.v1_azureblobstore_test_connection import (
+    V1AzureblobstoreTestConnection,
+)
+from nexus_sdk.apis.paths.v1_blobstores import V1Blobstores
+from nexus_sdk.apis.paths.v1_blobstores_azure import V1BlobstoresAzure
+from nexus_sdk.apis.paths.v1_blobstores_azure_name import V1BlobstoresAzureName
+from nexus_sdk.apis.paths.v1_blobstores_file import V1BlobstoresFile
+from nexus_sdk.apis.paths.v1_blobstores_file_name import V1BlobstoresFileName
+from nexus_sdk.apis.paths.v1_blobstores_group import V1BlobstoresGroup
+from nexus_sdk.apis.paths.v1_blobstores_group_convert_name_new_name_for_original import (
+    V1BlobstoresGroupConvertNameNewNameForOriginal,
+)
+from nexus_sdk.apis.paths.v1_blobstores_group_name import V1BlobstoresGroupName
+from nexus_sdk.apis.paths.v1_blobstores_name import V1BlobstoresName
+from nexus_sdk.apis.paths.v1_blobstores_name_quota_status import (
+    V1BlobstoresNameQuotaStatus,
+)
+from nexus_sdk.apis.paths.v1_blobstores_s3 import V1BlobstoresS3
+from nexus_sdk.apis.paths.v1_blobstores_s3_name import V1BlobstoresS3Name
+from nexus_sdk.apis.paths.v1_components import V1Components
+from nexus_sdk.apis.paths.v1_components_id import V1ComponentsId
+from nexus_sdk.apis.paths.v1_email import V1Email
+from nexus_sdk.apis.paths.v1_email_verify import V1EmailVerify
+from nexus_sdk.apis.paths.v1_formats_format_upload_specs import (
+    V1FormatsFormatUploadSpecs,
+)
+from nexus_sdk.apis.paths.v1_formats_upload_specs import V1FormatsUploadSpecs
+from nexus_sdk.apis.paths.v1_iq import V1Iq
+from nexus_sdk.apis.paths.v1_iq_disable import V1IqDisable
+from nexus_sdk.apis.paths.v1_iq_enable import V1IqEnable
+from nexus_sdk.apis.paths.v1_iq_verify_connection import V1IqVerifyConnection
+from nexus_sdk.apis.paths.v1_lifecycle_bounce import V1LifecycleBounce
+from nexus_sdk.apis.paths.v1_lifecycle_phase import V1LifecyclePhase
+from nexus_sdk.apis.paths.v1_read_only import V1ReadOnly
+from nexus_sdk.apis.paths.v1_read_only_force_release import V1ReadOnlyForceRelease
+from nexus_sdk.apis.paths.v1_read_only_freeze import V1ReadOnlyFreeze
+from nexus_sdk.apis.paths.v1_read_only_release import V1ReadOnlyRelease
+from nexus_sdk.apis.paths.v1_repositories import V1Repositories
+from nexus_sdk.apis.paths.v1_repositories_apt_hosted import V1RepositoriesAptHosted
+from nexus_sdk.apis.paths.v1_repositories_apt_hosted_repository_name import (
+    V1RepositoriesAptHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_apt_proxy import V1RepositoriesAptProxy
+from nexus_sdk.apis.paths.v1_repositories_apt_proxy_repository_name import (
+    V1RepositoriesAptProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_bower_group import V1RepositoriesBowerGroup
+from nexus_sdk.apis.paths.v1_repositories_bower_group_repository_name import (
+    V1RepositoriesBowerGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_bower_hosted import V1RepositoriesBowerHosted
+from nexus_sdk.apis.paths.v1_repositories_bower_hosted_repository_name import (
+    V1RepositoriesBowerHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_bower_proxy import V1RepositoriesBowerProxy
+from nexus_sdk.apis.paths.v1_repositories_bower_proxy_repository_name import (
+    V1RepositoriesBowerProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_cocoapods_proxy import (
+    V1RepositoriesCocoapodsProxy,
+)
+from nexus_sdk.apis.paths.v1_repositories_cocoapods_proxy_repository_name import (
+    V1RepositoriesCocoapodsProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_conan_proxy import V1RepositoriesConanProxy
+from nexus_sdk.apis.paths.v1_repositories_conan_proxy_repository_name import (
+    V1RepositoriesConanProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_conda_proxy import V1RepositoriesCondaProxy
+from nexus_sdk.apis.paths.v1_repositories_conda_proxy_repository_name import (
+    V1RepositoriesCondaProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_docker_group import V1RepositoriesDockerGroup
+from nexus_sdk.apis.paths.v1_repositories_docker_group_repository_name import (
+    V1RepositoriesDockerGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_docker_hosted import (
+    V1RepositoriesDockerHosted,
+)
+from nexus_sdk.apis.paths.v1_repositories_docker_hosted_repository_name import (
+    V1RepositoriesDockerHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_docker_proxy import V1RepositoriesDockerProxy
+from nexus_sdk.apis.paths.v1_repositories_docker_proxy_repository_name import (
+    V1RepositoriesDockerProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_gitlfs_hosted import (
+    V1RepositoriesGitlfsHosted,
+)
+from nexus_sdk.apis.paths.v1_repositories_gitlfs_hosted_repository_name import (
+    V1RepositoriesGitlfsHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_go_group import V1RepositoriesGoGroup
+from nexus_sdk.apis.paths.v1_repositories_go_group_repository_name import (
+    V1RepositoriesGoGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_go_proxy import V1RepositoriesGoProxy
+from nexus_sdk.apis.paths.v1_repositories_go_proxy_repository_name import (
+    V1RepositoriesGoProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_helm_hosted import V1RepositoriesHelmHosted
+from nexus_sdk.apis.paths.v1_repositories_helm_hosted_repository_name import (
+    V1RepositoriesHelmHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_helm_proxy import V1RepositoriesHelmProxy
+from nexus_sdk.apis.paths.v1_repositories_helm_proxy_repository_name import (
+    V1RepositoriesHelmProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_maven_group import V1RepositoriesMavenGroup
+from nexus_sdk.apis.paths.v1_repositories_maven_group_repository_name import (
+    V1RepositoriesMavenGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_maven_hosted import V1RepositoriesMavenHosted
+from nexus_sdk.apis.paths.v1_repositories_maven_hosted_repository_name import (
+    V1RepositoriesMavenHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_maven_proxy import V1RepositoriesMavenProxy
+from nexus_sdk.apis.paths.v1_repositories_maven_proxy_repository_name import (
+    V1RepositoriesMavenProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_npm_group import V1RepositoriesNpmGroup
+from nexus_sdk.apis.paths.v1_repositories_npm_group_repository_name import (
+    V1RepositoriesNpmGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_npm_hosted import V1RepositoriesNpmHosted
+from nexus_sdk.apis.paths.v1_repositories_npm_hosted_repository_name import (
+    V1RepositoriesNpmHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_npm_proxy import V1RepositoriesNpmProxy
+from nexus_sdk.apis.paths.v1_repositories_npm_proxy_repository_name import (
+    V1RepositoriesNpmProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_nuget_group import V1RepositoriesNugetGroup
+from nexus_sdk.apis.paths.v1_repositories_nuget_group_repository_name import (
+    V1RepositoriesNugetGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_nuget_hosted import V1RepositoriesNugetHosted
+from nexus_sdk.apis.paths.v1_repositories_nuget_hosted_repository_name import (
+    V1RepositoriesNugetHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_nuget_proxy import V1RepositoriesNugetProxy
+from nexus_sdk.apis.paths.v1_repositories_nuget_proxy_repository_name import (
+    V1RepositoriesNugetProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_p2_proxy import V1RepositoriesP2Proxy
+from nexus_sdk.apis.paths.v1_repositories_p2_proxy_repository_name import (
+    V1RepositoriesP2ProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_pypi_group import V1RepositoriesPypiGroup
+from nexus_sdk.apis.paths.v1_repositories_pypi_group_repository_name import (
+    V1RepositoriesPypiGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_pypi_hosted import V1RepositoriesPypiHosted
+from nexus_sdk.apis.paths.v1_repositories_pypi_hosted_repository_name import (
+    V1RepositoriesPypiHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_pypi_proxy import V1RepositoriesPypiProxy
+from nexus_sdk.apis.paths.v1_repositories_pypi_proxy_repository_name import (
+    V1RepositoriesPypiProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_r_group import V1RepositoriesRGroup
+from nexus_sdk.apis.paths.v1_repositories_r_group_repository_name import (
+    V1RepositoriesRGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_r_hosted import V1RepositoriesRHosted
+from nexus_sdk.apis.paths.v1_repositories_r_hosted_repository_name import (
+    V1RepositoriesRHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_r_proxy import V1RepositoriesRProxy
+from nexus_sdk.apis.paths.v1_repositories_r_proxy_repository_name import (
+    V1RepositoriesRProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_raw_group import V1RepositoriesRawGroup
+from nexus_sdk.apis.paths.v1_repositories_raw_group_repository_name import (
+    V1RepositoriesRawGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_raw_hosted import V1RepositoriesRawHosted
+from nexus_sdk.apis.paths.v1_repositories_raw_hosted_repository_name import (
+    V1RepositoriesRawHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_raw_proxy import V1RepositoriesRawProxy
+from nexus_sdk.apis.paths.v1_repositories_raw_proxy_repository_name import (
+    V1RepositoriesRawProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_repository_name import (
+    V1RepositoriesRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_repository_name_health_check import (
+    V1RepositoriesRepositoryNameHealthCheck,
+)
+from nexus_sdk.apis.paths.v1_repositories_repository_name_invalidate_cache import (
+    V1RepositoriesRepositoryNameInvalidateCache,
+)
+from nexus_sdk.apis.paths.v1_repositories_repository_name_rebuild_index import (
+    V1RepositoriesRepositoryNameRebuildIndex,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_group import (
+    V1RepositoriesRubygemsGroup,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_group_repository_name import (
+    V1RepositoriesRubygemsGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_hosted import (
+    V1RepositoriesRubygemsHosted,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_hosted_repository_name import (
+    V1RepositoriesRubygemsHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_proxy import (
+    V1RepositoriesRubygemsProxy,
+)
+from nexus_sdk.apis.paths.v1_repositories_rubygems_proxy_repository_name import (
+    V1RepositoriesRubygemsProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_yum_group import V1RepositoriesYumGroup
+from nexus_sdk.apis.paths.v1_repositories_yum_group_repository_name import (
+    V1RepositoriesYumGroupRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_yum_hosted import V1RepositoriesYumHosted
+from nexus_sdk.apis.paths.v1_repositories_yum_hosted_repository_name import (
+    V1RepositoriesYumHostedRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repositories_yum_proxy import V1RepositoriesYumProxy
+from nexus_sdk.apis.paths.v1_repositories_yum_proxy_repository_name import (
+    V1RepositoriesYumProxyRepositoryName,
+)
+from nexus_sdk.apis.paths.v1_repository_settings import V1RepositorySettings
+from nexus_sdk.apis.paths.v1_routing_rules import V1RoutingRules
+from nexus_sdk.apis.paths.v1_routing_rules_name import V1RoutingRulesName
+from nexus_sdk.apis.paths.v1_script import V1Script
+from nexus_sdk.apis.paths.v1_script_name import V1ScriptName
+from nexus_sdk.apis.paths.v1_script_name_run import V1ScriptNameRun
+from nexus_sdk.apis.paths.v1_search import V1Search
+from nexus_sdk.apis.paths.v1_search_assets import V1SearchAssets
+from nexus_sdk.apis.paths.v1_search_assets_download import V1SearchAssetsDownload
 from nexus_sdk.apis.paths.v1_security_anonymous import V1SecurityAnonymous
-from nexus_sdk.apis.paths.v1_security_user_sources import V1SecurityUserSources
-from nexus_sdk.apis.paths.v1_security_users_user_id import V1SecurityUsersUserId
-from nexus_sdk.apis.paths.v1_security_users_user_id_change_password import V1SecurityUsersUserIdChangePassword
-from nexus_sdk.apis.paths.v1_security_users import V1SecurityUsers
+from nexus_sdk.apis.paths.v1_security_atlassian_crowd import V1SecurityAtlassianCrowd
+from nexus_sdk.apis.paths.v1_security_atlassian_crowd_clear_cache import (
+    V1SecurityAtlassianCrowdClearCache,
+)
+from nexus_sdk.apis.paths.v1_security_atlassian_crowd_verify_connection import (
+    V1SecurityAtlassianCrowdVerifyConnection,
+)
+from nexus_sdk.apis.paths.v1_security_content_selectors import (
+    V1SecurityContentSelectors,
+)
+from nexus_sdk.apis.paths.v1_security_content_selectors_name import (
+    V1SecurityContentSelectorsName,
+)
 from nexus_sdk.apis.paths.v1_security_jwt import V1SecurityJwt
+from nexus_sdk.apis.paths.v1_security_ldap import V1SecurityLdap
+from nexus_sdk.apis.paths.v1_security_ldap_change_order import V1SecurityLdapChangeOrder
+from nexus_sdk.apis.paths.v1_security_ldap_name import V1SecurityLdapName
 from nexus_sdk.apis.paths.v1_security_privileges import V1SecurityPrivileges
-from nexus_sdk.apis.paths.v1_security_privileges_privilege_name import V1SecurityPrivilegesPrivilegeName
-from nexus_sdk.apis.paths.v1_security_privileges_wildcard import V1SecurityPrivilegesWildcard
-from nexus_sdk.apis.paths.v1_security_privileges_application import V1SecurityPrivilegesApplication
-from nexus_sdk.apis.paths.v1_security_privileges_wildcard_privilege_name import V1SecurityPrivilegesWildcardPrivilegeName
-from nexus_sdk.apis.paths.v1_security_privileges_application_privilege_name import V1SecurityPrivilegesApplicationPrivilegeName
+from nexus_sdk.apis.paths.v1_security_privileges_application import (
+    V1SecurityPrivilegesApplication,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_application_privilege_name import (
+    V1SecurityPrivilegesApplicationPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_privilege_name import (
+    V1SecurityPrivilegesPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_admin import (
+    V1SecurityPrivilegesRepositoryAdmin,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_admin_privilege_name import (
+    V1SecurityPrivilegesRepositoryAdminPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_content_selector import (
+    V1SecurityPrivilegesRepositoryContentSelector,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_content_selector_privilege_name import (
+    V1SecurityPrivilegesRepositoryContentSelectorPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_view import (
+    V1SecurityPrivilegesRepositoryView,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_repository_view_privilege_name import (
+    V1SecurityPrivilegesRepositoryViewPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_script import (
+    V1SecurityPrivilegesScript,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_script_privilege_name import (
+    V1SecurityPrivilegesScriptPrivilegeName,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_wildcard import (
+    V1SecurityPrivilegesWildcard,
+)
+from nexus_sdk.apis.paths.v1_security_privileges_wildcard_privilege_name import (
+    V1SecurityPrivilegesWildcardPrivilegeName,
+)
 from nexus_sdk.apis.paths.v1_security_realms_active import V1SecurityRealmsActive
 from nexus_sdk.apis.paths.v1_security_realms_available import V1SecurityRealmsAvailable
 from nexus_sdk.apis.paths.v1_security_roles import V1SecurityRoles
 from nexus_sdk.apis.paths.v1_security_roles_id import V1SecurityRolesId
-from nexus_sdk.apis.paths.v1_tasks_id import V1TasksId
-from nexus_sdk.apis.paths.v1_tasks import V1Tasks
-from nexus_sdk.apis.paths.v1_tasks_id_run import V1TasksIdRun
-from nexus_sdk.apis.paths.v1_tasks_id_stop import V1TasksIdStop
-from nexus_sdk.apis.paths.v1_blobstores_name import V1BlobstoresName
-from nexus_sdk.apis.paths.v1_blobstores_name_quota_status import V1BlobstoresNameQuotaStatus
-from nexus_sdk.apis.paths.v1_blobstores import V1Blobstores
-from nexus_sdk.apis.paths.v1_blobstores_file import V1BlobstoresFile
-from nexus_sdk.apis.paths.v1_blobstores_file_name import V1BlobstoresFileName
-from nexus_sdk.apis.paths.v1_lifecycle_bounce import V1LifecycleBounce
-from nexus_sdk.apis.paths.v1_lifecycle_phase import V1LifecyclePhase
-from nexus_sdk.apis.paths.v1_read_only_freeze import V1ReadOnlyFreeze
-from nexus_sdk.apis.paths.v1_read_only_force_release import V1ReadOnlyForceRelease
-from nexus_sdk.apis.paths.v1_read_only_release import V1ReadOnlyRelease
-from nexus_sdk.apis.paths.v1_read_only import V1ReadOnly
+from nexus_sdk.apis.paths.v1_security_saml import V1SecuritySaml
+from nexus_sdk.apis.paths.v1_security_saml_metadata import V1SecuritySamlMetadata
+from nexus_sdk.apis.paths.v1_security_saml_pem import V1SecuritySamlPem
 from nexus_sdk.apis.paths.v1_security_ssl import V1SecuritySsl
 from nexus_sdk.apis.paths.v1_security_ssl_truststore import V1SecuritySslTruststore
 from nexus_sdk.apis.paths.v1_security_ssl_truststore_id import V1SecuritySslTruststoreId
-from nexus_sdk.apis.paths.v1_assets_id import V1AssetsId
-from nexus_sdk.apis.paths.v1_assets import V1Assets
-from nexus_sdk.apis.paths.v1_components_id import V1ComponentsId
-from nexus_sdk.apis.paths.v1_components import V1Components
-from nexus_sdk.apis.paths.v1_repositories_repository_name_rebuild_index import V1RepositoriesRepositoryNameRebuildIndex
-from nexus_sdk.apis.paths.v1_repositories_repository_name_invalidate_cache import V1RepositoriesRepositoryNameInvalidateCache
-from nexus_sdk.apis.paths.v1_repositories_repository_name import V1RepositoriesRepositoryName
-from nexus_sdk.apis.paths.v1_repository_settings import V1RepositorySettings
-from nexus_sdk.apis.paths.v1_security_content_selectors import V1SecurityContentSelectors
-from nexus_sdk.apis.paths.v1_security_content_selectors_name import V1SecurityContentSelectorsName
-from nexus_sdk.apis.paths.v1_repositories import V1Repositories
-from nexus_sdk.apis.paths.v1_routing_rules_name import V1RoutingRulesName
-from nexus_sdk.apis.paths.v1_routing_rules import V1RoutingRules
-from nexus_sdk.apis.paths.v1_search_assets_download import V1SearchAssetsDownload
-from nexus_sdk.apis.paths.v1_search_assets import V1SearchAssets
-from nexus_sdk.apis.paths.v1_search import V1Search
-from nexus_sdk.apis.paths.v1_formats_format_upload_specs import V1FormatsFormatUploadSpecs
-from nexus_sdk.apis.paths.v1_formats_upload_specs import V1FormatsUploadSpecs
-from nexus_sdk.apis.paths.v1_security_privileges_repository_content_selector import V1SecurityPrivilegesRepositoryContentSelector
-from nexus_sdk.apis.paths.v1_security_privileges_repository_admin import V1SecurityPrivilegesRepositoryAdmin
-from nexus_sdk.apis.paths.v1_security_privileges_repository_view import V1SecurityPrivilegesRepositoryView
-from nexus_sdk.apis.paths.v1_security_privileges_repository_view_privilege_name import V1SecurityPrivilegesRepositoryViewPrivilegeName
-from nexus_sdk.apis.paths.v1_security_privileges_repository_content_selector_privilege_name import V1SecurityPrivilegesRepositoryContentSelectorPrivilegeName
-from nexus_sdk.apis.paths.v1_security_privileges_repository_admin_privilege_name import V1SecurityPrivilegesRepositoryAdminPrivilegeName
-from nexus_sdk.apis.paths.v1_repositories_maven_group import V1RepositoriesMavenGroup
-from nexus_sdk.apis.paths.v1_repositories_maven_group_repository_name import V1RepositoriesMavenGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_maven_hosted_repository_name import V1RepositoriesMavenHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_maven_hosted import V1RepositoriesMavenHosted
-from nexus_sdk.apis.paths.v1_repositories_maven_proxy_repository_name import V1RepositoriesMavenProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_maven_proxy import V1RepositoriesMavenProxy
-from nexus_sdk.apis.paths.v1_security_privileges_script import V1SecurityPrivilegesScript
-from nexus_sdk.apis.paths.v1_security_privileges_script_privilege_name import V1SecurityPrivilegesScriptPrivilegeName
-from nexus_sdk.apis.paths.v1_script import V1Script
-from nexus_sdk.apis.paths.v1_script_name import V1ScriptName
-from nexus_sdk.apis.paths.v1_script_name_run import V1ScriptNameRun
-from nexus_sdk.apis.paths.v1_blobstores_s3 import V1BlobstoresS3
-from nexus_sdk.apis.paths.v1_blobstores_s3_name import V1BlobstoresS3Name
-from nexus_sdk.apis.paths.v1_repositories_apt_hosted_repository_name import V1RepositoriesAptHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_apt_hosted import V1RepositoriesAptHosted
-from nexus_sdk.apis.paths.v1_repositories_apt_proxy_repository_name import V1RepositoriesAptProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_apt_proxy import V1RepositoriesAptProxy
-from nexus_sdk.apis.paths.v1_repositories_raw_group import V1RepositoriesRawGroup
-from nexus_sdk.apis.paths.v1_repositories_raw_group_repository_name import V1RepositoriesRawGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_raw_hosted import V1RepositoriesRawHosted
-from nexus_sdk.apis.paths.v1_repositories_raw_hosted_repository_name import V1RepositoriesRawHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_raw_proxy import V1RepositoriesRawProxy
-from nexus_sdk.apis.paths.v1_repositories_raw_proxy_repository_name import V1RepositoriesRawProxyRepositoryName
-from nexus_sdk.apis.paths.v1_email import V1Email
-from nexus_sdk.apis.paths.v1_email_verify import V1EmailVerify
-from nexus_sdk.apis.paths.v1_status_check import V1StatusCheck
+from nexus_sdk.apis.paths.v1_security_user_sources import V1SecurityUserSources
+from nexus_sdk.apis.paths.v1_security_user_tokens import V1SecurityUserTokens
+from nexus_sdk.apis.paths.v1_security_users import V1SecurityUsers
+from nexus_sdk.apis.paths.v1_security_users_user_id import V1SecurityUsersUserId
+from nexus_sdk.apis.paths.v1_security_users_user_id_change_password import (
+    V1SecurityUsersUserIdChangePassword,
+)
+from nexus_sdk.apis.paths.v1_security_users_user_id_realm_user_token_reset import (
+    V1SecurityUsersUserIdRealmUserTokenReset,
+)
+from nexus_sdk.apis.paths.v1_staging_delete import V1StagingDelete
+from nexus_sdk.apis.paths.v1_staging_move_destination import V1StagingMoveDestination
 from nexus_sdk.apis.paths.v1_status import V1Status
+from nexus_sdk.apis.paths.v1_status_check import V1StatusCheck
 from nexus_sdk.apis.paths.v1_status_writable import V1StatusWritable
 from nexus_sdk.apis.paths.v1_support_supportzip import V1SupportSupportzip
 from nexus_sdk.apis.paths.v1_support_supportzippath import V1SupportSupportzippath
-from nexus_sdk.apis.paths.v1_security_ldap import V1SecurityLdap
-from nexus_sdk.apis.paths.v1_security_ldap_name import V1SecurityLdapName
-from nexus_sdk.apis.paths.v1_security_ldap_change_order import V1SecurityLdapChangeOrder
+from nexus_sdk.apis.paths.v1_system_license import V1SystemLicense
 from nexus_sdk.apis.paths.v1_tags import V1Tags
 from nexus_sdk.apis.paths.v1_tags_associate_tag_name import V1TagsAssociateTagName
 from nexus_sdk.apis.paths.v1_tags_name import V1TagsName
-from nexus_sdk.apis.paths.v1_iq_verify_connection import V1IqVerifyConnection
-from nexus_sdk.apis.paths.v1_iq import V1Iq
-from nexus_sdk.apis.paths.v1_iq_enable import V1IqEnable
-from nexus_sdk.apis.paths.v1_iq_disable import V1IqDisable
-from nexus_sdk.apis.paths.v1_repositories_repository_name_health_check import V1RepositoriesRepositoryNameHealthCheck
-from nexus_sdk.apis.paths.v1_system_license import V1SystemLicense
-from nexus_sdk.apis.paths.v1_security_atlassian_crowd_verify_connection import V1SecurityAtlassianCrowdVerifyConnection
-from nexus_sdk.apis.paths.v1_security_atlassian_crowd import V1SecurityAtlassianCrowd
-from nexus_sdk.apis.paths.v1_security_atlassian_crowd_clear_cache import V1SecurityAtlassianCrowdClearCache
-from nexus_sdk.apis.paths.v1_repositories_npm_group_repository_name import V1RepositoriesNpmGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_npm_group import V1RepositoriesNpmGroup
-from nexus_sdk.apis.paths.v1_repositories_npm_hosted import V1RepositoriesNpmHosted
-from nexus_sdk.apis.paths.v1_repositories_npm_hosted_repository_name import V1RepositoriesNpmHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_npm_proxy_repository_name import V1RepositoriesNpmProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_npm_proxy import V1RepositoriesNpmProxy
-from nexus_sdk.apis.paths.v1_repositories_nuget_group import V1RepositoriesNugetGroup
-from nexus_sdk.apis.paths.v1_repositories_nuget_group_repository_name import V1RepositoriesNugetGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_nuget_hosted import V1RepositoriesNugetHosted
-from nexus_sdk.apis.paths.v1_repositories_nuget_hosted_repository_name import V1RepositoriesNugetHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_nuget_proxy_repository_name import V1RepositoriesNugetProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_nuget_proxy import V1RepositoriesNugetProxy
-from nexus_sdk.apis.paths.v1_security_user_tokens import V1SecurityUserTokens
-from nexus_sdk.apis.paths.v1_security_users_user_id_realm_user_token_reset import V1SecurityUsersUserIdRealmUserTokenReset
-from nexus_sdk.apis.paths.v1_repositories_rubygems_group import V1RepositoriesRubygemsGroup
-from nexus_sdk.apis.paths.v1_repositories_rubygems_group_repository_name import V1RepositoriesRubygemsGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_rubygems_hosted import V1RepositoriesRubygemsHosted
-from nexus_sdk.apis.paths.v1_repositories_rubygems_hosted_repository_name import V1RepositoriesRubygemsHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_rubygems_proxy import V1RepositoriesRubygemsProxy
-from nexus_sdk.apis.paths.v1_repositories_rubygems_proxy_repository_name import V1RepositoriesRubygemsProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_yum_group import V1RepositoriesYumGroup
-from nexus_sdk.apis.paths.v1_repositories_yum_group_repository_name import V1RepositoriesYumGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_yum_hosted_repository_name import V1RepositoriesYumHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_yum_hosted import V1RepositoriesYumHosted
-from nexus_sdk.apis.paths.v1_repositories_yum_proxy import V1RepositoriesYumProxy
-from nexus_sdk.apis.paths.v1_repositories_yum_proxy_repository_name import V1RepositoriesYumProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_docker_group_repository_name import V1RepositoriesDockerGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_docker_group import V1RepositoriesDockerGroup
-from nexus_sdk.apis.paths.v1_repositories_docker_hosted_repository_name import V1RepositoriesDockerHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_docker_hosted import V1RepositoriesDockerHosted
-from nexus_sdk.apis.paths.v1_repositories_docker_proxy_repository_name import V1RepositoriesDockerProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_docker_proxy import V1RepositoriesDockerProxy
-from nexus_sdk.apis.paths.v1_repositories_pypi_group import V1RepositoriesPypiGroup
-from nexus_sdk.apis.paths.v1_repositories_pypi_group_repository_name import V1RepositoriesPypiGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_pypi_hosted import V1RepositoriesPypiHosted
-from nexus_sdk.apis.paths.v1_repositories_pypi_hosted_repository_name import V1RepositoriesPypiHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_pypi_proxy import V1RepositoriesPypiProxy
-from nexus_sdk.apis.paths.v1_repositories_pypi_proxy_repository_name import V1RepositoriesPypiProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_conda_proxy import V1RepositoriesCondaProxy
-from nexus_sdk.apis.paths.v1_repositories_conda_proxy_repository_name import V1RepositoriesCondaProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_conan_proxy import V1RepositoriesConanProxy
-from nexus_sdk.apis.paths.v1_repositories_conan_proxy_repository_name import V1RepositoriesConanProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_gitlfs_hosted import V1RepositoriesGitlfsHosted
-from nexus_sdk.apis.paths.v1_repositories_gitlfs_hosted_repository_name import V1RepositoriesGitlfsHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_r_group import V1RepositoriesRGroup
-from nexus_sdk.apis.paths.v1_repositories_r_group_repository_name import V1RepositoriesRGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_r_hosted import V1RepositoriesRHosted
-from nexus_sdk.apis.paths.v1_repositories_r_hosted_repository_name import V1RepositoriesRHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_r_proxy import V1RepositoriesRProxy
-from nexus_sdk.apis.paths.v1_repositories_r_proxy_repository_name import V1RepositoriesRProxyRepositoryName
-from nexus_sdk.apis.paths.v1_blobstores_group import V1BlobstoresGroup
-from nexus_sdk.apis.paths.v1_blobstores_group_name import V1BlobstoresGroupName
-from nexus_sdk.apis.paths.v1_blobstores_group_convert_name_new_name_for_original import V1BlobstoresGroupConvertNameNewNameForOriginal
-from nexus_sdk.apis.paths.beta_replication_connection_name import BetaReplicationConnectionName
-from nexus_sdk.apis.paths.beta_replication_connection import BetaReplicationConnection
-from nexus_sdk.apis.paths.beta_replicationtarget_repository_enable import BetaReplicationtargetRepositoryEnable
-from nexus_sdk.apis.paths.beta_replicationtarget_repository_repository_name_enable import BetaReplicationtargetRepositoryRepositoryNameEnable
-from nexus_sdk.apis.paths.v1_repositories_cocoapods_proxy import V1RepositoriesCocoapodsProxy
-from nexus_sdk.apis.paths.v1_repositories_cocoapods_proxy_repository_name import V1RepositoriesCocoapodsProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_go_group import V1RepositoriesGoGroup
-from nexus_sdk.apis.paths.v1_repositories_go_group_repository_name import V1RepositoriesGoGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_go_proxy import V1RepositoriesGoProxy
-from nexus_sdk.apis.paths.v1_repositories_go_proxy_repository_name import V1RepositoriesGoProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_p2_proxy import V1RepositoriesP2Proxy
-from nexus_sdk.apis.paths.v1_repositories_p2_proxy_repository_name import V1RepositoriesP2ProxyRepositoryName
-from nexus_sdk.apis.paths.v1_staging_move_destination import V1StagingMoveDestination
-from nexus_sdk.apis.paths.v1_staging_delete import V1StagingDelete
-from nexus_sdk.apis.paths.v1_azureblobstore_test_connection import V1AzureblobstoreTestConnection
-from nexus_sdk.apis.paths.v1_blobstores_azure import V1BlobstoresAzure
-from nexus_sdk.apis.paths.v1_blobstores_azure_name import V1BlobstoresAzureName
-from nexus_sdk.apis.paths.v1_security_saml_metadata import V1SecuritySamlMetadata
-from nexus_sdk.apis.paths.v1_security_saml import V1SecuritySaml
-from nexus_sdk.apis.paths.v1_security_saml_pem import V1SecuritySamlPem
-from nexus_sdk.apis.paths.v1_repositories_helm_hosted import V1RepositoriesHelmHosted
-from nexus_sdk.apis.paths.v1_repositories_helm_hosted_repository_name import V1RepositoriesHelmHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_helm_proxy import V1RepositoriesHelmProxy
-from nexus_sdk.apis.paths.v1_repositories_helm_proxy_repository_name import V1RepositoriesHelmProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_bower_group import V1RepositoriesBowerGroup
-from nexus_sdk.apis.paths.v1_repositories_bower_group_repository_name import V1RepositoriesBowerGroupRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_bower_hosted import V1RepositoriesBowerHosted
-from nexus_sdk.apis.paths.v1_repositories_bower_hosted_repository_name import V1RepositoriesBowerHostedRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_bower_proxy_repository_name import V1RepositoriesBowerProxyRepositoryName
-from nexus_sdk.apis.paths.v1_repositories_bower_proxy import V1RepositoriesBowerProxy
+from nexus_sdk.apis.paths.v1_tasks import V1Tasks
+from nexus_sdk.apis.paths.v1_tasks_id import V1TasksId
+from nexus_sdk.apis.paths.v1_tasks_id_run import V1TasksIdRun
+from nexus_sdk.apis.paths.v1_tasks_id_stop import V1TasksIdStop
+from nexus_sdk.paths import PathValues
 
 PathToApi = typing_extensions.TypedDict(
-    'PathToApi',
+    "PathToApi",
     {
         PathValues.V1_SECURITY_ANONYMOUS: V1SecurityAnonymous,
         PathValues.V1_SECURITY_USERSOURCES: V1SecurityUserSources,
@@ -377,7 +531,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_REPOSITORIES_BOWER_HOSTED_REPOSITORY_NAME: V1RepositoriesBowerHostedRepositoryName,
         PathValues.V1_REPOSITORIES_BOWER_PROXY_REPOSITORY_NAME: V1RepositoriesBowerProxyRepositoryName,
         PathValues.V1_REPOSITORIES_BOWER_PROXY: V1RepositoriesBowerProxy,
-    }
+    },
 )
 
 path_to_api = PathToApi(

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.maven_hosted_api_repository import MavenHostedApiRepository
 from nexus_sdk import configuration
+from nexus_sdk.model.maven_hosted_api_repository import MavenHostedApiRepository
 
 
 class TestMavenHostedApiRepository(unittest.TestCase):
     """MavenHostedApiRepository unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

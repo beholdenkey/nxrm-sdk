@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.tag_xo import TagXO
 from nexus_sdk import configuration
+from nexus_sdk.model.tag_xo import TagXO
 
 
 class TestTagXO(unittest.TestCase):
     """TagXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

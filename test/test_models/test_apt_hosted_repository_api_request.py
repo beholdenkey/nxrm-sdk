@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.apt_hosted_repository_api_request import AptHostedRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.apt_hosted_repository_api_request import (
+    AptHostedRepositoryApiRequest,
+)
 
 
 class TestAptHostedRepositoryApiRequest(unittest.TestCase):

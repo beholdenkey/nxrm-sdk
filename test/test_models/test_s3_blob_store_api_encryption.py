@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.s3_blob_store_api_encryption import S3BlobStoreApiEncryption
 from nexus_sdk import configuration
+from nexus_sdk.model.s3_blob_store_api_encryption import S3BlobStoreApiEncryption
 
 
 class TestS3BlobStoreApiEncryption(unittest.TestCase):
     """S3BlobStoreApiEncryption unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

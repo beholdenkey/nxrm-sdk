@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_privilege_repository_view_request import ApiPrivilegeRepositoryViewRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.api_privilege_repository_view_request import (
+    ApiPrivilegeRepositoryViewRequest,
+)
 
 
 class TestApiPrivilegeRepositoryViewRequest(unittest.TestCase):

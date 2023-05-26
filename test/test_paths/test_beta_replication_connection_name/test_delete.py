@@ -12,8 +12,8 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
+from nexus_sdk import api_client, configuration, schemas
 from nexus_sdk.paths.beta_replication_connection_name import delete  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -23,6 +23,7 @@ class TestBetaReplicationConnectionName(ApiTestMixin, unittest.TestCase):
     BetaReplicationConnectionName unit test stubs
         Delete a replication connection.  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +36,5 @@ class TestBetaReplicationConnectionName(ApiTestMixin, unittest.TestCase):
     response_status = 204
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -20,4 +20,5 @@ class SecurityManagementApi(
 
     Do not edit the class manually.
     """
+
     pass

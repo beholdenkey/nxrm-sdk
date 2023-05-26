@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.simple_api_group_repository import SimpleApiGroupRepository
 from nexus_sdk import configuration
+from nexus_sdk.model.simple_api_group_repository import SimpleApiGroupRepository
 
 
 class TestSimpleApiGroupRepository(unittest.TestCase):
     """SimpleApiGroupRepository unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

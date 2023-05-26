@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.script_result_xo import ScriptResultXO
 from nexus_sdk import configuration
+from nexus_sdk.model.script_result_xo import ScriptResultXO
 
 
 class TestScriptResultXO(unittest.TestCase):
     """ScriptResultXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

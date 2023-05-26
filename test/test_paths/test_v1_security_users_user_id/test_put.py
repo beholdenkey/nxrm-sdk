@@ -12,8 +12,8 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
+from nexus_sdk import api_client, configuration, schemas
 from nexus_sdk.paths.v1_security_users_user_id import put  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -23,6 +23,7 @@ class TestV1SecurityUsersUserId(ApiTestMixin, unittest.TestCase):
     V1SecurityUsersUserId unit test stubs
         Update an existing user.  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +36,5 @@ class TestV1SecurityUsersUserId(ApiTestMixin, unittest.TestCase):
     response_status = 400
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

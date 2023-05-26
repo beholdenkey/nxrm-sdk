@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.r_group_repository_api_request import RGroupRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.r_group_repository_api_request import RGroupRepositoryApiRequest
 
 
 class TestRGroupRepositoryApiRequest(unittest.TestCase):
     """RGroupRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.npm_proxy_api_repository import NpmProxyApiRepository
 from nexus_sdk import configuration
+from nexus_sdk.model.npm_proxy_api_repository import NpmProxyApiRepository
 
 
 class TestNpmProxyApiRepository(unittest.TestCase):
     """NpmProxyApiRepository unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

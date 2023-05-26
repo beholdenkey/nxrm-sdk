@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.page_tag_xo import PageTagXO
 from nexus_sdk import configuration
+from nexus_sdk.model.page_tag_xo import PageTagXO
 
 
 class TestPageTagXO(unittest.TestCase):
     """PageTagXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

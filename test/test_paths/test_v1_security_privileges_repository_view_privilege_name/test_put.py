@@ -12,17 +12,22 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
-from nexus_sdk.paths.v1_security_privileges_repository_view_privilege_name import put  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
+from nexus_sdk import api_client, configuration, schemas
+from nexus_sdk.paths.v1_security_privileges_repository_view_privilege_name import (  # noqa: E501
+    put,
+)
 
 from .. import ApiTestMixin
 
 
-class TestV1SecurityPrivilegesRepositoryViewPrivilegeName(ApiTestMixin, unittest.TestCase):
+class TestV1SecurityPrivilegesRepositoryViewPrivilegeName(
+    ApiTestMixin, unittest.TestCase
+):
     """
     V1SecurityPrivilegesRepositoryViewPrivilegeName unit test stubs
         Update a repository view type privilege.  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +40,5 @@ class TestV1SecurityPrivilegesRepositoryViewPrivilegeName(ApiTestMixin, unittest
     response_status = 400
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.npm_hosted_repository_api_request import NpmHostedRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.npm_hosted_repository_api_request import (
+    NpmHostedRepositoryApiRequest,
+)
 
 
 class TestNpmHostedRepositoryApiRequest(unittest.TestCase):
     """NpmHostedRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

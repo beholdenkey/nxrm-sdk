@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.stack_trace_element import StackTraceElement
 from nexus_sdk import configuration
+from nexus_sdk.model.stack_trace_element import StackTraceElement
 
 
 class TestStackTraceElement(unittest.TestCase):
     """StackTraceElement unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

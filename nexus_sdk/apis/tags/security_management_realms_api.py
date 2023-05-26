@@ -10,8 +10,8 @@
 """
 
 from nexus_sdk.paths.v1_security_realms_active.get import GetActiveRealms
-from nexus_sdk.paths.v1_security_realms_available.get import GetRealms
 from nexus_sdk.paths.v1_security_realms_active.put import SetActiveRealms
+from nexus_sdk.paths.v1_security_realms_available.get import GetRealms
 
 
 class SecurityManagementRealmsApi(
@@ -24,4 +24,5 @@ class SecurityManagementRealmsApi(
 
     Do not edit the class manually.
     """
+
     pass

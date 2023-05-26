@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.golang_group_repository_api_request import GolangGroupRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.golang_group_repository_api_request import (
+    GolangGroupRepositoryApiRequest,
+)
 
 
 class TestGolangGroupRepositoryApiRequest(unittest.TestCase):
     """GolangGroupRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

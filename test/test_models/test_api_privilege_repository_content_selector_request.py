@@ -12,8 +12,10 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.api_privilege_repository_content_selector_request import ApiPrivilegeRepositoryContentSelectorRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.api_privilege_repository_content_selector_request import (
+    ApiPrivilegeRepositoryContentSelectorRequest,
+)
 
 
 class TestApiPrivilegeRepositoryContentSelectorRequest(unittest.TestCase):

@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.http_client_attributes import HttpClientAttributes
 from nexus_sdk import configuration
+from nexus_sdk.model.http_client_attributes import HttpClientAttributes
 
 
 class TestHttpClientAttributes(unittest.TestCase):
     """HttpClientAttributes unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

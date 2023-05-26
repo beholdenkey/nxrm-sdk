@@ -12,8 +12,8 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.azure_connection_xo import AzureConnectionXO
 from nexus_sdk import configuration
+from nexus_sdk.model.azure_connection_xo import AzureConnectionXO
 
 
 class TestAzureConnectionXO(unittest.TestCase):

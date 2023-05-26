@@ -12,14 +12,17 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.golang_proxy_repository_api_request import GolangProxyRepositoryApiRequest
 from nexus_sdk import configuration
+from nexus_sdk.model.golang_proxy_repository_api_request import (
+    GolangProxyRepositoryApiRequest,
+)
 
 
 class TestGolangProxyRepositoryApiRequest(unittest.TestCase):
     """GolangProxyRepositoryApiRequest unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

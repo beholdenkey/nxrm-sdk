@@ -12,14 +12,15 @@
 import unittest
 
 import nexus_sdk
-from nexus_sdk.model.iq_connection_xo import IqConnectionXo
 from nexus_sdk import configuration
+from nexus_sdk.model.iq_connection_xo import IqConnectionXo
 
 
 class TestIqConnectionXo(unittest.TestCase):
     """IqConnectionXo unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

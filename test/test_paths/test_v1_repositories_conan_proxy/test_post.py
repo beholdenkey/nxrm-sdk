@@ -12,8 +12,8 @@ from unittest.mock import patch
 import urllib3
 
 import nexus_sdk
+from nexus_sdk import api_client, configuration, schemas
 from nexus_sdk.paths.v1_repositories_conan_proxy import post  # noqa: E501
-from nexus_sdk import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -23,6 +23,7 @@ class TestV1RepositoriesConanProxy(ApiTestMixin, unittest.TestCase):
     V1RepositoriesConanProxy unit test stubs
         Create Conan proxy repository  # noqa: E501
     """
+
     _configuration = configuration.Configuration()
 
     def setUp(self):
@@ -35,5 +36,5 @@ class TestV1RepositoriesConanProxy(ApiTestMixin, unittest.TestCase):
     response_status = 201
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
