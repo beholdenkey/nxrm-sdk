@@ -1,40 +1,34 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ""
-labels: ""
-assignees: ""
+name: 🐛 Bug Report
+about: Report a reproducible bug in the current release of nexus-sdk
+
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+    NOTE: IF YOUR ISSUE DOES NOT FOLLOW THIS TEMPLATE, IT WILL BE CLOSED.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+    This form is only for reporting reproducible bugs. If you need assistance
+    with nexus-sdk installation, or if you have a general question, please start a
+    discussion instead: https://github.com/beholdenkey/nexus-sdk/discussions
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+    Please describe the environment in which you are running nexus-sdk. Be sure
+    that you are running an unmodified instance of the latest stable release
+    before submitting a bug report, and that any plugins have been disabled.
+-->
+### Environment
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+* Nexus SDK version (Docker tag too if applicable):
+* Python version:
+* Nexus Repository Manager version:
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+### Steps to Reproduce
 
-**Desktop (please complete the following information):**
+1.
+2.
+3.
 
-- OS: [e.g. iOS]
-- Browser [e.g. chrome, safari]
-- Version [e.g. 22]
+<!-- What did you expect to happen? -->
+### Expected Behavior
 
-**Smartphone (please complete the following information):**
-
-- Device: [e.g. iPhone6]
-- OS: [e.g. iOS8.1]
-- Browser [e.g. stock browser, safari]
-- Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+<!-- What happened instead? -->
+### Observed Behavior
