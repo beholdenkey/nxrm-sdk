@@ -18,8 +18,9 @@ from nexus_sdk.model.blob_store_api_soft_quota import BlobStoreApiSoftQuota
 
 class TestBlobStoreApiSoftQuota(unittest.TestCase):
     """BlobStoreApiSoftQuota unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
