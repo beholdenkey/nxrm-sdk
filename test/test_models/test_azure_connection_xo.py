@@ -18,8 +18,9 @@ from nexus_sdk.model.azure_connection_xo import AzureConnectionXO
 
 class TestAzureConnectionXO(unittest.TestCase):
     """AzureConnectionXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
