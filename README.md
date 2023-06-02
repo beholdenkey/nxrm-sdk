@@ -1,6 +1,6 @@
-# Sonatype Nexus Python SDK
+# Sonatype: Nexus Repository Manager 3 - Python SDK
 
-- [Sonatype Nexus Python SDK](#sonatype-nexus-python-sdk)
+- [Sonatype: Nexus Repository Manager 3 - Python SDK](#sonatype-nexus-repository-manager-3---python-sdk)
   - [Overview](#overview)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
