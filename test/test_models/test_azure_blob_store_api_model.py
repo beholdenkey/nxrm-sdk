@@ -18,8 +18,9 @@ from nexus_sdk.model.azure_blob_store_api_model import AzureBlobStoreApiModel
 
 class TestAzureBlobStoreApiModel(unittest.TestCase):
     """AzureBlobStoreApiModel unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
