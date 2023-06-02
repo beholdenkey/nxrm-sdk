@@ -1,7 +1,6 @@
 ---
 name: 🐛 Bug Report
 about: Report a reproducible bug in the current release of nexus-sdk
-
 ---
 
 <!--
@@ -15,11 +14,12 @@ about: Report a reproducible bug in the current release of nexus-sdk
     that you are running an unmodified instance of the latest stable release
     before submitting a bug report, and that any plugins have been disabled.
 -->
+
 ### Environment
 
-* Nexus SDK version (Docker tag too if applicable):
-* Python version:
-* Nexus Repository Manager version:
+- Nexus SDK version (Docker tag too if applicable):
+- Python version:
+- Nexus Repository Manager version:
 
 ### Steps to Reproduce
 
@@ -28,7 +28,9 @@ about: Report a reproducible bug in the current release of nexus-sdk
 3.
 
 <!-- What did you expect to happen? -->
+
 ### Expected Behavior
 
 <!-- What happened instead? -->
+
 ### Observed Behavior
