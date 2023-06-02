@@ -18,8 +18,9 @@ from nexus_sdk.model.blob_store_quota_result_xo import BlobStoreQuotaResultXO
 
 class TestBlobStoreQuotaResultXO(unittest.TestCase):
     """BlobStoreQuotaResultXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
