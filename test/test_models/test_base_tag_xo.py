@@ -18,8 +18,9 @@ from nexus_sdk.model.base_tag_xo import BaseTagXO
 
 class TestBaseTagXO(unittest.TestCase):
     """BaseTagXO unit test stubs"""
+
     _configuration = configuration.Configuration()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
