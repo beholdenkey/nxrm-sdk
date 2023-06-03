@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.bower_proxy_api_repository import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.bower_proxy_api_repository import (  # noqa: E501
     BowerProxyApiRepository,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestBowerProxyApiRepository(unittest.TestCase):

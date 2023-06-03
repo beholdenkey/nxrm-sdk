@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.anonymous_access_settings_xo import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.anonymous_access_settings_xo import (  # noqa: E501
     AnonymousAccessSettingsXO,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestAnonymousAccessSettingsXO(unittest.TestCase):

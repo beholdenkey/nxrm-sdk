@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.azure_blob_store_api_authentication import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.azure_blob_store_api_authentication import (  # noqa: E501
     AzureBlobStoreApiAuthentication,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestAzureBlobStoreApiAuthentication(unittest.TestCase):

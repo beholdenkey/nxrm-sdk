@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.maven_group_repository_api_request import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.maven_group_repository_api_request import (  # noqa: E501
     MavenGroupRepositoryApiRequest,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestMavenGroupRepositoryApiRequest(unittest.TestCase):

@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.docker_group_api_repository import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.docker_group_api_repository import (  # noqa: E501
     DockerGroupApiRepository,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestDockerGroupApiRepository(unittest.TestCase):

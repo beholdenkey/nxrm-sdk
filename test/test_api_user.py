@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.api_user import ApiUser  # noqa: E501
-from nexus_sdk.rest import ApiException
+import nxrm_sdk
+from nxrm_sdk.models.api_user import ApiUser  # noqa: E501
+from nxrm_sdk.rest import ApiException
 
 
 class TestApiUser(unittest.TestCase):

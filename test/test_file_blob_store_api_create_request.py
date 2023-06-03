@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.file_blob_store_api_create_request import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.file_blob_store_api_create_request import (  # noqa: E501
     FileBlobStoreApiCreateRequest,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestFileBlobStoreApiCreateRequest(unittest.TestCase):

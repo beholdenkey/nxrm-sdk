@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.api.security_management_realms_api import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.api.security_management_realms_api import (  # noqa: E501
     SecurityManagementRealmsApi,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestSecurityManagementRealmsApi(unittest.TestCase):

@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.http_client_attributes_with_preemptive_auth import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.http_client_attributes_with_preemptive_auth import (  # noqa: E501
     HttpClientAttributesWithPreemptiveAuth,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestHttpClientAttributesWithPreemptiveAuth(unittest.TestCase):

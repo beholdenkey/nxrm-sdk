@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.replication_connection_xo import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.models.replication_connection_xo import (  # noqa: E501
     ReplicationConnectionXO,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestReplicationConnectionXO(unittest.TestCase):

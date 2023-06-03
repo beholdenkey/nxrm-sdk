@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.raw_attributes import RawAttributes  # noqa: E501
-from nexus_sdk.rest import ApiException
+import nxrm_sdk
+from nxrm_sdk.models.raw_attributes import RawAttributes  # noqa: E501
+from nxrm_sdk.rest import ApiException
 
 
 class TestRawAttributes(unittest.TestCase):

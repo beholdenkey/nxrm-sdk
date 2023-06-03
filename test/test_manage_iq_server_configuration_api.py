@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.api.manage_iq_server_configuration_api import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.api.manage_iq_server_configuration_api import (  # noqa: E501
     ManageIQServerConfigurationApi,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestManageIQServerConfigurationApi(unittest.TestCase):

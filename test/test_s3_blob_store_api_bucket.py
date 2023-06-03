@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.models.s3_blob_store_api_bucket import S3BlobStoreApiBucket  # noqa: E501
-from nexus_sdk.rest import ApiException
+import nxrm_sdk
+from nxrm_sdk.models.s3_blob_store_api_bucket import S3BlobStoreApiBucket  # noqa: E501
+from nxrm_sdk.rest import ApiException
 
 
 class TestS3BlobStoreApiBucket(unittest.TestCase):

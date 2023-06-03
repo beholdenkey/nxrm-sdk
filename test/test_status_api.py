@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.api.status_api import StatusApi  # noqa: E501
-from nexus_sdk.rest import ApiException
+import nxrm_sdk
+from nxrm_sdk.api.status_api import StatusApi  # noqa: E501
+from nxrm_sdk.rest import ApiException
 
 
 class TestStatusApi(unittest.TestCase):

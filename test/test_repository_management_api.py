@@ -14,11 +14,11 @@ from __future__ import absolute_import
 
 import unittest
 
-import nexus_sdk
-from nexus_sdk.api.repository_management_api import (  # noqa: E501
+import nxrm_sdk
+from nxrm_sdk.api.repository_management_api import (  # noqa: E501
     RepositoryManagementApi,
 )
-from nexus_sdk.rest import ApiException
+from nxrm_sdk.rest import ApiException
 
 
 class TestRepositoryManagementApi(unittest.TestCase):
