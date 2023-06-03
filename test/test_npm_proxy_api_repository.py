@@ -15,9 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import nxrm_sdk
-from nxrm_sdk.models.npm_proxy_api_repository import (  # noqa: E501
-    NpmProxyApiRepository,
-)
+from nxrm_sdk.models.npm_proxy_api_repository import NpmProxyApiRepository  # noqa: E501
 from nxrm_sdk.rest import ApiException
 
 
