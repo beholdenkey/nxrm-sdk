@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.s3_blob_store_api_advanced_bucket_connection import S3BlobStoreApiAdvancedBucketConnection  # noqa: E501
+from nexus_sdk.models.s3_blob_store_api_advanced_bucket_connection import (  # noqa: E501
+    S3BlobStoreApiAdvancedBucketConnection,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestS3BlobStoreApiAdvancedBucketConnection(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

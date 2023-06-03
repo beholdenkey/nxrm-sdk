@@ -46,8 +46,8 @@ class ComponentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.delete_component_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_component_with_http_info(id, **kwargs)  # noqa: E501
@@ -68,31 +68,32 @@ class ComponentsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_component" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_component`")  # noqa: E501
+        if "id" not in params or params["id"] is None:
+            raise ValueError(
+                "Missing the required parameter `id` when calling `delete_component`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
+        if "id" in params:
+            path_params["id"] = params["id"]  # noqa: E501
 
         query_params = []
 
@@ -106,7 +107,8 @@ class ComponentsApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/components/{id}', 'DELETE',
+            "/v1/components/{id}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -115,11 +117,12 @@ class ComponentsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_component_by_id(self, id, **kwargs):  # noqa: E501
         """Get a single component  # noqa: E501
@@ -135,8 +138,8 @@ class ComponentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_component_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_component_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -157,31 +160,32 @@ class ComponentsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_component_by_id" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_component_by_id`")  # noqa: E501
+        if "id" not in params or params["id"] is None:
+            raise ValueError(
+                "Missing the required parameter `id` when calling `get_component_by_id`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
+        if "id" in params:
+            path_params["id"] = params["id"]  # noqa: E501
 
         query_params = []
 
@@ -192,27 +196,30 @@ class ComponentsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/components/{id}', 'GET',
+            "/v1/components/{id}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ComponentXO',  # noqa: E501
+            response_type="ComponentXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_components(self, repository, **kwargs):  # noqa: E501
         """List components  # noqa: E501
@@ -229,11 +236,15 @@ class ComponentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_components_with_http_info(repository, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_components_with_http_info(
+                repository, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_components_with_http_info(repository, **kwargs)  # noqa: E501
+            (data) = self.get_components_with_http_info(
+                repository, **kwargs
+            )  # noqa: E501
             return data
 
     def get_components_with_http_info(self, repository, **kwargs):  # noqa: E501
@@ -252,35 +263,38 @@ class ComponentsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository', 'continuation_token']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository", "continuation_token"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_components" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository' is set
-        if ('repository' not in params or
-                params['repository'] is None):
-            raise ValueError("Missing the required parameter `repository` when calling `get_components`")  # noqa: E501
+        if "repository" not in params or params["repository"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository` when calling `get_components`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'continuation_token' in params:
-            query_params.append(('continuationToken', params['continuation_token']))  # noqa: E501
-        if 'repository' in params:
-            query_params.append(('repository', params['repository']))  # noqa: E501
+        if "continuation_token" in params:
+            query_params.append(
+                ("continuationToken", params["continuation_token"])
+            )  # noqa: E501
+        if "repository" in params:
+            query_params.append(("repository", params["repository"]))  # noqa: E501
 
         header_params = {}
 
@@ -289,27 +303,30 @@ class ComponentsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/components', 'GET',
+            "/v1/components",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='PageComponentXO',  # noqa: E501
+            response_type="PageComponentXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def upload_component(self, repository, **kwargs):  # noqa: E501
         """Upload a single component  # noqa: E501
@@ -369,11 +386,15 @@ class ComponentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.upload_component_with_http_info(repository, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.upload_component_with_http_info(
+                repository, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.upload_component_with_http_info(repository, **kwargs)  # noqa: E501
+            (data) = self.upload_component_with_http_info(
+                repository, **kwargs
+            )  # noqa: E501
             return data
 
     def upload_component_with_http_info(self, repository, **kwargs):  # noqa: E501
@@ -435,137 +456,220 @@ class ComponentsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository', 'helm_tag', 'helm_asset', 'r_tag', 'r_asset', 'r_asset_path_id', 'pypi_tag', 'pypi_asset', 'docker_tag', 'docker_asset', 'yum_directory', 'yum_tag', 'yum_asset', 'yum_asset_filename', 'rubygems_tag', 'rubygems_asset', 'nuget_tag', 'nuget_asset', 'npm_tag', 'npm_asset', 'raw_directory', 'raw_tag', 'raw_asset1', 'raw_asset1_filename', 'raw_asset2', 'raw_asset2_filename', 'raw_asset3', 'raw_asset3_filename', 'apt_tag', 'apt_asset', 'maven2_group_id', 'maven2_artifact_id', 'maven2_version', 'maven2_generate_pom', 'maven2_packaging', 'maven2_tag', 'maven2_asset1', 'maven2_asset1_classifier', 'maven2_asset1_extension', 'maven2_asset2', 'maven2_asset2_classifier', 'maven2_asset2_extension', 'maven2_asset3', 'maven2_asset3_classifier', 'maven2_asset3_extension']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "repository",
+            "helm_tag",
+            "helm_asset",
+            "r_tag",
+            "r_asset",
+            "r_asset_path_id",
+            "pypi_tag",
+            "pypi_asset",
+            "docker_tag",
+            "docker_asset",
+            "yum_directory",
+            "yum_tag",
+            "yum_asset",
+            "yum_asset_filename",
+            "rubygems_tag",
+            "rubygems_asset",
+            "nuget_tag",
+            "nuget_asset",
+            "npm_tag",
+            "npm_asset",
+            "raw_directory",
+            "raw_tag",
+            "raw_asset1",
+            "raw_asset1_filename",
+            "raw_asset2",
+            "raw_asset2_filename",
+            "raw_asset3",
+            "raw_asset3_filename",
+            "apt_tag",
+            "apt_asset",
+            "maven2_group_id",
+            "maven2_artifact_id",
+            "maven2_version",
+            "maven2_generate_pom",
+            "maven2_packaging",
+            "maven2_tag",
+            "maven2_asset1",
+            "maven2_asset1_classifier",
+            "maven2_asset1_extension",
+            "maven2_asset2",
+            "maven2_asset2_classifier",
+            "maven2_asset2_extension",
+            "maven2_asset3",
+            "maven2_asset3_classifier",
+            "maven2_asset3_extension",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method upload_component" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository' is set
-        if ('repository' not in params or
-                params['repository'] is None):
-            raise ValueError("Missing the required parameter `repository` when calling `upload_component`")  # noqa: E501
+        if "repository" not in params or params["repository"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository` when calling `upload_component`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'repository' in params:
-            query_params.append(('repository', params['repository']))  # noqa: E501
+        if "repository" in params:
+            query_params.append(("repository", params["repository"]))  # noqa: E501
 
         header_params = {}
 
         form_params = []
         local_var_files = {}
-        if 'helm_tag' in params:
-            form_params.append(('helm.tag', params['helm_tag']))  # noqa: E501
-        if 'helm_asset' in params:
-            local_var_files['helm.asset'] = params['helm_asset']  # noqa: E501
-        if 'r_tag' in params:
-            form_params.append(('r.tag', params['r_tag']))  # noqa: E501
-        if 'r_asset' in params:
-            local_var_files['r.asset'] = params['r_asset']  # noqa: E501
-        if 'r_asset_path_id' in params:
-            form_params.append(('r.asset.pathId', params['r_asset_path_id']))  # noqa: E501
-        if 'pypi_tag' in params:
-            form_params.append(('pypi.tag', params['pypi_tag']))  # noqa: E501
-        if 'pypi_asset' in params:
-            local_var_files['pypi.asset'] = params['pypi_asset']  # noqa: E501
-        if 'docker_tag' in params:
-            form_params.append(('docker.tag', params['docker_tag']))  # noqa: E501
-        if 'docker_asset' in params:
-            local_var_files['docker.asset'] = params['docker_asset']  # noqa: E501
-        if 'yum_directory' in params:
-            form_params.append(('yum.directory', params['yum_directory']))  # noqa: E501
-        if 'yum_tag' in params:
-            form_params.append(('yum.tag', params['yum_tag']))  # noqa: E501
-        if 'yum_asset' in params:
-            local_var_files['yum.asset'] = params['yum_asset']  # noqa: E501
-        if 'yum_asset_filename' in params:
-            form_params.append(('yum.asset.filename', params['yum_asset_filename']))  # noqa: E501
-        if 'rubygems_tag' in params:
-            form_params.append(('rubygems.tag', params['rubygems_tag']))  # noqa: E501
-        if 'rubygems_asset' in params:
-            local_var_files['rubygems.asset'] = params['rubygems_asset']  # noqa: E501
-        if 'nuget_tag' in params:
-            form_params.append(('nuget.tag', params['nuget_tag']))  # noqa: E501
-        if 'nuget_asset' in params:
-            local_var_files['nuget.asset'] = params['nuget_asset']  # noqa: E501
-        if 'npm_tag' in params:
-            form_params.append(('npm.tag', params['npm_tag']))  # noqa: E501
-        if 'npm_asset' in params:
-            local_var_files['npm.asset'] = params['npm_asset']  # noqa: E501
-        if 'raw_directory' in params:
-            form_params.append(('raw.directory', params['raw_directory']))  # noqa: E501
-        if 'raw_tag' in params:
-            form_params.append(('raw.tag', params['raw_tag']))  # noqa: E501
-        if 'raw_asset1' in params:
-            local_var_files['raw.asset1'] = params['raw_asset1']  # noqa: E501
-        if 'raw_asset1_filename' in params:
-            form_params.append(('raw.asset1.filename', params['raw_asset1_filename']))  # noqa: E501
-        if 'raw_asset2' in params:
-            local_var_files['raw.asset2'] = params['raw_asset2']  # noqa: E501
-        if 'raw_asset2_filename' in params:
-            form_params.append(('raw.asset2.filename', params['raw_asset2_filename']))  # noqa: E501
-        if 'raw_asset3' in params:
-            local_var_files['raw.asset3'] = params['raw_asset3']  # noqa: E501
-        if 'raw_asset3_filename' in params:
-            form_params.append(('raw.asset3.filename', params['raw_asset3_filename']))  # noqa: E501
-        if 'apt_tag' in params:
-            form_params.append(('apt.tag', params['apt_tag']))  # noqa: E501
-        if 'apt_asset' in params:
-            local_var_files['apt.asset'] = params['apt_asset']  # noqa: E501
-        if 'maven2_group_id' in params:
-            form_params.append(('maven2.groupId', params['maven2_group_id']))  # noqa: E501
-        if 'maven2_artifact_id' in params:
-            form_params.append(('maven2.artifactId', params['maven2_artifact_id']))  # noqa: E501
-        if 'maven2_version' in params:
-            form_params.append(('maven2.version', params['maven2_version']))  # noqa: E501
-        if 'maven2_generate_pom' in params:
-            form_params.append(('maven2.generate-pom', params['maven2_generate_pom']))  # noqa: E501
-        if 'maven2_packaging' in params:
-            form_params.append(('maven2.packaging', params['maven2_packaging']))  # noqa: E501
-        if 'maven2_tag' in params:
-            form_params.append(('maven2.tag', params['maven2_tag']))  # noqa: E501
-        if 'maven2_asset1' in params:
-            local_var_files['maven2.asset1'] = params['maven2_asset1']  # noqa: E501
-        if 'maven2_asset1_classifier' in params:
-            form_params.append(('maven2.asset1.classifier', params['maven2_asset1_classifier']))  # noqa: E501
-        if 'maven2_asset1_extension' in params:
-            form_params.append(('maven2.asset1.extension', params['maven2_asset1_extension']))  # noqa: E501
-        if 'maven2_asset2' in params:
-            local_var_files['maven2.asset2'] = params['maven2_asset2']  # noqa: E501
-        if 'maven2_asset2_classifier' in params:
-            form_params.append(('maven2.asset2.classifier', params['maven2_asset2_classifier']))  # noqa: E501
-        if 'maven2_asset2_extension' in params:
-            form_params.append(('maven2.asset2.extension', params['maven2_asset2_extension']))  # noqa: E501
-        if 'maven2_asset3' in params:
-            local_var_files['maven2.asset3'] = params['maven2_asset3']  # noqa: E501
-        if 'maven2_asset3_classifier' in params:
-            form_params.append(('maven2.asset3.classifier', params['maven2_asset3_classifier']))  # noqa: E501
-        if 'maven2_asset3_extension' in params:
-            form_params.append(('maven2.asset3.extension', params['maven2_asset3_extension']))  # noqa: E501
+        if "helm_tag" in params:
+            form_params.append(("helm.tag", params["helm_tag"]))  # noqa: E501
+        if "helm_asset" in params:
+            local_var_files["helm.asset"] = params["helm_asset"]  # noqa: E501
+        if "r_tag" in params:
+            form_params.append(("r.tag", params["r_tag"]))  # noqa: E501
+        if "r_asset" in params:
+            local_var_files["r.asset"] = params["r_asset"]  # noqa: E501
+        if "r_asset_path_id" in params:
+            form_params.append(
+                ("r.asset.pathId", params["r_asset_path_id"])
+            )  # noqa: E501
+        if "pypi_tag" in params:
+            form_params.append(("pypi.tag", params["pypi_tag"]))  # noqa: E501
+        if "pypi_asset" in params:
+            local_var_files["pypi.asset"] = params["pypi_asset"]  # noqa: E501
+        if "docker_tag" in params:
+            form_params.append(("docker.tag", params["docker_tag"]))  # noqa: E501
+        if "docker_asset" in params:
+            local_var_files["docker.asset"] = params["docker_asset"]  # noqa: E501
+        if "yum_directory" in params:
+            form_params.append(("yum.directory", params["yum_directory"]))  # noqa: E501
+        if "yum_tag" in params:
+            form_params.append(("yum.tag", params["yum_tag"]))  # noqa: E501
+        if "yum_asset" in params:
+            local_var_files["yum.asset"] = params["yum_asset"]  # noqa: E501
+        if "yum_asset_filename" in params:
+            form_params.append(
+                ("yum.asset.filename", params["yum_asset_filename"])
+            )  # noqa: E501
+        if "rubygems_tag" in params:
+            form_params.append(("rubygems.tag", params["rubygems_tag"]))  # noqa: E501
+        if "rubygems_asset" in params:
+            local_var_files["rubygems.asset"] = params["rubygems_asset"]  # noqa: E501
+        if "nuget_tag" in params:
+            form_params.append(("nuget.tag", params["nuget_tag"]))  # noqa: E501
+        if "nuget_asset" in params:
+            local_var_files["nuget.asset"] = params["nuget_asset"]  # noqa: E501
+        if "npm_tag" in params:
+            form_params.append(("npm.tag", params["npm_tag"]))  # noqa: E501
+        if "npm_asset" in params:
+            local_var_files["npm.asset"] = params["npm_asset"]  # noqa: E501
+        if "raw_directory" in params:
+            form_params.append(("raw.directory", params["raw_directory"]))  # noqa: E501
+        if "raw_tag" in params:
+            form_params.append(("raw.tag", params["raw_tag"]))  # noqa: E501
+        if "raw_asset1" in params:
+            local_var_files["raw.asset1"] = params["raw_asset1"]  # noqa: E501
+        if "raw_asset1_filename" in params:
+            form_params.append(
+                ("raw.asset1.filename", params["raw_asset1_filename"])
+            )  # noqa: E501
+        if "raw_asset2" in params:
+            local_var_files["raw.asset2"] = params["raw_asset2"]  # noqa: E501
+        if "raw_asset2_filename" in params:
+            form_params.append(
+                ("raw.asset2.filename", params["raw_asset2_filename"])
+            )  # noqa: E501
+        if "raw_asset3" in params:
+            local_var_files["raw.asset3"] = params["raw_asset3"]  # noqa: E501
+        if "raw_asset3_filename" in params:
+            form_params.append(
+                ("raw.asset3.filename", params["raw_asset3_filename"])
+            )  # noqa: E501
+        if "apt_tag" in params:
+            form_params.append(("apt.tag", params["apt_tag"]))  # noqa: E501
+        if "apt_asset" in params:
+            local_var_files["apt.asset"] = params["apt_asset"]  # noqa: E501
+        if "maven2_group_id" in params:
+            form_params.append(
+                ("maven2.groupId", params["maven2_group_id"])
+            )  # noqa: E501
+        if "maven2_artifact_id" in params:
+            form_params.append(
+                ("maven2.artifactId", params["maven2_artifact_id"])
+            )  # noqa: E501
+        if "maven2_version" in params:
+            form_params.append(
+                ("maven2.version", params["maven2_version"])
+            )  # noqa: E501
+        if "maven2_generate_pom" in params:
+            form_params.append(
+                ("maven2.generate-pom", params["maven2_generate_pom"])
+            )  # noqa: E501
+        if "maven2_packaging" in params:
+            form_params.append(
+                ("maven2.packaging", params["maven2_packaging"])
+            )  # noqa: E501
+        if "maven2_tag" in params:
+            form_params.append(("maven2.tag", params["maven2_tag"]))  # noqa: E501
+        if "maven2_asset1" in params:
+            local_var_files["maven2.asset1"] = params["maven2_asset1"]  # noqa: E501
+        if "maven2_asset1_classifier" in params:
+            form_params.append(
+                ("maven2.asset1.classifier", params["maven2_asset1_classifier"])
+            )  # noqa: E501
+        if "maven2_asset1_extension" in params:
+            form_params.append(
+                ("maven2.asset1.extension", params["maven2_asset1_extension"])
+            )  # noqa: E501
+        if "maven2_asset2" in params:
+            local_var_files["maven2.asset2"] = params["maven2_asset2"]  # noqa: E501
+        if "maven2_asset2_classifier" in params:
+            form_params.append(
+                ("maven2.asset2.classifier", params["maven2_asset2_classifier"])
+            )  # noqa: E501
+        if "maven2_asset2_extension" in params:
+            form_params.append(
+                ("maven2.asset2.extension", params["maven2_asset2_extension"])
+            )  # noqa: E501
+        if "maven2_asset3" in params:
+            local_var_files["maven2.asset3"] = params["maven2_asset3"]  # noqa: E501
+        if "maven2_asset3_classifier" in params:
+            form_params.append(
+                ("maven2.asset3.classifier", params["maven2_asset3_classifier"])
+            )  # noqa: E501
+        if "maven2_asset3_extension" in params:
+            form_params.append(
+                ("maven2.asset3.extension", params["maven2_asset3_extension"])
+            )  # noqa: E501
 
         body_params = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['multipart/form-data'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["multipart/form-data"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/components', 'POST',
+            "/v1/components",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -574,8 +678,9 @@ class ComponentsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

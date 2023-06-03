@@ -1,21 +1,23 @@
 # swagger_client.ManageIQServerConfigurationApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**disable_iq**](ManageIQServerConfigurationApi.md#disable_iq) | **POST** /v1/iq/disable | Disable IQ server
-[**enable_iq**](ManageIQServerConfigurationApi.md#enable_iq) | **POST** /v1/iq/enable | Enable IQ server
-[**get_configuration**](ManageIQServerConfigurationApi.md#get_configuration) | **GET** /v1/iq | Get IQ server configuration
-[**update_configuration**](ManageIQServerConfigurationApi.md#update_configuration) | **PUT** /v1/iq | Update IQ server configuration
-[**verify_connection**](ManageIQServerConfigurationApi.md#verify_connection) | **POST** /v1/iq/verify-connection | Verify IQ server connection
+| Method                                                                             | HTTP request                      | Description                    |
+| ---------------------------------------------------------------------------------- | --------------------------------- | ------------------------------ |
+| [**disable_iq**](ManageIQServerConfigurationApi.md#disable_iq)                     | **POST** /v1/iq/disable           | Disable IQ server              |
+| [**enable_iq**](ManageIQServerConfigurationApi.md#enable_iq)                       | **POST** /v1/iq/enable            | Enable IQ server               |
+| [**get_configuration**](ManageIQServerConfigurationApi.md#get_configuration)       | **GET** /v1/iq                    | Get IQ server configuration    |
+| [**update_configuration**](ManageIQServerConfigurationApi.md#update_configuration) | **PUT** /v1/iq                    | Update IQ server configuration |
+| [**verify_connection**](ManageIQServerConfigurationApi.md#verify_connection)       | **POST** /v1/iq/verify-connection | Verify IQ server connection    |
 
 # **disable_iq**
+
 > disable_iq()
 
 Disable IQ server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -34,6 +36,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -46,17 +49,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enable_iq**
+
 > enable_iq()
 
 Enable IQ server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -75,6 +80,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -87,17 +93,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration**
+
 > get_configuration()
 
 Get IQ server configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -116,6 +124,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -128,17 +137,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_configuration**
+
 > update_configuration(body=body)
 
 Update IQ server configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -159,9 +170,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**IqConnectionXo**](IqConnectionXo.md)|  | [optional] 
+| Name     | Type                                    | Description | Notes      |
+| -------- | --------------------------------------- | ----------- | ---------- |
+| **body** | [**IqConnectionXo**](IqConnectionXo.md) |             | [optional] |
 
 ### Return type
 
@@ -173,17 +184,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **verify_connection**
+
 > verify_connection()
 
 Verify IQ server connection
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -202,6 +215,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -214,8 +228,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

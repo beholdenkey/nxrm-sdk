@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.maven_hosted_api_repository import MavenHostedApiRepository  # noqa: E501
+from nexus_sdk.models.maven_hosted_api_repository import (  # noqa: E501
+    MavenHostedApiRepository,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestMavenHostedApiRepository(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

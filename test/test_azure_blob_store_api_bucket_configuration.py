@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.azure_blob_store_api_bucket_configuration import AzureBlobStoreApiBucketConfiguration  # noqa: E501
+from nexus_sdk.models.azure_blob_store_api_bucket_configuration import (  # noqa: E501
+    AzureBlobStoreApiBucketConfiguration,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestAzureBlobStoreApiBucketConfiguration(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

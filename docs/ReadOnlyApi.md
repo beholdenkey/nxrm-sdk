@@ -1,15 +1,16 @@
 # swagger_client.ReadOnlyApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**force_release**](ReadOnlyApi.md#force_release) | **POST** /v1/read-only/force-release | Forcibly release read-only
-[**freeze**](ReadOnlyApi.md#freeze) | **POST** /v1/read-only/freeze | Enable read-only
-[**get**](ReadOnlyApi.md#get) | **GET** /v1/read-only | Get read-only state
-[**release**](ReadOnlyApi.md#release) | **POST** /v1/read-only/release | Release read-only
+| Method                                            | HTTP request                         | Description                |
+| ------------------------------------------------- | ------------------------------------ | -------------------------- |
+| [**force_release**](ReadOnlyApi.md#force_release) | **POST** /v1/read-only/force-release | Forcibly release read-only |
+| [**freeze**](ReadOnlyApi.md#freeze)               | **POST** /v1/read-only/freeze        | Enable read-only           |
+| [**get**](ReadOnlyApi.md#get)                     | **GET** /v1/read-only                | Get read-only state        |
+| [**release**](ReadOnlyApi.md#release)             | **POST** /v1/read-only/release       | Release read-only          |
 
 # **force_release**
+
 > force_release()
 
 Forcibly release read-only
@@ -17,6 +18,7 @@ Forcibly release read-only
 Forcibly release read-only status, including System initiated tasks. Warning: may result in data loss.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -35,6 +37,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -47,17 +50,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **freeze**
+
 > freeze()
 
 Enable read-only
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -76,6 +81,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -88,17 +94,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
+
 > ReadOnlyState get()
 
 Get read-only state
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -118,6 +126,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -130,12 +139,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **release**
+
 > release()
 
 Release read-only
@@ -143,6 +153,7 @@ Release read-only
 Release administrator initiated read-only status. Will not release read-only caused by system tasks.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -161,6 +172,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -173,8 +185,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

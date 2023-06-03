@@ -46,8 +46,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege_with_http_info(**kwargs)  # noqa: E501
@@ -68,21 +68,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -96,17 +96,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/application', 'POST',
+            "/v1/security/privileges/application",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -115,11 +119,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_privilege1(self, **kwargs):  # noqa: E501
         """Create a wildcard type privilege.  # noqa: E501
@@ -135,8 +140,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege1_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege1_with_http_info(**kwargs)  # noqa: E501
@@ -157,21 +162,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -185,17 +190,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/wildcard', 'POST',
+            "/v1/security/privileges/wildcard",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -204,11 +213,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_privilege2(self, **kwargs):  # noqa: E501
         """Create a repository content selector type privilege.  # noqa: E501
@@ -224,8 +234,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege2_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege2_with_http_info(**kwargs)  # noqa: E501
@@ -246,21 +256,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -274,17 +284,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-content-selector', 'POST',
+            "/v1/security/privileges/repository-content-selector",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -293,11 +307,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_privilege3(self, **kwargs):  # noqa: E501
         """Create a repository admin type privilege.  # noqa: E501
@@ -313,8 +328,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege3_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege3_with_http_info(**kwargs)  # noqa: E501
@@ -335,21 +350,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -363,17 +378,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-admin', 'POST',
+            "/v1/security/privileges/repository-admin",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -382,11 +401,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_privilege4(self, **kwargs):  # noqa: E501
         """Create a repository view type privilege.  # noqa: E501
@@ -402,8 +422,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege4_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege4_with_http_info(**kwargs)  # noqa: E501
@@ -424,21 +444,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege4" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -452,17 +472,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-view', 'POST',
+            "/v1/security/privileges/repository-view",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -471,11 +495,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_privilege5(self, **kwargs):  # noqa: E501
         """Create a script type privilege.  # noqa: E501
@@ -491,8 +516,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_privilege5_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_privilege5_with_http_info(**kwargs)  # noqa: E501
@@ -513,21 +538,21 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_privilege5" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -541,17 +566,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/script', 'POST',
+            "/v1/security/privileges/script",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -560,11 +589,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def delete_privilege(self, privilege_name, **kwargs):  # noqa: E501
         """Delete a privilege by name.  # noqa: E501
@@ -580,11 +610,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.delete_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.delete_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.delete_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.delete_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def delete_privilege_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -602,31 +636,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_privilege" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `delete_privilege`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `delete_privilege`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -640,7 +675,8 @@ class SecurityManagementPrivilegesApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/{privilegeName}', 'DELETE',
+            "/v1/security/privileges/{privilegeName}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -649,11 +685,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_privilege(self, privilege_name, **kwargs):  # noqa: E501
         """Retrieve a privilege by name.  # noqa: E501
@@ -669,11 +706,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.get_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_privilege_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -691,31 +732,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_privilege" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `get_privilege`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `get_privilege`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -726,27 +768,30 @@ class SecurityManagementPrivilegesApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/{privilegeName}', 'GET',
+            "/v1/security/privileges/{privilegeName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiPrivilege',  # noqa: E501
+            response_type="ApiPrivilege",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_privileges(self, **kwargs):  # noqa: E501
         """Retrieve a list of privileges.  # noqa: E501
@@ -761,8 +806,8 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_privileges_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_privileges_with_http_info(**kwargs)  # noqa: E501
@@ -783,20 +828,20 @@ class SecurityManagementPrivilegesApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_privileges" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -811,27 +856,30 @@ class SecurityManagementPrivilegesApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges', 'GET',
+            "/v1/security/privileges",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ApiPrivilege]',  # noqa: E501
+            response_type="list[ApiPrivilege]",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege(self, privilege_name, **kwargs):  # noqa: E501
         """Update an application type privilege.  # noqa: E501
@@ -848,11 +896,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -871,31 +923,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -905,17 +958,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/application/{privilegeName}', 'PUT',
+            "/v1/security/privileges/application/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -924,11 +981,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege1(self, privilege_name, **kwargs):  # noqa: E501
         """Update a wildcard type privilege.  # noqa: E501
@@ -945,11 +1003,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege1_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege1_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege1_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege1_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege1_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -968,31 +1030,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege1`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -1002,17 +1065,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/wildcard/{privilegeName}', 'PUT',
+            "/v1/security/privileges/wildcard/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1021,11 +1088,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege2(self, privilege_name, **kwargs):  # noqa: E501
         """Update a repository view type privilege.  # noqa: E501
@@ -1042,11 +1110,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege2_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege2_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege2_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege2_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege2_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -1065,31 +1137,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege2`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege2`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -1099,17 +1172,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-view/{privilegeName}', 'PUT',
+            "/v1/security/privileges/repository-view/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1118,11 +1195,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege3(self, privilege_name, **kwargs):  # noqa: E501
         """Update a repository content selector type privilege.  # noqa: E501
@@ -1139,11 +1217,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege3_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege3_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege3_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege3_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege3_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -1162,31 +1244,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege3`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege3`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -1196,17 +1279,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-content-selector/{privilegeName}', 'PUT',
+            "/v1/security/privileges/repository-content-selector/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1215,11 +1302,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege4(self, privilege_name, **kwargs):  # noqa: E501
         """Update a repository admin type privilege.  # noqa: E501
@@ -1236,11 +1324,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege4_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege4_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege4_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege4_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege4_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -1259,31 +1351,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege4" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege4`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege4`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -1293,17 +1386,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/repository-admin/{privilegeName}', 'PUT',
+            "/v1/security/privileges/repository-admin/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1312,11 +1409,12 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_privilege5(self, privilege_name, **kwargs):  # noqa: E501
         """Update a script type privilege.  # noqa: E501
@@ -1333,11 +1431,15 @@ class SecurityManagementPrivilegesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_privilege5_with_http_info(privilege_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_privilege5_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_privilege5_with_http_info(privilege_name, **kwargs)  # noqa: E501
+            (data) = self.update_privilege5_with_http_info(
+                privilege_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_privilege5_with_http_info(self, privilege_name, **kwargs):  # noqa: E501
@@ -1356,31 +1458,32 @@ class SecurityManagementPrivilegesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['privilege_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["privilege_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_privilege5" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'privilege_name' is set
-        if ('privilege_name' not in params or
-                params['privilege_name'] is None):
-            raise ValueError("Missing the required parameter `privilege_name` when calling `update_privilege5`")  # noqa: E501
+        if "privilege_name" not in params or params["privilege_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `privilege_name` when calling `update_privilege5`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'privilege_name' in params:
-            path_params['privilegeName'] = params['privilege_name']  # noqa: E501
+        if "privilege_name" in params:
+            path_params["privilegeName"] = params["privilege_name"]  # noqa: E501
 
         query_params = []
 
@@ -1390,17 +1493,21 @@ class SecurityManagementPrivilegesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/privileges/script/{privilegeName}', 'PUT',
+            "/v1/security/privileges/script/{privilegeName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1409,8 +1516,9 @@ class SecurityManagementPrivilegesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

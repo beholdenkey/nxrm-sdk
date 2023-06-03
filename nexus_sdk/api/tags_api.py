@@ -82,8 +82,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.associate_with_http_info(tag_name, **kwargs)  # noqa: E501
         else:
             (data) = self.associate_with_http_info(tag_name, **kwargs)  # noqa: E501
@@ -140,105 +140,182 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['tag_name', 'wait', 'q', 'repository', 'format', 'group', 'name', 'version', 'prerelease', 'md5', 'sha1', 'sha256', 'sha512', 'conan_base_version', 'conan_channel', 'docker_image_name', 'docker_image_tag', 'docker_layer_id', 'docker_content_digest', 'maven_group_id', 'maven_artifact_id', 'maven_base_version', 'maven_extension', 'maven_classifier', 'npm_scope', 'nuget_id', 'nuget_tags', 'p2_plugin_name', 'pypi_classifiers', 'pypi_description', 'pypi_keywords', 'pypi_summary', 'rubygems_description', 'rubygems_platform', 'rubygems_summary', 'tag', 'yum_architecture']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "tag_name",
+            "wait",
+            "q",
+            "repository",
+            "format",
+            "group",
+            "name",
+            "version",
+            "prerelease",
+            "md5",
+            "sha1",
+            "sha256",
+            "sha512",
+            "conan_base_version",
+            "conan_channel",
+            "docker_image_name",
+            "docker_image_tag",
+            "docker_layer_id",
+            "docker_content_digest",
+            "maven_group_id",
+            "maven_artifact_id",
+            "maven_base_version",
+            "maven_extension",
+            "maven_classifier",
+            "npm_scope",
+            "nuget_id",
+            "nuget_tags",
+            "p2_plugin_name",
+            "pypi_classifiers",
+            "pypi_description",
+            "pypi_keywords",
+            "pypi_summary",
+            "rubygems_description",
+            "rubygems_platform",
+            "rubygems_summary",
+            "tag",
+            "yum_architecture",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method associate" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'tag_name' is set
-        if ('tag_name' not in params or
-                params['tag_name'] is None):
-            raise ValueError("Missing the required parameter `tag_name` when calling `associate`")  # noqa: E501
+        if "tag_name" not in params or params["tag_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `tag_name` when calling `associate`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'tag_name' in params:
-            path_params['tagName'] = params['tag_name']  # noqa: E501
+        if "tag_name" in params:
+            path_params["tagName"] = params["tag_name"]  # noqa: E501
 
         query_params = []
-        if 'wait' in params:
-            query_params.append(('wait', params['wait']))  # noqa: E501
-        if 'q' in params:
-            query_params.append(('q', params['q']))  # noqa: E501
-        if 'repository' in params:
-            query_params.append(('repository', params['repository']))  # noqa: E501
-        if 'format' in params:
-            query_params.append(('format', params['format']))  # noqa: E501
-        if 'group' in params:
-            query_params.append(('group', params['group']))  # noqa: E501
-        if 'name' in params:
-            query_params.append(('name', params['name']))  # noqa: E501
-        if 'version' in params:
-            query_params.append(('version', params['version']))  # noqa: E501
-        if 'prerelease' in params:
-            query_params.append(('prerelease', params['prerelease']))  # noqa: E501
-        if 'md5' in params:
-            query_params.append(('md5', params['md5']))  # noqa: E501
-        if 'sha1' in params:
-            query_params.append(('sha1', params['sha1']))  # noqa: E501
-        if 'sha256' in params:
-            query_params.append(('sha256', params['sha256']))  # noqa: E501
-        if 'sha512' in params:
-            query_params.append(('sha512', params['sha512']))  # noqa: E501
-        if 'conan_base_version' in params:
-            query_params.append(('conan.baseVersion', params['conan_base_version']))  # noqa: E501
-        if 'conan_channel' in params:
-            query_params.append(('conan.channel', params['conan_channel']))  # noqa: E501
-        if 'docker_image_name' in params:
-            query_params.append(('docker.imageName', params['docker_image_name']))  # noqa: E501
-        if 'docker_image_tag' in params:
-            query_params.append(('docker.imageTag', params['docker_image_tag']))  # noqa: E501
-        if 'docker_layer_id' in params:
-            query_params.append(('docker.layerId', params['docker_layer_id']))  # noqa: E501
-        if 'docker_content_digest' in params:
-            query_params.append(('docker.contentDigest', params['docker_content_digest']))  # noqa: E501
-        if 'maven_group_id' in params:
-            query_params.append(('maven.groupId', params['maven_group_id']))  # noqa: E501
-        if 'maven_artifact_id' in params:
-            query_params.append(('maven.artifactId', params['maven_artifact_id']))  # noqa: E501
-        if 'maven_base_version' in params:
-            query_params.append(('maven.baseVersion', params['maven_base_version']))  # noqa: E501
-        if 'maven_extension' in params:
-            query_params.append(('maven.extension', params['maven_extension']))  # noqa: E501
-        if 'maven_classifier' in params:
-            query_params.append(('maven.classifier', params['maven_classifier']))  # noqa: E501
-        if 'npm_scope' in params:
-            query_params.append(('npm.scope', params['npm_scope']))  # noqa: E501
-        if 'nuget_id' in params:
-            query_params.append(('nuget.id', params['nuget_id']))  # noqa: E501
-        if 'nuget_tags' in params:
-            query_params.append(('nuget.tags', params['nuget_tags']))  # noqa: E501
-        if 'p2_plugin_name' in params:
-            query_params.append(('p2.pluginName', params['p2_plugin_name']))  # noqa: E501
-        if 'pypi_classifiers' in params:
-            query_params.append(('pypi.classifiers', params['pypi_classifiers']))  # noqa: E501
-        if 'pypi_description' in params:
-            query_params.append(('pypi.description', params['pypi_description']))  # noqa: E501
-        if 'pypi_keywords' in params:
-            query_params.append(('pypi.keywords', params['pypi_keywords']))  # noqa: E501
-        if 'pypi_summary' in params:
-            query_params.append(('pypi.summary', params['pypi_summary']))  # noqa: E501
-        if 'rubygems_description' in params:
-            query_params.append(('rubygems.description', params['rubygems_description']))  # noqa: E501
-        if 'rubygems_platform' in params:
-            query_params.append(('rubygems.platform', params['rubygems_platform']))  # noqa: E501
-        if 'rubygems_summary' in params:
-            query_params.append(('rubygems.summary', params['rubygems_summary']))  # noqa: E501
-        if 'tag' in params:
-            query_params.append(('tag', params['tag']))  # noqa: E501
-        if 'yum_architecture' in params:
-            query_params.append(('yum.architecture', params['yum_architecture']))  # noqa: E501
+        if "wait" in params:
+            query_params.append(("wait", params["wait"]))  # noqa: E501
+        if "q" in params:
+            query_params.append(("q", params["q"]))  # noqa: E501
+        if "repository" in params:
+            query_params.append(("repository", params["repository"]))  # noqa: E501
+        if "format" in params:
+            query_params.append(("format", params["format"]))  # noqa: E501
+        if "group" in params:
+            query_params.append(("group", params["group"]))  # noqa: E501
+        if "name" in params:
+            query_params.append(("name", params["name"]))  # noqa: E501
+        if "version" in params:
+            query_params.append(("version", params["version"]))  # noqa: E501
+        if "prerelease" in params:
+            query_params.append(("prerelease", params["prerelease"]))  # noqa: E501
+        if "md5" in params:
+            query_params.append(("md5", params["md5"]))  # noqa: E501
+        if "sha1" in params:
+            query_params.append(("sha1", params["sha1"]))  # noqa: E501
+        if "sha256" in params:
+            query_params.append(("sha256", params["sha256"]))  # noqa: E501
+        if "sha512" in params:
+            query_params.append(("sha512", params["sha512"]))  # noqa: E501
+        if "conan_base_version" in params:
+            query_params.append(
+                ("conan.baseVersion", params["conan_base_version"])
+            )  # noqa: E501
+        if "conan_channel" in params:
+            query_params.append(
+                ("conan.channel", params["conan_channel"])
+            )  # noqa: E501
+        if "docker_image_name" in params:
+            query_params.append(
+                ("docker.imageName", params["docker_image_name"])
+            )  # noqa: E501
+        if "docker_image_tag" in params:
+            query_params.append(
+                ("docker.imageTag", params["docker_image_tag"])
+            )  # noqa: E501
+        if "docker_layer_id" in params:
+            query_params.append(
+                ("docker.layerId", params["docker_layer_id"])
+            )  # noqa: E501
+        if "docker_content_digest" in params:
+            query_params.append(
+                ("docker.contentDigest", params["docker_content_digest"])
+            )  # noqa: E501
+        if "maven_group_id" in params:
+            query_params.append(
+                ("maven.groupId", params["maven_group_id"])
+            )  # noqa: E501
+        if "maven_artifact_id" in params:
+            query_params.append(
+                ("maven.artifactId", params["maven_artifact_id"])
+            )  # noqa: E501
+        if "maven_base_version" in params:
+            query_params.append(
+                ("maven.baseVersion", params["maven_base_version"])
+            )  # noqa: E501
+        if "maven_extension" in params:
+            query_params.append(
+                ("maven.extension", params["maven_extension"])
+            )  # noqa: E501
+        if "maven_classifier" in params:
+            query_params.append(
+                ("maven.classifier", params["maven_classifier"])
+            )  # noqa: E501
+        if "npm_scope" in params:
+            query_params.append(("npm.scope", params["npm_scope"]))  # noqa: E501
+        if "nuget_id" in params:
+            query_params.append(("nuget.id", params["nuget_id"]))  # noqa: E501
+        if "nuget_tags" in params:
+            query_params.append(("nuget.tags", params["nuget_tags"]))  # noqa: E501
+        if "p2_plugin_name" in params:
+            query_params.append(
+                ("p2.pluginName", params["p2_plugin_name"])
+            )  # noqa: E501
+        if "pypi_classifiers" in params:
+            query_params.append(
+                ("pypi.classifiers", params["pypi_classifiers"])
+            )  # noqa: E501
+        if "pypi_description" in params:
+            query_params.append(
+                ("pypi.description", params["pypi_description"])
+            )  # noqa: E501
+        if "pypi_keywords" in params:
+            query_params.append(
+                ("pypi.keywords", params["pypi_keywords"])
+            )  # noqa: E501
+        if "pypi_summary" in params:
+            query_params.append(("pypi.summary", params["pypi_summary"]))  # noqa: E501
+        if "rubygems_description" in params:
+            query_params.append(
+                ("rubygems.description", params["rubygems_description"])
+            )  # noqa: E501
+        if "rubygems_platform" in params:
+            query_params.append(
+                ("rubygems.platform", params["rubygems_platform"])
+            )  # noqa: E501
+        if "rubygems_summary" in params:
+            query_params.append(
+                ("rubygems.summary", params["rubygems_summary"])
+            )  # noqa: E501
+        if "tag" in params:
+            query_params.append(("tag", params["tag"]))  # noqa: E501
+        if "yum_architecture" in params:
+            query_params.append(
+                ("yum.architecture", params["yum_architecture"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -250,7 +327,8 @@ class TagsApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags/associate/{tagName}', 'POST',
+            "/v1/tags/associate/{tagName}",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -259,11 +337,12 @@ class TagsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create1(self, **kwargs):  # noqa: E501
         """Create a tag  # noqa: E501
@@ -279,8 +358,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create1_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create1_with_http_info(**kwargs)  # noqa: E501
@@ -301,21 +380,20 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create1" % key
+                    "Got an unexpected keyword argument '%s'" " to method create1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -329,17 +407,21 @@ class TagsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags', 'POST',
+            "/v1/tags",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -348,11 +430,12 @@ class TagsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def delete2(self, name, **kwargs):  # noqa: E501
         """Delete a tag  # noqa: E501
@@ -368,8 +451,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.delete2_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete2_with_http_info(name, **kwargs)  # noqa: E501
@@ -390,31 +473,31 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete2" % key
+                    "Got an unexpected keyword argument '%s'" " to method delete2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete2`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `delete2`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -428,7 +511,8 @@ class TagsApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags/{name}', 'DELETE',
+            "/v1/tags/{name}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -437,11 +521,12 @@ class TagsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def disassociate(self, tag_name, **kwargs):  # noqa: E501
         """Disassociate components from a tag  # noqa: E501
@@ -492,8 +577,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.disassociate_with_http_info(tag_name, **kwargs)  # noqa: E501
         else:
             (data) = self.disassociate_with_http_info(tag_name, **kwargs)  # noqa: E501
@@ -549,103 +634,179 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['tag_name', 'q', 'repository', 'format', 'group', 'name', 'version', 'prerelease', 'md5', 'sha1', 'sha256', 'sha512', 'conan_base_version', 'conan_channel', 'docker_image_name', 'docker_image_tag', 'docker_layer_id', 'docker_content_digest', 'maven_group_id', 'maven_artifact_id', 'maven_base_version', 'maven_extension', 'maven_classifier', 'npm_scope', 'nuget_id', 'nuget_tags', 'p2_plugin_name', 'pypi_classifiers', 'pypi_description', 'pypi_keywords', 'pypi_summary', 'rubygems_description', 'rubygems_platform', 'rubygems_summary', 'tag', 'yum_architecture']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "tag_name",
+            "q",
+            "repository",
+            "format",
+            "group",
+            "name",
+            "version",
+            "prerelease",
+            "md5",
+            "sha1",
+            "sha256",
+            "sha512",
+            "conan_base_version",
+            "conan_channel",
+            "docker_image_name",
+            "docker_image_tag",
+            "docker_layer_id",
+            "docker_content_digest",
+            "maven_group_id",
+            "maven_artifact_id",
+            "maven_base_version",
+            "maven_extension",
+            "maven_classifier",
+            "npm_scope",
+            "nuget_id",
+            "nuget_tags",
+            "p2_plugin_name",
+            "pypi_classifiers",
+            "pypi_description",
+            "pypi_keywords",
+            "pypi_summary",
+            "rubygems_description",
+            "rubygems_platform",
+            "rubygems_summary",
+            "tag",
+            "yum_architecture",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method disassociate" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'tag_name' is set
-        if ('tag_name' not in params or
-                params['tag_name'] is None):
-            raise ValueError("Missing the required parameter `tag_name` when calling `disassociate`")  # noqa: E501
+        if "tag_name" not in params or params["tag_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `tag_name` when calling `disassociate`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'tag_name' in params:
-            path_params['tagName'] = params['tag_name']  # noqa: E501
+        if "tag_name" in params:
+            path_params["tagName"] = params["tag_name"]  # noqa: E501
 
         query_params = []
-        if 'q' in params:
-            query_params.append(('q', params['q']))  # noqa: E501
-        if 'repository' in params:
-            query_params.append(('repository', params['repository']))  # noqa: E501
-        if 'format' in params:
-            query_params.append(('format', params['format']))  # noqa: E501
-        if 'group' in params:
-            query_params.append(('group', params['group']))  # noqa: E501
-        if 'name' in params:
-            query_params.append(('name', params['name']))  # noqa: E501
-        if 'version' in params:
-            query_params.append(('version', params['version']))  # noqa: E501
-        if 'prerelease' in params:
-            query_params.append(('prerelease', params['prerelease']))  # noqa: E501
-        if 'md5' in params:
-            query_params.append(('md5', params['md5']))  # noqa: E501
-        if 'sha1' in params:
-            query_params.append(('sha1', params['sha1']))  # noqa: E501
-        if 'sha256' in params:
-            query_params.append(('sha256', params['sha256']))  # noqa: E501
-        if 'sha512' in params:
-            query_params.append(('sha512', params['sha512']))  # noqa: E501
-        if 'conan_base_version' in params:
-            query_params.append(('conan.baseVersion', params['conan_base_version']))  # noqa: E501
-        if 'conan_channel' in params:
-            query_params.append(('conan.channel', params['conan_channel']))  # noqa: E501
-        if 'docker_image_name' in params:
-            query_params.append(('docker.imageName', params['docker_image_name']))  # noqa: E501
-        if 'docker_image_tag' in params:
-            query_params.append(('docker.imageTag', params['docker_image_tag']))  # noqa: E501
-        if 'docker_layer_id' in params:
-            query_params.append(('docker.layerId', params['docker_layer_id']))  # noqa: E501
-        if 'docker_content_digest' in params:
-            query_params.append(('docker.contentDigest', params['docker_content_digest']))  # noqa: E501
-        if 'maven_group_id' in params:
-            query_params.append(('maven.groupId', params['maven_group_id']))  # noqa: E501
-        if 'maven_artifact_id' in params:
-            query_params.append(('maven.artifactId', params['maven_artifact_id']))  # noqa: E501
-        if 'maven_base_version' in params:
-            query_params.append(('maven.baseVersion', params['maven_base_version']))  # noqa: E501
-        if 'maven_extension' in params:
-            query_params.append(('maven.extension', params['maven_extension']))  # noqa: E501
-        if 'maven_classifier' in params:
-            query_params.append(('maven.classifier', params['maven_classifier']))  # noqa: E501
-        if 'npm_scope' in params:
-            query_params.append(('npm.scope', params['npm_scope']))  # noqa: E501
-        if 'nuget_id' in params:
-            query_params.append(('nuget.id', params['nuget_id']))  # noqa: E501
-        if 'nuget_tags' in params:
-            query_params.append(('nuget.tags', params['nuget_tags']))  # noqa: E501
-        if 'p2_plugin_name' in params:
-            query_params.append(('p2.pluginName', params['p2_plugin_name']))  # noqa: E501
-        if 'pypi_classifiers' in params:
-            query_params.append(('pypi.classifiers', params['pypi_classifiers']))  # noqa: E501
-        if 'pypi_description' in params:
-            query_params.append(('pypi.description', params['pypi_description']))  # noqa: E501
-        if 'pypi_keywords' in params:
-            query_params.append(('pypi.keywords', params['pypi_keywords']))  # noqa: E501
-        if 'pypi_summary' in params:
-            query_params.append(('pypi.summary', params['pypi_summary']))  # noqa: E501
-        if 'rubygems_description' in params:
-            query_params.append(('rubygems.description', params['rubygems_description']))  # noqa: E501
-        if 'rubygems_platform' in params:
-            query_params.append(('rubygems.platform', params['rubygems_platform']))  # noqa: E501
-        if 'rubygems_summary' in params:
-            query_params.append(('rubygems.summary', params['rubygems_summary']))  # noqa: E501
-        if 'tag' in params:
-            query_params.append(('tag', params['tag']))  # noqa: E501
-        if 'yum_architecture' in params:
-            query_params.append(('yum.architecture', params['yum_architecture']))  # noqa: E501
+        if "q" in params:
+            query_params.append(("q", params["q"]))  # noqa: E501
+        if "repository" in params:
+            query_params.append(("repository", params["repository"]))  # noqa: E501
+        if "format" in params:
+            query_params.append(("format", params["format"]))  # noqa: E501
+        if "group" in params:
+            query_params.append(("group", params["group"]))  # noqa: E501
+        if "name" in params:
+            query_params.append(("name", params["name"]))  # noqa: E501
+        if "version" in params:
+            query_params.append(("version", params["version"]))  # noqa: E501
+        if "prerelease" in params:
+            query_params.append(("prerelease", params["prerelease"]))  # noqa: E501
+        if "md5" in params:
+            query_params.append(("md5", params["md5"]))  # noqa: E501
+        if "sha1" in params:
+            query_params.append(("sha1", params["sha1"]))  # noqa: E501
+        if "sha256" in params:
+            query_params.append(("sha256", params["sha256"]))  # noqa: E501
+        if "sha512" in params:
+            query_params.append(("sha512", params["sha512"]))  # noqa: E501
+        if "conan_base_version" in params:
+            query_params.append(
+                ("conan.baseVersion", params["conan_base_version"])
+            )  # noqa: E501
+        if "conan_channel" in params:
+            query_params.append(
+                ("conan.channel", params["conan_channel"])
+            )  # noqa: E501
+        if "docker_image_name" in params:
+            query_params.append(
+                ("docker.imageName", params["docker_image_name"])
+            )  # noqa: E501
+        if "docker_image_tag" in params:
+            query_params.append(
+                ("docker.imageTag", params["docker_image_tag"])
+            )  # noqa: E501
+        if "docker_layer_id" in params:
+            query_params.append(
+                ("docker.layerId", params["docker_layer_id"])
+            )  # noqa: E501
+        if "docker_content_digest" in params:
+            query_params.append(
+                ("docker.contentDigest", params["docker_content_digest"])
+            )  # noqa: E501
+        if "maven_group_id" in params:
+            query_params.append(
+                ("maven.groupId", params["maven_group_id"])
+            )  # noqa: E501
+        if "maven_artifact_id" in params:
+            query_params.append(
+                ("maven.artifactId", params["maven_artifact_id"])
+            )  # noqa: E501
+        if "maven_base_version" in params:
+            query_params.append(
+                ("maven.baseVersion", params["maven_base_version"])
+            )  # noqa: E501
+        if "maven_extension" in params:
+            query_params.append(
+                ("maven.extension", params["maven_extension"])
+            )  # noqa: E501
+        if "maven_classifier" in params:
+            query_params.append(
+                ("maven.classifier", params["maven_classifier"])
+            )  # noqa: E501
+        if "npm_scope" in params:
+            query_params.append(("npm.scope", params["npm_scope"]))  # noqa: E501
+        if "nuget_id" in params:
+            query_params.append(("nuget.id", params["nuget_id"]))  # noqa: E501
+        if "nuget_tags" in params:
+            query_params.append(("nuget.tags", params["nuget_tags"]))  # noqa: E501
+        if "p2_plugin_name" in params:
+            query_params.append(
+                ("p2.pluginName", params["p2_plugin_name"])
+            )  # noqa: E501
+        if "pypi_classifiers" in params:
+            query_params.append(
+                ("pypi.classifiers", params["pypi_classifiers"])
+            )  # noqa: E501
+        if "pypi_description" in params:
+            query_params.append(
+                ("pypi.description", params["pypi_description"])
+            )  # noqa: E501
+        if "pypi_keywords" in params:
+            query_params.append(
+                ("pypi.keywords", params["pypi_keywords"])
+            )  # noqa: E501
+        if "pypi_summary" in params:
+            query_params.append(("pypi.summary", params["pypi_summary"]))  # noqa: E501
+        if "rubygems_description" in params:
+            query_params.append(
+                ("rubygems.description", params["rubygems_description"])
+            )  # noqa: E501
+        if "rubygems_platform" in params:
+            query_params.append(
+                ("rubygems.platform", params["rubygems_platform"])
+            )  # noqa: E501
+        if "rubygems_summary" in params:
+            query_params.append(
+                ("rubygems.summary", params["rubygems_summary"])
+            )  # noqa: E501
+        if "tag" in params:
+            query_params.append(("tag", params["tag"]))  # noqa: E501
+        if "yum_architecture" in params:
+            query_params.append(
+                ("yum.architecture", params["yum_architecture"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -657,7 +818,8 @@ class TagsApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags/associate/{tagName}', 'DELETE',
+            "/v1/tags/associate/{tagName}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -666,11 +828,12 @@ class TagsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get3(self, name, **kwargs):  # noqa: E501
         """Get a tag  # noqa: E501
@@ -686,8 +849,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get3_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get3_with_http_info(name, **kwargs)  # noqa: E501
@@ -708,31 +871,31 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get3" % key
+                    "Got an unexpected keyword argument '%s'" " to method get3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `get3`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `get3`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -743,27 +906,30 @@ class TagsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags/{name}', 'GET',
+            "/v1/tags/{name}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='TagXO',  # noqa: E501
+            response_type="TagXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_tags(self, **kwargs):  # noqa: E501
         """List tags  # noqa: E501
@@ -779,8 +945,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_tags_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_tags_with_http_info(**kwargs)  # noqa: E501
@@ -801,29 +967,31 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['continuation_token']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["continuation_token"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_tags" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'continuation_token' in params:
-            query_params.append(('continuationToken', params['continuation_token']))  # noqa: E501
+        if "continuation_token" in params:
+            query_params.append(
+                ("continuationToken", params["continuation_token"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -832,27 +1000,30 @@ class TagsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags', 'GET',
+            "/v1/tags",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='PageTagXO',  # noqa: E501
+            response_type="PageTagXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def replace(self, name, **kwargs):  # noqa: E501
         """Update a tags attributes  # noqa: E501
@@ -869,8 +1040,8 @@ class TagsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.replace_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.replace_with_http_info(name, **kwargs)  # noqa: E501
@@ -892,31 +1063,31 @@ class TagsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method replace" % key
+                    "Got an unexpected keyword argument '%s'" " to method replace" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `replace`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -926,31 +1097,37 @@ class TagsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/tags/{name}', 'PUT',
+            "/v1/tags/{name}",
+            "PUT",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='TagXO',  # noqa: E501
+            response_type="TagXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

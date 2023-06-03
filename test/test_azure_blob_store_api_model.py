@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.azure_blob_store_api_model import AzureBlobStoreApiModel  # noqa: E501
+from nexus_sdk.models.azure_blob_store_api_model import (  # noqa: E501
+    AzureBlobStoreApiModel,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestAzureBlobStoreApiModel(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

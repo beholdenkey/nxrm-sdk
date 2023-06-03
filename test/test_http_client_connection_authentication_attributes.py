@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.http_client_connection_authentication_attributes import HttpClientConnectionAuthenticationAttributes  # noqa: E501
+from nexus_sdk.models.http_client_connection_authentication_attributes import (  # noqa: E501
+    HttpClientConnectionAuthenticationAttributes,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestHttpClientConnectionAuthenticationAttributes(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.upload_field_definition_xo import UploadFieldDefinitionXO  # noqa: E501
+from nexus_sdk.models.upload_field_definition_xo import (  # noqa: E501
+    UploadFieldDefinitionXO,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestUploadFieldDefinitionXO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

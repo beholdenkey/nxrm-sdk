@@ -1,19 +1,21 @@
 # swagger_client.ProductLicensingApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_license_status**](ProductLicensingApi.md#get_license_status) | **GET** /v1/system/license | Get the current license status.
-[**remove_license**](ProductLicensingApi.md#remove_license) | **DELETE** /v1/system/license | Uninstall license if present.
-[**set_license**](ProductLicensingApi.md#set_license) | **POST** /v1/system/license | Upload a new license file.
+| Method                                                              | HTTP request                  | Description                     |
+| ------------------------------------------------------------------- | ----------------------------- | ------------------------------- |
+| [**get_license_status**](ProductLicensingApi.md#get_license_status) | **GET** /v1/system/license    | Get the current license status. |
+| [**remove_license**](ProductLicensingApi.md#remove_license)         | **DELETE** /v1/system/license | Uninstall license if present.   |
+| [**set_license**](ProductLicensingApi.md#set_license)               | **POST** /v1/system/license   | Upload a new license file.      |
 
 # **get_license_status**
+
 > ApiLicenseDetailsXO get_license_status()
 
 Get the current license status.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -33,6 +35,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -45,17 +48,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_license**
+
 > remove_license()
 
 Uninstall license if present.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -74,6 +79,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -86,12 +92,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_license**
+
 > ApiLicenseDetailsXO set_license(body=body)
 
 Upload a new license file.
@@ -99,6 +106,7 @@ Upload a new license file.
 Server must be restarted to take effect
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -120,9 +128,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**InputStream**](InputStream.md)|  | [optional] 
+| Name     | Type                              | Description | Notes      |
+| -------- | --------------------------------- | ----------- | ---------- |
+| **body** | [**InputStream**](InputStream.md) |             | [optional] |
 
 ### Return type
 
@@ -134,8 +142,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/octet-stream
- - **Accept**: application/json
+- **Content-Type**: application/octet-stream
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

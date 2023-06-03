@@ -1,17 +1,19 @@
 # swagger_client.SecurityManagementApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_user_sources**](SecurityManagementApi.md#get_user_sources) | **GET** /v1/security/user-sources | Retrieve a list of the available user sources.
+| Method                                                            | HTTP request                      | Description                                    |
+| ----------------------------------------------------------------- | --------------------------------- | ---------------------------------------------- |
+| [**get_user_sources**](SecurityManagementApi.md#get_user_sources) | **GET** /v1/security/user-sources | Retrieve a list of the available user sources. |
 
 # **get_user_sources**
+
 > list[ApiUserSource] get_user_sources()
 
 Retrieve a list of the available user sources.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -31,6 +33,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -43,8 +46,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

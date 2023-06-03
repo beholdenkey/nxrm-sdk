@@ -1,19 +1,21 @@
 # swagger_client.AssetsApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_asset**](AssetsApi.md#delete_asset) | **DELETE** /v1/assets/{id} | Delete a single asset
-[**get_asset_by_id**](AssetsApi.md#get_asset_by_id) | **GET** /v1/assets/{id} | Get a single asset
-[**get_assets**](AssetsApi.md#get_assets) | **GET** /v1/assets | List assets
+| Method                                              | HTTP request               | Description           |
+| --------------------------------------------------- | -------------------------- | --------------------- |
+| [**delete_asset**](AssetsApi.md#delete_asset)       | **DELETE** /v1/assets/{id} | Delete a single asset |
+| [**get_asset_by_id**](AssetsApi.md#get_asset_by_id) | **GET** /v1/assets/{id}    | Get a single asset    |
+| [**get_assets**](AssetsApi.md#get_assets)           | **GET** /v1/assets         | List assets           |
 
 # **delete_asset**
+
 > delete_asset(id)
 
 Delete a single asset
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -34,9 +36,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| Id of the asset to delete | 
+| Name   | Type    | Description               | Notes |
+| ------ | ------- | ------------------------- | ----- |
+| **id** | **str** | Id of the asset to delete |
 
 ### Return type
 
@@ -48,17 +50,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_id**
+
 > AssetXO get_asset_by_id(id)
 
 Get a single asset
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -80,9 +84,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| Id of the asset to get | 
+| Name   | Type    | Description            | Notes |
+| ------ | ------- | ---------------------- | ----- |
+| **id** | **str** | Id of the asset to get |
 
 ### Return type
 
@@ -94,17 +98,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assets**
+
 > PageAssetXO get_assets(repository, continuation_token=continuation_token)
 
 List assets
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -127,10 +133,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **repository** | **str**| Repository from which you would like to retrieve assets. | 
- **continuation_token** | **str**| A token returned by a prior request. If present, the next page of results are returned | [optional] 
+| Name                   | Type    | Description                                                                            | Notes      |
+| ---------------------- | ------- | -------------------------------------------------------------------------------------- | ---------- |
+| **repository**         | **str** | Repository from which you would like to retrieve assets.                               |
+| **continuation_token** | **str** | A token returned by a prior request. If present, the next page of results are returned | [optional] |
 
 ### Return type
 
@@ -142,8 +148,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

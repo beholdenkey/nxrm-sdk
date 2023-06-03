@@ -1,20 +1,22 @@
 # swagger_client.SecurityCertificatesApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**add_certificate**](SecurityCertificatesApi.md#add_certificate) | **POST** /v1/security/ssl/truststore | Add a certificate to the trust store.
-[**get_trust_store_certificates**](SecurityCertificatesApi.md#get_trust_store_certificates) | **GET** /v1/security/ssl/truststore | Retrieve a list of certificates added to the trust store.
-[**remove_certificate**](SecurityCertificatesApi.md#remove_certificate) | **DELETE** /v1/security/ssl/truststore/{id} | Remove a certificate in the trust store.
-[**retrieve_certificate**](SecurityCertificatesApi.md#retrieve_certificate) | **GET** /v1/security/ssl | Helper method to retrieve certificate details from a remote system.
+| Method                                                                                      | HTTP request                                | Description                                                         |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------- |
+| [**add_certificate**](SecurityCertificatesApi.md#add_certificate)                           | **POST** /v1/security/ssl/truststore        | Add a certificate to the trust store.                               |
+| [**get_trust_store_certificates**](SecurityCertificatesApi.md#get_trust_store_certificates) | **GET** /v1/security/ssl/truststore         | Retrieve a list of certificates added to the trust store.           |
+| [**remove_certificate**](SecurityCertificatesApi.md#remove_certificate)                     | **DELETE** /v1/security/ssl/truststore/{id} | Remove a certificate in the trust store.                            |
+| [**retrieve_certificate**](SecurityCertificatesApi.md#retrieve_certificate)                 | **GET** /v1/security/ssl                    | Helper method to retrieve certificate details from a remote system. |
 
 # **add_certificate**
+
 > ApiCertificate add_certificate(body=body)
 
 Add a certificate to the trust store.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -36,9 +38,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| The certificate to add encoded in PEM format | [optional] 
+| Name     | Type              | Description                                  | Notes      |
+| -------- | ----------------- | -------------------------------------------- | ---------- |
+| **body** | [**str**](str.md) | The certificate to add encoded in PEM format | [optional] |
 
 ### Return type
 
@@ -50,17 +52,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: */*
- - **Accept**: application/json
+- **Content-Type**: _/_
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_trust_store_certificates**
+
 > list[ApiCertificate] get_trust_store_certificates()
 
 Retrieve a list of certificates added to the trust store.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -80,6 +84,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -92,17 +97,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_certificate**
+
 > remove_certificate(id)
 
 Remove a certificate in the trust store.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -123,9 +130,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The id of the certificate that should be removed. | 
+| Name   | Type    | Description                                       | Notes |
+| ------ | ------- | ------------------------------------------------- | ----- |
+| **id** | **str** | The id of the certificate that should be removed. |
 
 ### Return type
 
@@ -137,17 +144,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **retrieve_certificate**
+
 > ApiCertificate retrieve_certificate(host, port=port, protocol_hint=protocol_hint)
 
 Helper method to retrieve certificate details from a remote system.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -171,11 +180,11 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **host** | **str**| The remote system&#x27;s host name | 
- **port** | **int**| The port on the remote system to connect to | [optional] [default to 443]
- **protocol_hint** | **str**| An optional hint of the protocol to try for the connection | [optional] 
+| Name              | Type    | Description                                                | Notes                       |
+| ----------------- | ------- | ---------------------------------------------------------- | --------------------------- |
+| **host**          | **str** | The remote system&#x27;s host name                         |
+| **port**          | **int** | The port on the remote system to connect to                | [optional] [default to 443] |
+| **protocol_hint** | **str** | An optional hint of the protocol to try for the connection | [optional]                  |
 
 ### Return type
 
@@ -187,8 +196,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.api_privilege_application_request import ApiPrivilegeApplicationRequest  # noqa: E501
+from nexus_sdk.models.api_privilege_application_request import (  # noqa: E501
+    ApiPrivilegeApplicationRequest,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiPrivilegeApplicationRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

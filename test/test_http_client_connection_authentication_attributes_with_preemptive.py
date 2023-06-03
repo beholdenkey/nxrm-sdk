@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.http_client_connection_authentication_attributes_with_preemptive import HttpClientConnectionAuthenticationAttributesWithPreemptive  # noqa: E501
+from nexus_sdk.models.http_client_connection_authentication_attributes_with_preemptive import (  # noqa: E501
+    HttpClientConnectionAuthenticationAttributesWithPreemptive,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestHttpClientConnectionAuthenticationAttributesWithPreemptive(unittest.Te
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

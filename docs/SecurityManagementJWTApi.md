@@ -1,17 +1,19 @@
 # swagger_client.SecurityManagementJWTApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**reset_secret**](SecurityManagementJWTApi.md#reset_secret) | **PUT** /v1/security/jwt | Reset JWT secret (note that session will be expired for the all logged-in users)
+| Method                                                       | HTTP request             | Description                                                                      |
+| ------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------------- |
+| [**reset_secret**](SecurityManagementJWTApi.md#reset_secret) | **PUT** /v1/security/jwt | Reset JWT secret (note that session will be expired for the all logged-in users) |
 
 # **reset_secret**
+
 > reset_secret()
 
 Reset JWT secret (note that session will be expired for the all logged-in users)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -30,6 +32,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -42,8 +45,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

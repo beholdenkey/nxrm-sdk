@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.api.security_management_ldap_api import SecurityManagementLDAPApi  # noqa: E501
+from nexus_sdk.api.security_management_ldap_api import (  # noqa: E501
+    SecurityManagementLDAPApi,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -71,5 +73,5 @@ class TestSecurityManagementLDAPApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,17 +1,19 @@
 # swagger_client.AzureBlobStoreApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**verify_connection2**](AzureBlobStoreApi.md#verify_connection2) | **POST** /v1/azureblobstore/test-connection | Verify connection using supplied Azure Blob Store settings
+| Method                                                            | HTTP request                                | Description                                                |
+| ----------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------- |
+| [**verify_connection2**](AzureBlobStoreApi.md#verify_connection2) | **POST** /v1/azureblobstore/test-connection | Verify connection using supplied Azure Blob Store settings |
 
 # **verify_connection2**
+
 > verify_connection2(body=body)
 
 Verify connection using supplied Azure Blob Store settings
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,9 +34,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AzureConnectionXO**](AzureConnectionXO.md)|  | [optional] 
+| Name     | Type                                          | Description | Notes      |
+| -------- | --------------------------------------------- | ----------- | ---------- |
+| **body** | [**AzureConnectionXO**](AzureConnectionXO.md) |             | [optional] |
 
 ### Return type
 
@@ -46,8 +48,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

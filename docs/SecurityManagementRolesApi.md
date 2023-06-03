@@ -1,21 +1,23 @@
 # swagger_client.SecurityManagementRolesApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**create**](SecurityManagementRolesApi.md#create) | **POST** /v1/security/roles | Create role
-[**delete**](SecurityManagementRolesApi.md#delete) | **DELETE** /v1/security/roles/{id} | Delete role
-[**get_role**](SecurityManagementRolesApi.md#get_role) | **GET** /v1/security/roles/{id} | Get role
-[**get_roles**](SecurityManagementRolesApi.md#get_roles) | **GET** /v1/security/roles | List roles
-[**update1**](SecurityManagementRolesApi.md#update1) | **PUT** /v1/security/roles/{id} | Update role
+| Method                                                   | HTTP request                       | Description |
+| -------------------------------------------------------- | ---------------------------------- | ----------- |
+| [**create**](SecurityManagementRolesApi.md#create)       | **POST** /v1/security/roles        | Create role |
+| [**delete**](SecurityManagementRolesApi.md#delete)       | **DELETE** /v1/security/roles/{id} | Delete role |
+| [**get_role**](SecurityManagementRolesApi.md#get_role)   | **GET** /v1/security/roles/{id}    | Get role    |
+| [**get_roles**](SecurityManagementRolesApi.md#get_roles) | **GET** /v1/security/roles         | List roles  |
+| [**update1**](SecurityManagementRolesApi.md#update1)     | **PUT** /v1/security/roles/{id}    | Update role |
 
 # **create**
+
 > RoleXOResponse create(body)
 
 Create role
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -37,9 +39,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RoleXORequest**](RoleXORequest.md)| A role configuration | 
+| Name     | Type                                  | Description          | Notes |
+| -------- | ------------------------------------- | -------------------- | ----- |
+| **body** | [**RoleXORequest**](RoleXORequest.md) | A role configuration |
 
 ### Return type
 
@@ -51,17 +53,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete**
+
 > delete(id)
 
 Delete role
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -82,9 +86,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The id of the role to delete | 
+| Name   | Type    | Description                  | Notes |
+| ------ | ------- | ---------------------------- | ----- |
+| **id** | **str** | The id of the role to delete |
 
 ### Return type
 
@@ -96,17 +100,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_role**
+
 > RoleXOResponse get_role(id, source=source)
 
 Get role
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -129,10 +135,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The id of the role to get | 
- **source** | **str**| The id of the user source to filter the roles by. Available sources can be fetched using the &#x27;User Sources&#x27; endpoint. | [optional] [default to default]
+| Name       | Type    | Description                                                                                                                     | Notes                           |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **id**     | **str** | The id of the role to get                                                                                                       |
+| **source** | **str** | The id of the user source to filter the roles by. Available sources can be fetched using the &#x27;User Sources&#x27; endpoint. | [optional] [default to default] |
 
 ### Return type
 
@@ -144,17 +150,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_roles**
+
 > list[RoleXOResponse] get_roles(source=source)
 
 List roles
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -176,9 +184,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **source** | **str**| The id of the user source to filter the roles by, if supplied. Otherwise roles from all user sources will be returned. | [optional] 
+| Name       | Type    | Description                                                                                                            | Notes      |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **source** | **str** | The id of the user source to filter the roles by, if supplied. Otherwise roles from all user sources will be returned. | [optional] |
 
 ### Return type
 
@@ -190,17 +198,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update1**
+
 > update1(body, id)
 
 Update role
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -222,10 +232,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RoleXORequest**](RoleXORequest.md)| A role configuration | 
- **id** | **str**| The id of the role to update | 
+| Name     | Type                                  | Description                  | Notes |
+| -------- | ------------------------------------- | ---------------------------- | ----- |
+| **body** | [**RoleXORequest**](RoleXORequest.md) | A role configuration         |
+| **id**   | **str**                               | The id of the role to update |
 
 ### Return type
 
@@ -237,8 +247,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

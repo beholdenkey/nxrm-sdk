@@ -1,20 +1,22 @@
 # swagger_client.EmailApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_email_configuration**](EmailApi.md#delete_email_configuration) | **DELETE** /v1/email | Disable and clear the email configuration
-[**get_email_configuration**](EmailApi.md#get_email_configuration) | **GET** /v1/email | Retrieve the current email configuration
-[**set_email_configuration**](EmailApi.md#set_email_configuration) | **PUT** /v1/email | Set the current email configuration
-[**test_email_configuration**](EmailApi.md#test_email_configuration) | **POST** /v1/email/verify | Send a test email to the email address provided in the request body
+| Method                                                                   | HTTP request              | Description                                                         |
+| ------------------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------------- |
+| [**delete_email_configuration**](EmailApi.md#delete_email_configuration) | **DELETE** /v1/email      | Disable and clear the email configuration                           |
+| [**get_email_configuration**](EmailApi.md#get_email_configuration)       | **GET** /v1/email         | Retrieve the current email configuration                            |
+| [**set_email_configuration**](EmailApi.md#set_email_configuration)       | **PUT** /v1/email         | Set the current email configuration                                 |
+| [**test_email_configuration**](EmailApi.md#test_email_configuration)     | **POST** /v1/email/verify | Send a test email to the email address provided in the request body |
 
 # **delete_email_configuration**
+
 > delete_email_configuration()
 
 Disable and clear the email configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -33,6 +35,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -45,17 +48,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_email_configuration**
+
 > ApiEmailConfiguration get_email_configuration()
 
 Retrieve the current email configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -75,6 +80,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -87,17 +93,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_email_configuration**
+
 > set_email_configuration(body)
 
 Set the current email configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -107,7 +115,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EmailApi()
-body = swagger_client.ApiEmailConfiguration() # ApiEmailConfiguration | 
+body = swagger_client.ApiEmailConfiguration() # ApiEmailConfiguration |
 
 try:
     # Set the current email configuration
@@ -118,9 +126,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ApiEmailConfiguration**](ApiEmailConfiguration.md)|  | 
+| Name     | Type                                                  | Description | Notes |
+| -------- | ----------------------------------------------------- | ----------- | ----- |
+| **body** | [**ApiEmailConfiguration**](ApiEmailConfiguration.md) |             |
 
 ### Return type
 
@@ -132,17 +140,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: */*
- - **Accept**: Not defined
+- **Content-Type**: _/_
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_email_configuration**
+
 > ApiEmailValidation test_email_configuration(body)
 
 Send a test email to the email address provided in the request body
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -164,9 +174,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| An email address to send a test email to | 
+| Name     | Type              | Description                              | Notes |
+| -------- | ----------------- | ---------------------------------------- | ----- |
+| **body** | [**str**](str.md) | An email address to send a test email to |
 
 ### Return type
 
@@ -178,8 +188,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: */*
- - **Accept**: application/json
+- **Content-Type**: _/_
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

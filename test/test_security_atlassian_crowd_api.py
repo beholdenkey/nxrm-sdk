@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.api.security_atlassian_crowd_api import SecurityAtlassianCrowdApi  # noqa: E501
+from nexus_sdk.api.security_atlassian_crowd_api import (  # noqa: E501
+    SecurityAtlassianCrowdApi,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -57,5 +59,5 @@ class TestSecurityAtlassianCrowdApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

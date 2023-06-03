@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.npm_proxy_api_repository import NpmProxyApiRepository  # noqa: E501
+from nexus_sdk.models.npm_proxy_api_repository import (  # noqa: E501
+    NpmProxyApiRepository,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestNpmProxyApiRepository(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

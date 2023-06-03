@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.pypi_proxy_repository_api_request import PypiProxyRepositoryApiRequest  # noqa: E501
+from nexus_sdk.models.pypi_proxy_repository_api_request import (  # noqa: E501
+    PypiProxyRepositoryApiRequest,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestPypiProxyRepositoryApiRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

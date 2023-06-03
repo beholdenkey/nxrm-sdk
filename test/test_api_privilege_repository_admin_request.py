@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.api_privilege_repository_admin_request import ApiPrivilegeRepositoryAdminRequest  # noqa: E501
+from nexus_sdk.models.api_privilege_repository_admin_request import (  # noqa: E501
+    ApiPrivilegeRepositoryAdminRequest,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiPrivilegeRepositoryAdminRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

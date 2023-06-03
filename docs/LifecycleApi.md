@@ -1,14 +1,15 @@
 # swagger_client.LifecycleApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**bounce**](LifecycleApi.md#bounce) | **PUT** /v1/lifecycle/bounce | Bounce lifecycle phase
-[**get_phase**](LifecycleApi.md#get_phase) | **GET** /v1/lifecycle/phase | Get current lifecycle phase
-[**set_phase**](LifecycleApi.md#set_phase) | **PUT** /v1/lifecycle/phase | Move to new lifecycle phase
+| Method                                     | HTTP request                 | Description                 |
+| ------------------------------------------ | ---------------------------- | --------------------------- |
+| [**bounce**](LifecycleApi.md#bounce)       | **PUT** /v1/lifecycle/bounce | Bounce lifecycle phase      |
+| [**get_phase**](LifecycleApi.md#get_phase) | **GET** /v1/lifecycle/phase  | Get current lifecycle phase |
+| [**set_phase**](LifecycleApi.md#set_phase) | **PUT** /v1/lifecycle/phase  | Move to new lifecycle phase |
 
 # **bounce**
+
 > bounce(body=body)
 
 Bounce lifecycle phase
@@ -16,6 +17,7 @@ Bounce lifecycle phase
 Re-runs all phases from the given phase to the current phase
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -36,9 +38,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| The phase to bounce | [optional] 
+| Name     | Type              | Description         | Notes      |
+| -------- | ----------------- | ------------------- | ---------- |
+| **body** | [**str**](str.md) | The phase to bounce | [optional] |
 
 ### Return type
 
@@ -50,17 +52,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: text/plain
- - **Accept**: Not defined
+- **Content-Type**: text/plain
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_phase**
+
 > str get_phase()
 
 Get current lifecycle phase
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -80,6 +84,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -92,17 +97,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain
+- **Content-Type**: Not defined
+- **Accept**: text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_phase**
+
 > set_phase(body=body)
 
 Move to new lifecycle phase
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -123,9 +130,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| The phase to move to | [optional] 
+| Name     | Type              | Description          | Notes      |
+| -------- | ----------------- | -------------------- | ---------- |
+| **body** | [**str**](str.md) | The phase to move to | [optional] |
 
 ### Return type
 
@@ -137,8 +144,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: text/plain
- - **Accept**: Not defined
+- **Content-Type**: text/plain
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

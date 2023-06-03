@@ -1,20 +1,22 @@
 # swagger_client.SecurityAtlassianCrowdApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**clear_cache**](SecurityAtlassianCrowdApi.md#clear_cache) | **POST** /v1/security/atlassian-crowd/clear-cache | Clear Atlassian Crowd cache
-[**read_settings**](SecurityAtlassianCrowdApi.md#read_settings) | **GET** /v1/security/atlassian-crowd | Retrieve Atlassian Crowd settings configured in Nexus Repository Manager
-[**update_settings**](SecurityAtlassianCrowdApi.md#update_settings) | **PUT** /v1/security/atlassian-crowd | Update Atlassian Crowd settings configured in Nexus Repository Manager
-[**verify_connection1**](SecurityAtlassianCrowdApi.md#verify_connection1) | **POST** /v1/security/atlassian-crowd/verify-connection | Verify connection using supplied Atlassian Crowd settings
+| Method                                                                    | HTTP request                                            | Description                                                              |
+| ------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [**clear_cache**](SecurityAtlassianCrowdApi.md#clear_cache)               | **POST** /v1/security/atlassian-crowd/clear-cache       | Clear Atlassian Crowd cache                                              |
+| [**read_settings**](SecurityAtlassianCrowdApi.md#read_settings)           | **GET** /v1/security/atlassian-crowd                    | Retrieve Atlassian Crowd settings configured in Nexus Repository Manager |
+| [**update_settings**](SecurityAtlassianCrowdApi.md#update_settings)       | **PUT** /v1/security/atlassian-crowd                    | Update Atlassian Crowd settings configured in Nexus Repository Manager   |
+| [**verify_connection1**](SecurityAtlassianCrowdApi.md#verify_connection1) | **POST** /v1/security/atlassian-crowd/verify-connection | Verify connection using supplied Atlassian Crowd settings                |
 
 # **clear_cache**
+
 > clear_cache()
 
 Clear Atlassian Crowd cache
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -33,6 +35,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -45,17 +48,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_settings**
+
 > read_settings()
 
 Retrieve Atlassian Crowd settings configured in Nexus Repository Manager
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -74,6 +79,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -86,17 +92,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_settings**
+
 > update_settings(body=body)
 
 Update Atlassian Crowd settings configured in Nexus Repository Manager
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -117,9 +125,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CrowdApiXO**](CrowdApiXO.md)|  | [optional] 
+| Name     | Type                            | Description | Notes      |
+| -------- | ------------------------------- | ----------- | ---------- |
+| **body** | [**CrowdApiXO**](CrowdApiXO.md) |             | [optional] |
 
 ### Return type
 
@@ -131,17 +139,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: */*
- - **Accept**: Not defined
+- **Content-Type**: _/_
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **verify_connection1**
+
 > verify_connection1(body=body)
 
 Verify connection using supplied Atlassian Crowd settings
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -162,9 +172,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CrowdApiXO**](CrowdApiXO.md)|  | [optional] 
+| Name     | Type                            | Description | Notes      |
+| -------- | ------------------------------- | ----------- | ---------- |
+| **body** | [**CrowdApiXO**](CrowdApiXO.md) |             | [optional] |
 
 ### Return type
 
@@ -176,8 +186,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: */*
- - **Accept**: Not defined
+- **Content-Type**: _/_
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

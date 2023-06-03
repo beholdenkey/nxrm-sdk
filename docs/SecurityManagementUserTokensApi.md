@@ -1,19 +1,21 @@
 # swagger_client.SecurityManagementUserTokensApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**reset_all_user_tokens**](SecurityManagementUserTokensApi.md#reset_all_user_tokens) | **DELETE** /v1/security/user-tokens | Invalidate all existing user tokens.
-[**service_status**](SecurityManagementUserTokensApi.md#service_status) | **GET** /v1/security/user-tokens | Show if the user token capability is enabled or not
-[**set_service_status**](SecurityManagementUserTokensApi.md#set_service_status) | **PUT** /v1/security/user-tokens | Enable/Disable the user token capability
+| Method                                                                                | HTTP request                        | Description                                         |
+| ------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------- |
+| [**reset_all_user_tokens**](SecurityManagementUserTokensApi.md#reset_all_user_tokens) | **DELETE** /v1/security/user-tokens | Invalidate all existing user tokens.                |
+| [**service_status**](SecurityManagementUserTokensApi.md#service_status)               | **GET** /v1/security/user-tokens    | Show if the user token capability is enabled or not |
+| [**set_service_status**](SecurityManagementUserTokensApi.md#set_service_status)       | **PUT** /v1/security/user-tokens    | Enable/Disable the user token capability            |
 
 # **reset_all_user_tokens**
+
 > reset_all_user_tokens()
 
 Invalidate all existing user tokens.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,6 +34,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,17 +47,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **service_status**
+
 > UserTokensApiModel service_status()
 
 Show if the user token capability is enabled or not
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -74,6 +79,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -86,17 +92,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_service_status**
+
 > UserTokensApiModel set_service_status(body=body)
 
 Enable/Disable the user token capability
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -118,9 +126,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**UserTokensApiModel**](UserTokensApiModel.md)|  | [optional] 
+| Name     | Type                                            | Description | Notes      |
+| -------- | ----------------------------------------------- | ----------- | ---------- |
+| **body** | [**UserTokensApiModel**](UserTokensApiModel.md) |             | [optional] |
 
 ### Return type
 
@@ -132,8 +140,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.api_privilege_repository_content_selector_request import ApiPrivilegeRepositoryContentSelectorRequest  # noqa: E501
+from nexus_sdk.models.api_privilege_repository_content_selector_request import (  # noqa: E501
+    ApiPrivilegeRepositoryContentSelectorRequest,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiPrivilegeRepositoryContentSelectorRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

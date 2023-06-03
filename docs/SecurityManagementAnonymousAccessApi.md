@@ -1,18 +1,20 @@
 # swagger_client.SecurityManagementAnonymousAccessApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**read**](SecurityManagementAnonymousAccessApi.md#read) | **GET** /v1/security/anonymous | Get Anonymous Access settings
-[**update**](SecurityManagementAnonymousAccessApi.md#update) | **PUT** /v1/security/anonymous | Update Anonymous Access settings
+| Method                                                       | HTTP request                   | Description                      |
+| ------------------------------------------------------------ | ------------------------------ | -------------------------------- |
+| [**read**](SecurityManagementAnonymousAccessApi.md#read)     | **GET** /v1/security/anonymous | Get Anonymous Access settings    |
+| [**update**](SecurityManagementAnonymousAccessApi.md#update) | **PUT** /v1/security/anonymous | Update Anonymous Access settings |
 
 # **read**
+
 > AnonymousAccessSettingsXO read()
 
 Get Anonymous Access settings
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,6 +34,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,17 +47,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update**
+
 > AnonymousAccessSettingsXO update(body=body)
 
 Update Anonymous Access settings
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -76,9 +81,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AnonymousAccessSettingsXO**](AnonymousAccessSettingsXO.md)|  | [optional] 
+| Name     | Type                                                          | Description | Notes      |
+| -------- | ------------------------------------------------------------- | ----------- | ---------- |
+| **body** | [**AnonymousAccessSettingsXO**](AnonymousAccessSettingsXO.md) |             | [optional] |
 
 ### Return type
 
@@ -90,8 +95,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

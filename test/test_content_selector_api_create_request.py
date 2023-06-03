@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.content_selector_api_create_request import ContentSelectorApiCreateRequest  # noqa: E501
+from nexus_sdk.models.content_selector_api_create_request import (  # noqa: E501
+    ContentSelectorApiCreateRequest,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestContentSelectorApiCreateRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

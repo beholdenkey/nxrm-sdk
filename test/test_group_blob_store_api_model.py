@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.group_blob_store_api_model import GroupBlobStoreApiModel  # noqa: E501
+from nexus_sdk.models.group_blob_store_api_model import (  # noqa: E501
+    GroupBlobStoreApiModel,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestGroupBlobStoreApiModel(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

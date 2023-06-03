@@ -32,7 +32,9 @@ class BlobStoreApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def convert_blob_store_to_group(self, name, new_name_for_original, **kwargs):  # noqa: E501
+    def convert_blob_store_to_group(
+        self, name, new_name_for_original, **kwargs
+    ):  # noqa: E501
         """Convert a blob store to a group blob store  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -47,14 +49,20 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.convert_blob_store_to_group_with_http_info(name, new_name_for_original, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.convert_blob_store_to_group_with_http_info(
+                name, new_name_for_original, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.convert_blob_store_to_group_with_http_info(name, new_name_for_original, **kwargs)  # noqa: E501
+            (data) = self.convert_blob_store_to_group_with_http_info(
+                name, new_name_for_original, **kwargs
+            )  # noqa: E501
             return data
 
-    def convert_blob_store_to_group_with_http_info(self, name, new_name_for_original, **kwargs):  # noqa: E501
+    def convert_blob_store_to_group_with_http_info(
+        self, name, new_name_for_original, **kwargs
+    ):  # noqa: E501
         """Convert a blob store to a group blob store  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -70,37 +78,44 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'new_name_for_original']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "new_name_for_original"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method convert_blob_store_to_group" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `convert_blob_store_to_group`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `convert_blob_store_to_group`"
+            )  # noqa: E501
         # verify the required parameter 'new_name_for_original' is set
-        if ('new_name_for_original' not in params or
-                params['new_name_for_original'] is None):
-            raise ValueError("Missing the required parameter `new_name_for_original` when calling `convert_blob_store_to_group`")  # noqa: E501
+        if (
+            "new_name_for_original" not in params
+            or params["new_name_for_original"] is None
+        ):
+            raise ValueError(
+                "Missing the required parameter `new_name_for_original` when calling `convert_blob_store_to_group`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
-        if 'new_name_for_original' in params:
-            path_params['newNameForOriginal'] = params['new_name_for_original']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
+        if "new_name_for_original" in params:
+            path_params["newNameForOriginal"] = params[
+                "new_name_for_original"
+            ]  # noqa: E501
 
         query_params = []
 
@@ -111,27 +126,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/group/convert/{name}/{newNameForOriginal}', 'POST',
+            "/v1/blobstores/group/convert/{name}/{newNameForOriginal}",
+            "POST",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='GroupBlobStoreApiModel',  # noqa: E501
+            response_type="GroupBlobStoreApiModel",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_blob_store(self, **kwargs):  # noqa: E501
         """Create an S3 blob store  # noqa: E501
@@ -147,8 +165,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_blob_store_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_blob_store_with_http_info(**kwargs)  # noqa: E501
@@ -169,21 +187,21 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -197,17 +215,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/s3', 'POST',
+            "/v1/blobstores/s3",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -216,11 +238,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_blob_store1(self, **kwargs):  # noqa: E501
         """Create an Azure blob store  # noqa: E501
@@ -236,8 +259,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_blob_store1_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_blob_store1_with_http_info(**kwargs)  # noqa: E501
@@ -258,21 +281,21 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_blob_store1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -286,17 +309,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/azure', 'POST',
+            "/v1/blobstores/azure",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -305,11 +332,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_file_blob_store(self, **kwargs):  # noqa: E501
         """Create a file blob store  # noqa: E501
@@ -325,8 +353,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_file_blob_store_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_file_blob_store_with_http_info(**kwargs)  # noqa: E501
@@ -347,21 +375,21 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_file_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -375,17 +403,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/file', 'POST',
+            "/v1/blobstores/file",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -394,11 +426,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_group_blob_store(self, **kwargs):  # noqa: E501
         """Create a group blob store  # noqa: E501
@@ -414,8 +447,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_group_blob_store_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_group_blob_store_with_http_info(**kwargs)  # noqa: E501
@@ -436,21 +469,21 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_group_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -464,17 +497,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/group', 'POST',
+            "/v1/blobstores/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -483,11 +520,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def delete_blob_store(self, name, **kwargs):  # noqa: E501
         """Delete a blob store by name  # noqa: E501
@@ -503,8 +541,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.delete_blob_store_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_blob_store_with_http_info(name, **kwargs)  # noqa: E501
@@ -525,31 +563,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_blob_store`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `delete_blob_store`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -563,7 +602,8 @@ class BlobStoreApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/{name}', 'DELETE',
+            "/v1/blobstores/{name}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -572,11 +612,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_blob_store(self, name, **kwargs):  # noqa: E501
         """Get a S3 blob store configuration by name  # noqa: E501
@@ -592,8 +633,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_blob_store_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_blob_store_with_http_info(name, **kwargs)  # noqa: E501
@@ -614,31 +655,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `get_blob_store`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `get_blob_store`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -649,27 +691,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/s3/{name}', 'GET',
+            "/v1/blobstores/s3/{name}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='S3BlobStoreApiModel',  # noqa: E501
+            response_type="S3BlobStoreApiModel",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_blob_store1(self, name, **kwargs):  # noqa: E501
         """Get an Azure blob store configuration by name  # noqa: E501
@@ -685,8 +730,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_blob_store1_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_blob_store1_with_http_info(name, **kwargs)  # noqa: E501
@@ -707,31 +752,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_blob_store1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `get_blob_store1`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `get_blob_store1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -742,27 +788,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/azure/{name}', 'GET',
+            "/v1/blobstores/azure/{name}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AzureBlobStoreApiModel',  # noqa: E501
+            response_type="AzureBlobStoreApiModel",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_file_blob_store_configuration(self, name, **kwargs):  # noqa: E501
         """Get a file blob store configuration by name  # noqa: E501
@@ -778,14 +827,20 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_file_blob_store_configuration_with_http_info(name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_file_blob_store_configuration_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_file_blob_store_configuration_with_http_info(name, **kwargs)  # noqa: E501
+            (data) = self.get_file_blob_store_configuration_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_file_blob_store_configuration_with_http_info(self, name, **kwargs):  # noqa: E501
+    def get_file_blob_store_configuration_with_http_info(
+        self, name, **kwargs
+    ):  # noqa: E501
         """Get a file blob store configuration by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -800,31 +855,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_file_blob_store_configuration" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `get_file_blob_store_configuration`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `get_file_blob_store_configuration`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -835,27 +891,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/file/{name}', 'GET',
+            "/v1/blobstores/file/{name}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='FileBlobStoreApiModel',  # noqa: E501
+            response_type="FileBlobStoreApiModel",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_group_blob_store_configuration(self, name, **kwargs):  # noqa: E501
         """Get a group blob store configuration by name  # noqa: E501
@@ -871,14 +930,20 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_group_blob_store_configuration_with_http_info(name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_group_blob_store_configuration_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_group_blob_store_configuration_with_http_info(name, **kwargs)  # noqa: E501
+            (data) = self.get_group_blob_store_configuration_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_group_blob_store_configuration_with_http_info(self, name, **kwargs):  # noqa: E501
+    def get_group_blob_store_configuration_with_http_info(
+        self, name, **kwargs
+    ):  # noqa: E501
         """Get a group blob store configuration by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -893,31 +958,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_group_blob_store_configuration" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `get_group_blob_store_configuration`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `get_group_blob_store_configuration`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -928,27 +994,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/group/{name}', 'GET',
+            "/v1/blobstores/group/{name}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='GroupBlobStoreApiModel',  # noqa: E501
+            response_type="GroupBlobStoreApiModel",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def list_blob_stores(self, **kwargs):  # noqa: E501
         """List the blob stores  # noqa: E501
@@ -963,8 +1032,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.list_blob_stores_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_blob_stores_with_http_info(**kwargs)  # noqa: E501
@@ -985,20 +1054,20 @@ class BlobStoreApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method list_blob_stores" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1013,27 +1082,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores', 'GET',
+            "/v1/blobstores",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[GenericBlobStoreApiResponse]',  # noqa: E501
+            response_type="list[GenericBlobStoreApiResponse]",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def quota_status(self, name, **kwargs):  # noqa: E501
         """Get quota status for a given blob store  # noqa: E501
@@ -1049,8 +1121,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.quota_status_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.quota_status_with_http_info(name, **kwargs)  # noqa: E501
@@ -1071,31 +1143,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method quota_status" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `quota_status`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `quota_status`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -1106,27 +1179,30 @@ class BlobStoreApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/{name}/quota-status', 'GET',
+            "/v1/blobstores/{name}/quota-status",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BlobStoreQuotaResultXO',  # noqa: E501
+            response_type="BlobStoreQuotaResultXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_blob_store(self, name, **kwargs):  # noqa: E501
         """Update an S3 blob store configuration by name  # noqa: E501
@@ -1143,8 +1219,8 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.update_blob_store_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.update_blob_store_with_http_info(name, **kwargs)  # noqa: E501
@@ -1166,31 +1242,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `update_blob_store`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `update_blob_store`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -1200,17 +1277,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/s3/{name}', 'PUT',
+            "/v1/blobstores/s3/{name}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1219,11 +1300,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_blob_store1(self, name, **kwargs):  # noqa: E501
         """Update an Azure blob store configuration by name  # noqa: E501
@@ -1240,11 +1322,13 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.update_blob_store1_with_http_info(name, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_blob_store1_with_http_info(name, **kwargs)  # noqa: E501
+            (data) = self.update_blob_store1_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_blob_store1_with_http_info(self, name, **kwargs):  # noqa: E501
@@ -1263,31 +1347,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_blob_store1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `update_blob_store1`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `update_blob_store1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -1297,17 +1382,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/azure/{name}', 'PUT',
+            "/v1/blobstores/azure/{name}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1316,11 +1405,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_file_blob_store(self, name, **kwargs):  # noqa: E501
         """Update a file blob store configuration by name  # noqa: E501
@@ -1337,11 +1427,15 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_file_blob_store_with_http_info(name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_file_blob_store_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_file_blob_store_with_http_info(name, **kwargs)  # noqa: E501
+            (data) = self.update_file_blob_store_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_file_blob_store_with_http_info(self, name, **kwargs):  # noqa: E501
@@ -1360,31 +1454,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_file_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `update_file_blob_store`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `update_file_blob_store`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -1394,17 +1489,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/file/{name}', 'PUT',
+            "/v1/blobstores/file/{name}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1413,11 +1512,12 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_group_blob_store(self, name, **kwargs):  # noqa: E501
         """Update a group blob store configuration by name  # noqa: E501
@@ -1434,11 +1534,15 @@ class BlobStoreApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_group_blob_store_with_http_info(name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_group_blob_store_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_group_blob_store_with_http_info(name, **kwargs)  # noqa: E501
+            (data) = self.update_group_blob_store_with_http_info(
+                name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_group_blob_store_with_http_info(self, name, **kwargs):  # noqa: E501
@@ -1457,31 +1561,32 @@ class BlobStoreApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_group_blob_store" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'name' is set
-        if ('name' not in params or
-                params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `update_group_blob_store`")  # noqa: E501
+        if "name" not in params or params["name"] is None:
+            raise ValueError(
+                "Missing the required parameter `name` when calling `update_group_blob_store`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']  # noqa: E501
+        if "name" in params:
+            path_params["name"] = params["name"]  # noqa: E501
 
         query_params = []
 
@@ -1491,17 +1596,21 @@ class BlobStoreApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/blobstores/group/{name}', 'PUT',
+            "/v1/blobstores/group/{name}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -1510,8 +1619,9 @@ class BlobStoreApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

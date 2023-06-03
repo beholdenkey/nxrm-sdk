@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.api.security_management_jwt_api import SecurityManagementJWTApi  # noqa: E501
+from nexus_sdk.api.security_management_jwt_api import (  # noqa: E501
+    SecurityManagementJWTApi,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -36,5 +38,5 @@ class TestSecurityManagementJWTApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

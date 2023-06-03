@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.apt_hosted_repositories_attributes import AptHostedRepositoriesAttributes  # noqa: E501
+from nexus_sdk.models.apt_hosted_repositories_attributes import (  # noqa: E501
+    AptHostedRepositoriesAttributes,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestAptHostedRepositoriesAttributes(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

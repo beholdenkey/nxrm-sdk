@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.api.security_management_realms_api import SecurityManagementRealmsApi  # noqa: E501
+from nexus_sdk.api.security_management_realms_api import (  # noqa: E501
+    SecurityManagementRealmsApi,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -50,5 +52,5 @@ class TestSecurityManagementRealmsApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

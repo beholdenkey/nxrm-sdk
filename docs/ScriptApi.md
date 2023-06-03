@@ -1,22 +1,24 @@
 # swagger_client.ScriptApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**add**](ScriptApi.md#add) | **POST** /v1/script | Add a new script
-[**browse**](ScriptApi.md#browse) | **GET** /v1/script | List all stored scripts
-[**delete1**](ScriptApi.md#delete1) | **DELETE** /v1/script/{name} | Delete stored script by name
-[**edit**](ScriptApi.md#edit) | **PUT** /v1/script/{name} | Update stored script by name
-[**read1**](ScriptApi.md#read1) | **GET** /v1/script/{name} | Read stored script by name
-[**run1**](ScriptApi.md#run1) | **POST** /v1/script/{name}/run | Run stored script by name
+| Method                              | HTTP request                   | Description                  |
+| ----------------------------------- | ------------------------------ | ---------------------------- |
+| [**add**](ScriptApi.md#add)         | **POST** /v1/script            | Add a new script             |
+| [**browse**](ScriptApi.md#browse)   | **GET** /v1/script             | List all stored scripts      |
+| [**delete1**](ScriptApi.md#delete1) | **DELETE** /v1/script/{name}   | Delete stored script by name |
+| [**edit**](ScriptApi.md#edit)       | **PUT** /v1/script/{name}      | Update stored script by name |
+| [**read1**](ScriptApi.md#read1)     | **GET** /v1/script/{name}      | Read stored script by name   |
+| [**run1**](ScriptApi.md#run1)       | **POST** /v1/script/{name}/run | Run stored script by name    |
 
 # **add**
+
 > add(body=body)
 
 Add a new script
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -37,9 +39,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ScriptXO**](ScriptXO.md)|  | [optional] 
+| Name     | Type                        | Description | Notes      |
+| -------- | --------------------------- | ----------- | ---------- |
+| **body** | [**ScriptXO**](ScriptXO.md) |             | [optional] |
 
 ### Return type
 
@@ -51,17 +53,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **browse**
+
 > list[ScriptXO] browse()
 
 List all stored scripts
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -81,6 +85,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -93,17 +98,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete1**
+
 > delete1(name)
 
 Delete stored script by name
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -113,7 +120,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ScriptApi()
-name = 'name_example' # str | 
+name = 'name_example' # str |
 
 try:
     # Delete stored script by name
@@ -124,9 +131,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
+| Name     | Type    | Description | Notes |
+| -------- | ------- | ----------- | ----- |
+| **name** | **str** |             |
 
 ### Return type
 
@@ -138,17 +145,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **edit**
+
 > edit(name, body=body)
 
 Update stored script by name
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -158,7 +167,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ScriptApi()
-name = 'name_example' # str | 
+name = 'name_example' # str |
 body = swagger_client.ScriptXO() # ScriptXO |  (optional)
 
 try:
@@ -170,10 +179,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
- **body** | [**ScriptXO**](ScriptXO.md)|  | [optional] 
+| Name     | Type                        | Description | Notes      |
+| -------- | --------------------------- | ----------- | ---------- |
+| **name** | **str**                     |             |
+| **body** | [**ScriptXO**](ScriptXO.md) |             | [optional] |
 
 ### Return type
 
@@ -185,17 +194,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read1**
+
 > ScriptXO read1(name)
 
 Read stored script by name
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -205,7 +216,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ScriptApi()
-name = 'name_example' # str | 
+name = 'name_example' # str |
 
 try:
     # Read stored script by name
@@ -217,9 +228,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
+| Name     | Type    | Description | Notes |
+| -------- | ------- | ----------- | ----- |
+| **name** | **str** |             |
 
 ### Return type
 
@@ -231,17 +242,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **run1**
+
 > ScriptResultXO run1(name, body=body)
 
 Run stored script by name
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -251,7 +264,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ScriptApi()
-name = 'name_example' # str | 
+name = 'name_example' # str |
 body = 'body_example' # str |  (optional)
 
 try:
@@ -264,10 +277,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
- **body** | [**str**](str.md)|  | [optional] 
+| Name     | Type              | Description | Notes      |
+| -------- | ----------------- | ----------- | ---------- |
+| **name** | **str**           |             |
+| **body** | [**str**](str.md) |             | [optional] |
 
 ### Return type
 
@@ -279,8 +292,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: text/plain, application/json
- - **Accept**: application/json
+- **Content-Type**: text/plain, application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

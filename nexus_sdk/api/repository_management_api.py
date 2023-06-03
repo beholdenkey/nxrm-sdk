@@ -46,8 +46,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository_with_http_info(**kwargs)  # noqa: E501
@@ -68,21 +68,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -96,17 +96,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/group', 'POST',
+            "/v1/repositories/maven/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -115,11 +119,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository1(self, **kwargs):  # noqa: E501
         """Create Maven hosted repository  # noqa: E501
@@ -135,8 +140,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository1_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository1_with_http_info(**kwargs)  # noqa: E501
@@ -157,21 +162,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -185,17 +190,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/hosted', 'POST',
+            "/v1/repositories/maven/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -204,11 +213,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository10(self, **kwargs):  # noqa: E501
         """Create npm proxy repository  # noqa: E501
@@ -224,8 +234,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository10_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository10_with_http_info(**kwargs)  # noqa: E501
@@ -246,21 +256,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository10" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -274,17 +284,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/proxy', 'POST',
+            "/v1/repositories/npm/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -293,11 +307,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository11(self, **kwargs):  # noqa: E501
         """Create NuGet group repository  # noqa: E501
@@ -313,8 +328,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository11_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository11_with_http_info(**kwargs)  # noqa: E501
@@ -335,21 +350,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository11" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -363,17 +378,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/group', 'POST',
+            "/v1/repositories/nuget/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -382,11 +401,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository12(self, **kwargs):  # noqa: E501
         """Create NuGet hosted repository  # noqa: E501
@@ -402,8 +422,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository12_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository12_with_http_info(**kwargs)  # noqa: E501
@@ -424,21 +444,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository12" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -452,17 +472,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/hosted', 'POST',
+            "/v1/repositories/nuget/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -471,11 +495,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository13(self, **kwargs):  # noqa: E501
         """Create NuGet proxy repository  # noqa: E501
@@ -491,8 +516,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository13_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository13_with_http_info(**kwargs)  # noqa: E501
@@ -513,21 +538,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository13" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -541,17 +566,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/proxy', 'POST',
+            "/v1/repositories/nuget/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -560,11 +589,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository14(self, **kwargs):  # noqa: E501
         """Create RubyGems group repository  # noqa: E501
@@ -580,8 +610,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository14_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository14_with_http_info(**kwargs)  # noqa: E501
@@ -602,21 +632,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository14" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -630,17 +660,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/group', 'POST',
+            "/v1/repositories/rubygems/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -649,11 +683,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository15(self, **kwargs):  # noqa: E501
         """Create RubyGems hosted repository  # noqa: E501
@@ -669,8 +704,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository15_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository15_with_http_info(**kwargs)  # noqa: E501
@@ -691,21 +726,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository15" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -719,17 +754,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/hosted', 'POST',
+            "/v1/repositories/rubygems/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -738,11 +777,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository16(self, **kwargs):  # noqa: E501
         """Create RubyGems proxy repository  # noqa: E501
@@ -758,8 +798,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository16_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository16_with_http_info(**kwargs)  # noqa: E501
@@ -780,21 +820,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository16" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -808,17 +848,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/proxy', 'POST',
+            "/v1/repositories/rubygems/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -827,11 +871,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository17(self, **kwargs):  # noqa: E501
         """Create Yum group repository  # noqa: E501
@@ -847,8 +892,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository17_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository17_with_http_info(**kwargs)  # noqa: E501
@@ -869,21 +914,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository17" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -897,17 +942,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/group', 'POST',
+            "/v1/repositories/yum/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -916,11 +965,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository18(self, **kwargs):  # noqa: E501
         """Create Yum hosted repository  # noqa: E501
@@ -936,8 +986,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository18_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository18_with_http_info(**kwargs)  # noqa: E501
@@ -958,21 +1008,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository18" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -986,17 +1036,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/hosted', 'POST',
+            "/v1/repositories/yum/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1005,11 +1059,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository19(self, **kwargs):  # noqa: E501
         """Create Yum proxy repository  # noqa: E501
@@ -1025,8 +1080,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository19_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository19_with_http_info(**kwargs)  # noqa: E501
@@ -1047,21 +1102,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository19" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1075,17 +1130,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/proxy', 'POST',
+            "/v1/repositories/yum/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1094,11 +1153,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository2(self, **kwargs):  # noqa: E501
         """Create Maven proxy repository  # noqa: E501
@@ -1114,8 +1174,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository2_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository2_with_http_info(**kwargs)  # noqa: E501
@@ -1136,21 +1196,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1164,17 +1224,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/proxy', 'POST',
+            "/v1/repositories/maven/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1183,11 +1247,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository20(self, **kwargs):  # noqa: E501
         """Create Docker group repository  # noqa: E501
@@ -1203,8 +1268,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository20_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository20_with_http_info(**kwargs)  # noqa: E501
@@ -1225,21 +1290,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository20" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1253,17 +1318,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/group', 'POST',
+            "/v1/repositories/docker/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1272,11 +1341,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository21(self, **kwargs):  # noqa: E501
         """Create Docker hosted repository  # noqa: E501
@@ -1292,8 +1362,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository21_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository21_with_http_info(**kwargs)  # noqa: E501
@@ -1314,21 +1384,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository21" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1342,17 +1412,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/hosted', 'POST',
+            "/v1/repositories/docker/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1361,11 +1435,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository22(self, **kwargs):  # noqa: E501
         """Create Docker proxy repository  # noqa: E501
@@ -1381,8 +1456,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository22_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository22_with_http_info(**kwargs)  # noqa: E501
@@ -1403,21 +1478,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository22" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1431,17 +1506,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/proxy', 'POST',
+            "/v1/repositories/docker/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1450,11 +1529,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository23(self, **kwargs):  # noqa: E501
         """Create PyPI group repository  # noqa: E501
@@ -1470,8 +1550,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository23_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository23_with_http_info(**kwargs)  # noqa: E501
@@ -1492,21 +1572,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository23" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1520,17 +1600,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/group', 'POST',
+            "/v1/repositories/pypi/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1539,11 +1623,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository24(self, **kwargs):  # noqa: E501
         """Create PyPI hosted repository  # noqa: E501
@@ -1559,8 +1644,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository24_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository24_with_http_info(**kwargs)  # noqa: E501
@@ -1581,21 +1666,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository24" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1609,17 +1694,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/hosted', 'POST',
+            "/v1/repositories/pypi/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1628,11 +1717,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository25(self, **kwargs):  # noqa: E501
         """Create PyPI proxy repository  # noqa: E501
@@ -1648,8 +1738,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository25_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository25_with_http_info(**kwargs)  # noqa: E501
@@ -1670,21 +1760,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository25" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1698,17 +1788,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/proxy', 'POST',
+            "/v1/repositories/pypi/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1717,11 +1811,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository26(self, **kwargs):  # noqa: E501
         """Create conda proxy repository  # noqa: E501
@@ -1737,8 +1832,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository26_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository26_with_http_info(**kwargs)  # noqa: E501
@@ -1759,21 +1854,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository26" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1787,17 +1882,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conda/proxy', 'POST',
+            "/v1/repositories/conda/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1806,11 +1905,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository27(self, **kwargs):  # noqa: E501
         """Create Conan proxy repository  # noqa: E501
@@ -1826,8 +1926,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository27_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository27_with_http_info(**kwargs)  # noqa: E501
@@ -1848,21 +1948,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository27" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1876,17 +1976,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conan/proxy', 'POST',
+            "/v1/repositories/conan/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1895,11 +1999,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository28(self, **kwargs):  # noqa: E501
         """Create Git LFS hosted repository  # noqa: E501
@@ -1915,8 +2020,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository28_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository28_with_http_info(**kwargs)  # noqa: E501
@@ -1937,21 +2042,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository28" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -1965,17 +2070,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/gitlfs/hosted', 'POST',
+            "/v1/repositories/gitlfs/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -1984,11 +2093,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository29(self, **kwargs):  # noqa: E501
         """Create R group repository  # noqa: E501
@@ -2004,8 +2114,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository29_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository29_with_http_info(**kwargs)  # noqa: E501
@@ -2026,21 +2136,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository29" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2054,17 +2164,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/group', 'POST',
+            "/v1/repositories/r/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2073,11 +2187,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository3(self, **kwargs):  # noqa: E501
         """Create APT hosted repository  # noqa: E501
@@ -2093,8 +2208,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository3_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository3_with_http_info(**kwargs)  # noqa: E501
@@ -2115,21 +2230,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2143,17 +2258,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/hosted', 'POST',
+            "/v1/repositories/apt/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2162,11 +2281,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository30(self, **kwargs):  # noqa: E501
         """Create R hosted repository  # noqa: E501
@@ -2182,8 +2302,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository30_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository30_with_http_info(**kwargs)  # noqa: E501
@@ -2204,21 +2324,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository30" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2232,17 +2352,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/hosted', 'POST',
+            "/v1/repositories/r/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2251,11 +2375,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository31(self, **kwargs):  # noqa: E501
         """Create R proxy repository  # noqa: E501
@@ -2271,8 +2396,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository31_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository31_with_http_info(**kwargs)  # noqa: E501
@@ -2293,21 +2418,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository31" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2321,17 +2446,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/proxy', 'POST',
+            "/v1/repositories/r/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2340,11 +2469,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository32(self, **kwargs):  # noqa: E501
         """Create Cocoapods proxy repository  # noqa: E501
@@ -2360,8 +2490,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository32_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository32_with_http_info(**kwargs)  # noqa: E501
@@ -2382,21 +2512,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository32" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2410,17 +2540,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/cocoapods/proxy', 'POST',
+            "/v1/repositories/cocoapods/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2429,11 +2563,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository33(self, **kwargs):  # noqa: E501
         """Create a Go group repository  # noqa: E501
@@ -2449,8 +2584,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository33_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository33_with_http_info(**kwargs)  # noqa: E501
@@ -2471,21 +2606,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository33" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2499,17 +2634,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/group', 'POST',
+            "/v1/repositories/go/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2518,11 +2657,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository34(self, **kwargs):  # noqa: E501
         """Create a Go proxy repository  # noqa: E501
@@ -2538,8 +2678,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository34_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository34_with_http_info(**kwargs)  # noqa: E501
@@ -2560,21 +2700,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository34" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2588,17 +2728,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/proxy', 'POST',
+            "/v1/repositories/go/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2607,11 +2751,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository35(self, **kwargs):  # noqa: E501
         """Create p2 proxy repository  # noqa: E501
@@ -2627,8 +2772,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository35_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository35_with_http_info(**kwargs)  # noqa: E501
@@ -2649,21 +2794,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository35" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2677,17 +2822,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/p2/proxy', 'POST',
+            "/v1/repositories/p2/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2696,11 +2845,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository36(self, **kwargs):  # noqa: E501
         """Create Helm hosted repository  # noqa: E501
@@ -2716,8 +2866,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository36_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository36_with_http_info(**kwargs)  # noqa: E501
@@ -2738,21 +2888,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository36" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2766,17 +2916,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/hosted', 'POST',
+            "/v1/repositories/helm/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2785,11 +2939,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository37(self, **kwargs):  # noqa: E501
         """Create Helm proxy repository  # noqa: E501
@@ -2805,8 +2960,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository37_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository37_with_http_info(**kwargs)  # noqa: E501
@@ -2827,21 +2982,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository37" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2855,17 +3010,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/proxy', 'POST',
+            "/v1/repositories/helm/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2874,11 +3033,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository38(self, **kwargs):  # noqa: E501
         """Create Bower group repository  # noqa: E501
@@ -2894,8 +3054,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository38_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository38_with_http_info(**kwargs)  # noqa: E501
@@ -2916,21 +3076,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository38" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -2944,17 +3104,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/group', 'POST',
+            "/v1/repositories/bower/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -2963,11 +3127,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository39(self, **kwargs):  # noqa: E501
         """Create Bower hosted repository  # noqa: E501
@@ -2983,8 +3148,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository39_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository39_with_http_info(**kwargs)  # noqa: E501
@@ -3005,21 +3170,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository39" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3033,17 +3198,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/hosted', 'POST',
+            "/v1/repositories/bower/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3052,11 +3221,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository4(self, **kwargs):  # noqa: E501
         """Create APT proxy repository  # noqa: E501
@@ -3072,8 +3242,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository4_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository4_with_http_info(**kwargs)  # noqa: E501
@@ -3094,21 +3264,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository4" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3122,17 +3292,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/proxy', 'POST',
+            "/v1/repositories/apt/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3141,11 +3315,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository40(self, **kwargs):  # noqa: E501
         """Create Bower proxy repository  # noqa: E501
@@ -3161,8 +3336,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository40_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository40_with_http_info(**kwargs)  # noqa: E501
@@ -3183,21 +3358,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository40" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3211,17 +3386,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/proxy', 'POST',
+            "/v1/repositories/bower/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3230,11 +3409,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository5(self, **kwargs):  # noqa: E501
         """Create raw group repository  # noqa: E501
@@ -3250,8 +3430,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository5_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository5_with_http_info(**kwargs)  # noqa: E501
@@ -3272,21 +3452,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository5" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3300,17 +3480,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/group', 'POST',
+            "/v1/repositories/raw/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3319,11 +3503,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository6(self, **kwargs):  # noqa: E501
         """Create raw hosted repository  # noqa: E501
@@ -3339,8 +3524,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository6_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository6_with_http_info(**kwargs)  # noqa: E501
@@ -3361,21 +3546,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository6" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3389,17 +3574,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/hosted', 'POST',
+            "/v1/repositories/raw/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3408,11 +3597,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository7(self, **kwargs):  # noqa: E501
         """Create raw proxy repository  # noqa: E501
@@ -3428,8 +3618,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository7_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository7_with_http_info(**kwargs)  # noqa: E501
@@ -3450,21 +3640,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository7" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3478,17 +3668,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/proxy', 'POST',
+            "/v1/repositories/raw/proxy",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3497,11 +3691,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository8(self, **kwargs):  # noqa: E501
         """Create npm group repository  # noqa: E501
@@ -3517,8 +3712,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository8_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository8_with_http_info(**kwargs)  # noqa: E501
@@ -3539,21 +3734,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository8" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3567,17 +3762,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/group', 'POST',
+            "/v1/repositories/npm/group",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3586,11 +3785,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def create_repository9(self, **kwargs):  # noqa: E501
         """Create npm hosted repository  # noqa: E501
@@ -3606,8 +3806,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_repository9_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.create_repository9_with_http_info(**kwargs)  # noqa: E501
@@ -3628,21 +3828,21 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_repository9" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -3656,17 +3856,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/hosted', 'POST',
+            "/v1/repositories/npm/hosted",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3675,11 +3879,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def delete_repository(self, repository_name, **kwargs):  # noqa: E501
         """Delete repository of any format  # noqa: E501
@@ -3695,11 +3900,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.delete_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.delete_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.delete_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.delete_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def delete_repository_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -3717,31 +3926,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_repository" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `delete_repository`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `delete_repository`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -3755,7 +3965,8 @@ class RepositoryManagementApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}', 'DELETE',
+            "/v1/repositories/{repositoryName}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -3764,11 +3975,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def disable_repository_health_check(self, repository_name, **kwargs):  # noqa: E501
         """Disable repository health check. Proxy repositories only.  # noqa: E501
@@ -3784,14 +3996,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.disable_repository_health_check_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.disable_repository_health_check_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.disable_repository_health_check_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.disable_repository_health_check_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def disable_repository_health_check_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def disable_repository_health_check_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Disable repository health check. Proxy repositories only.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3806,31 +4024,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method disable_repository_health_check" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `disable_repository_health_check`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `disable_repository_health_check`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -3844,7 +4063,8 @@ class RepositoryManagementApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}/health-check', 'DELETE',
+            "/v1/repositories/{repositoryName}/health-check",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -3853,11 +4073,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def enable_repository_health_check(self, repository_name, **kwargs):  # noqa: E501
         """Enable repository health check. Proxy repositories only.  # noqa: E501
@@ -3873,14 +4094,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.enable_repository_health_check_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.enable_repository_health_check_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.enable_repository_health_check_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.enable_repository_health_check_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def enable_repository_health_check_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def enable_repository_health_check_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Enable repository health check. Proxy repositories only.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3895,31 +4122,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method enable_repository_health_check" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `enable_repository_health_check`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `enable_repository_health_check`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -3933,7 +4161,8 @@ class RepositoryManagementApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}/health-check', 'POST',
+            "/v1/repositories/{repositoryName}/health-check",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -3942,11 +4171,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repositories(self, **kwargs):  # noqa: E501
         """List repositories  # noqa: E501
@@ -3961,8 +4191,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_repositories_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_repositories_with_http_info(**kwargs)  # noqa: E501
@@ -3983,20 +4213,20 @@ class RepositoryManagementApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repositories" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -4011,27 +4241,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositorySettings', 'GET',
+            "/v1/repositorySettings",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[AbstractApiRepository]',  # noqa: E501
+            response_type="list[AbstractApiRepository]",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repositories1(self, **kwargs):  # noqa: E501
         """List repositories  # noqa: E501
@@ -4046,8 +4279,8 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_repositories1_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_repositories1_with_http_info(**kwargs)  # noqa: E501
@@ -4068,20 +4301,20 @@ class RepositoryManagementApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repositories1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -4096,27 +4329,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories', 'GET',
+            "/v1/repositories",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[RepositoryXO]',  # noqa: E501
+            response_type="list[RepositoryXO]",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository(self, repository_name, **kwargs):  # noqa: E501
         """Get repository details  # noqa: E501
@@ -4132,11 +4368,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4154,31 +4394,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4189,27 +4430,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}', 'GET',
+            "/v1/repositories/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RepositoryXO',  # noqa: E501
+            response_type="RepositoryXO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository1(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4225,11 +4469,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository1_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository1_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository1_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository1_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository1_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4247,31 +4495,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository1`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4282,27 +4531,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/group/{repositoryName}', 'GET',
+            "/v1/repositories/maven/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository10(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4318,11 +4570,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository10_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository10_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository10_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository10_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository10_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4340,31 +4596,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository10" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository10`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository10`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4375,27 +4632,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/npm/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository11(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4411,11 +4671,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository11_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository11_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository11_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository11_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository11_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4433,31 +4697,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository11" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository11`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository11`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4468,27 +4733,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/npm/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NpmProxyApiRepository',  # noqa: E501
+            response_type="NpmProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository12(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4504,11 +4772,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository12_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository12_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository12_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository12_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository12_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4526,31 +4798,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository12" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository12`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository12`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4561,27 +4834,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/group/{repositoryName}', 'GET',
+            "/v1/repositories/nuget/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository13(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4597,11 +4873,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository13_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository13_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository13_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository13_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository13_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4619,31 +4899,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository13" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository13`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository13`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4654,27 +4935,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/nuget/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository14(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4690,11 +4974,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository14_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository14_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository14_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository14_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository14_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4712,31 +5000,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository14" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository14`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository14`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4747,27 +5036,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/nuget/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NugetProxyApiRepository',  # noqa: E501
+            response_type="NugetProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository15(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4783,11 +5075,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository15_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository15_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository15_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository15_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository15_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4805,31 +5101,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository15" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository15`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository15`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4840,27 +5137,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/group/{repositoryName}', 'GET',
+            "/v1/repositories/rubygems/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository16(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4876,11 +5176,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository16_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository16_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository16_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository16_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository16_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4898,31 +5202,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository16" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository16`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository16`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -4933,27 +5238,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/rubygems/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository17(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -4969,11 +5277,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository17_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository17_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository17_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository17_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository17_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -4991,31 +5303,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository17" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository17`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository17`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5026,27 +5339,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/rubygems/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository18(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5062,11 +5378,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository18_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository18_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository18_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository18_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository18_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5084,31 +5404,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository18" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository18`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository18`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5119,27 +5440,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/group/{repositoryName}', 'GET',
+            "/v1/repositories/yum/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository19(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5155,11 +5479,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository19_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository19_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository19_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository19_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository19_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5177,31 +5505,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository19" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository19`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository19`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5212,27 +5541,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/yum/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='YumHostedApiRepository',  # noqa: E501
+            response_type="YumHostedApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository2(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5248,11 +5580,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository2_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository2_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository2_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository2_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository2_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5270,31 +5606,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository2`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository2`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5305,27 +5642,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/maven/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MavenHostedApiRepository',  # noqa: E501
+            response_type="MavenHostedApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository20(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5341,11 +5681,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository20_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository20_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository20_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository20_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository20_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5363,31 +5707,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository20" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository20`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository20`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5398,27 +5743,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/yum/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository21(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5434,11 +5782,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository21_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository21_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository21_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository21_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository21_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5456,31 +5808,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository21" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository21`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository21`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5491,27 +5844,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/group/{repositoryName}', 'GET',
+            "/v1/repositories/docker/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DockerGroupApiRepository',  # noqa: E501
+            response_type="DockerGroupApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository22(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5527,11 +5883,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository22_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository22_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository22_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository22_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository22_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5549,31 +5909,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository22" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository22`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository22`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5584,27 +5945,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/docker/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DockerHostedApiRepository',  # noqa: E501
+            response_type="DockerHostedApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository23(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5620,11 +5984,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository23_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository23_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository23_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository23_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository23_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5642,31 +6010,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository23" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository23`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository23`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5677,27 +6046,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/docker/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DockerProxyApiRepository',  # noqa: E501
+            response_type="DockerProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository24(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5713,11 +6085,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository24_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository24_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository24_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository24_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository24_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5735,31 +6111,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository24" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository24`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository24`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5770,27 +6147,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/group/{repositoryName}', 'GET',
+            "/v1/repositories/pypi/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository25(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5806,11 +6186,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository25_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository25_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository25_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository25_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository25_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5828,31 +6212,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository25" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository25`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository25`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5863,27 +6248,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/pypi/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository26(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5899,11 +6287,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository26_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository26_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository26_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository26_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository26_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -5921,31 +6313,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository26" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository26`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository26`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -5956,27 +6349,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/pypi/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository27(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -5992,11 +6388,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository27_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository27_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository27_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository27_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository27_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6014,31 +6414,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository27" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository27`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository27`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6049,27 +6450,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conda/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/conda/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository28(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6085,11 +6489,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository28_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository28_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository28_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository28_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository28_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6107,31 +6515,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository28" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository28`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository28`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6142,27 +6551,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conan/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/conan/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository29(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6178,11 +6590,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository29_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository29_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository29_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository29_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository29_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6200,31 +6616,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository29" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository29`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository29`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6235,27 +6652,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/gitlfs/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/gitlfs/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository3(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6271,11 +6691,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository3_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository3_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository3_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository3_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository3_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6293,31 +6717,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository3`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository3`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6328,27 +6753,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/maven/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MavenProxyApiRepository',  # noqa: E501
+            response_type="MavenProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository30(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6364,11 +6792,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository30_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository30_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository30_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository30_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository30_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6386,31 +6818,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository30" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository30`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository30`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6421,27 +6854,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/group/{repositoryName}', 'GET',
+            "/v1/repositories/r/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository31(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6457,11 +6893,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository31_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository31_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository31_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository31_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository31_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6479,31 +6919,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository31" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository31`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository31`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6514,27 +6955,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/r/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository32(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6550,11 +6994,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository32_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository32_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository32_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository32_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository32_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6572,31 +7020,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository32" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository32`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository32`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6607,27 +7056,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/r/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository33(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6643,11 +7095,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository33_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository33_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository33_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository33_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository33_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6665,31 +7121,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository33" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository33`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository33`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6700,27 +7157,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/cocoapods/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/cocoapods/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository34(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6736,11 +7196,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository34_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository34_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository34_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository34_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository34_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6758,31 +7222,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository34" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository34`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository34`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6793,27 +7258,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/group/{repositoryName}', 'GET',
+            "/v1/repositories/go/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository35(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6829,11 +7297,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository35_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository35_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository35_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository35_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository35_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6851,31 +7323,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository35" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository35`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository35`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6886,27 +7359,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/go/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository36(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -6922,11 +7398,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository36_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository36_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository36_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository36_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository36_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -6944,31 +7424,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository36" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository36`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository36`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -6979,27 +7460,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/p2/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/p2/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository37(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7015,11 +7499,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository37_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository37_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository37_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository37_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository37_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7037,31 +7525,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository37" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository37`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository37`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7072,27 +7561,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/helm/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository38(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7108,11 +7600,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository38_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository38_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository38_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository38_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository38_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7130,31 +7626,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository38" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository38`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository38`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7165,27 +7662,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/helm/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository39(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7201,11 +7701,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository39_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository39_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository39_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository39_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository39_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7223,31 +7727,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository39" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository39`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository39`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7258,27 +7763,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/group/{repositoryName}', 'GET',
+            "/v1/repositories/bower/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository4(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7294,11 +7802,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository4_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository4_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository4_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository4_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository4_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7316,31 +7828,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository4" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository4`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository4`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7351,27 +7864,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/apt/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AptHostedApiRepository',  # noqa: E501
+            response_type="AptHostedApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository40(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7387,11 +7903,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository40_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository40_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository40_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository40_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository40_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7409,31 +7929,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository40" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository40`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository40`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7444,27 +7965,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/bower/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository41(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7480,11 +8004,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository41_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository41_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository41_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository41_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository41_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7502,31 +8030,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository41" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository41`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository41`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7537,27 +8066,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/bower/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BowerProxyApiRepository',  # noqa: E501
+            response_type="BowerProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository5(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7573,11 +8105,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository5_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository5_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository5_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository5_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository5_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7595,31 +8131,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository5" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository5`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository5`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7630,27 +8167,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/apt/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AptProxyApiRepository',  # noqa: E501
+            response_type="AptProxyApiRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository6(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7666,11 +8206,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository6_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository6_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository6_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository6_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository6_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7688,31 +8232,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository6" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository6`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository6`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7723,27 +8268,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/group/{repositoryName}', 'GET',
+            "/v1/repositories/raw/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupRepository',  # noqa: E501
+            response_type="SimpleApiGroupRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository7(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7759,11 +8307,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository7_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository7_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository7_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository7_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository7_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7781,31 +8333,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository7" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository7`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository7`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7816,27 +8369,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/hosted/{repositoryName}', 'GET',
+            "/v1/repositories/raw/hosted/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiHostedRepository',  # noqa: E501
+            response_type="SimpleApiHostedRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository8(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7852,11 +8408,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository8_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository8_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository8_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository8_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository8_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7874,31 +8434,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository8" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository8`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository8`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -7909,27 +8470,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/proxy/{repositoryName}', 'GET',
+            "/v1/repositories/raw/proxy/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiProxyRepository',  # noqa: E501
+            response_type="SimpleApiProxyRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_repository9(self, repository_name, **kwargs):  # noqa: E501
         """Get repository  # noqa: E501
@@ -7945,11 +8509,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_repository9_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_repository9_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_repository9_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.get_repository9_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def get_repository9_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -7967,31 +8535,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_repository9" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `get_repository9`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `get_repository9`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8002,27 +8571,30 @@ class RepositoryManagementApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/group/{repositoryName}', 'GET',
+            "/v1/repositories/npm/group/{repositoryName}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SimpleApiGroupDeployRepository',  # noqa: E501
+            response_type="SimpleApiGroupDeployRepository",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def invalidate_cache(self, repository_name, **kwargs):  # noqa: E501
         """Invalidate repository cache. Proxy or group repositories only.  # noqa: E501
@@ -8038,11 +8610,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.invalidate_cache_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.invalidate_cache_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.invalidate_cache_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.invalidate_cache_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def invalidate_cache_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -8060,31 +8636,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method invalidate_cache" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `invalidate_cache`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `invalidate_cache`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8098,7 +8675,8 @@ class RepositoryManagementApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}/invalidate-cache', 'POST',
+            "/v1/repositories/{repositoryName}/invalidate-cache",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -8107,11 +8685,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def rebuild_index(self, repository_name, **kwargs):  # noqa: E501
         """Schedule a 'Repair - Rebuild repository search' Task. Hosted or proxy repositories only.  # noqa: E501
@@ -8127,11 +8706,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.rebuild_index_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.rebuild_index_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.rebuild_index_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.rebuild_index_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def rebuild_index_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -8149,31 +8732,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method rebuild_index" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `rebuild_index`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `rebuild_index`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8187,7 +8771,8 @@ class RepositoryManagementApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/{repositoryName}/rebuild-index', 'POST',
+            "/v1/repositories/{repositoryName}/rebuild-index",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -8196,11 +8781,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository(self, repository_name, **kwargs):  # noqa: E501
         """Update Maven group repository  # noqa: E501
@@ -8217,11 +8803,15 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
     def update_repository_with_http_info(self, repository_name, **kwargs):  # noqa: E501
@@ -8240,31 +8830,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8274,17 +8865,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/group/{repositoryName}', 'PUT',
+            "/v1/repositories/maven/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8293,11 +8888,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository1(self, repository_name, **kwargs):  # noqa: E501
         """Update Maven hosted repository  # noqa: E501
@@ -8314,14 +8910,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository1_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository1_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository1_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository1_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository1_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository1_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Maven hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8337,31 +8939,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository1`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8371,17 +8974,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/maven/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8390,11 +8997,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository10(self, repository_name, **kwargs):  # noqa: E501
         """Update npm proxy repository  # noqa: E501
@@ -8411,14 +9019,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository10_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository10_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository10_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository10_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository10_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository10_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update npm proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8434,31 +9048,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository10" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository10`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository10`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8468,17 +9083,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/npm/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8487,11 +9106,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository11(self, repository_name, **kwargs):  # noqa: E501
         """Update NuGet group repository  # noqa: E501
@@ -8508,14 +9128,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository11_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository11_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository11_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository11_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository11_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository11_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update NuGet group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8531,31 +9157,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository11" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository11`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository11`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8565,17 +9192,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/group/{repositoryName}', 'PUT',
+            "/v1/repositories/nuget/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8584,11 +9215,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository12(self, repository_name, **kwargs):  # noqa: E501
         """Update NuGet hosted repository  # noqa: E501
@@ -8605,14 +9237,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository12_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository12_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository12_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository12_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository12_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository12_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update NuGet hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8628,31 +9266,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository12" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository12`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository12`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8662,17 +9301,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/nuget/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8681,11 +9324,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository13(self, repository_name, **kwargs):  # noqa: E501
         """Update NuGet proxy repository  # noqa: E501
@@ -8702,14 +9346,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository13_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository13_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository13_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository13_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository13_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository13_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update NuGet proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8725,31 +9375,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository13" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository13`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository13`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8759,17 +9410,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/nuget/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/nuget/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8778,11 +9433,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository14(self, repository_name, **kwargs):  # noqa: E501
         """Update RubyGems group repository  # noqa: E501
@@ -8799,14 +9455,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository14_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository14_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository14_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository14_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository14_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository14_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update RubyGems group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8822,31 +9484,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository14" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository14`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository14`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8856,17 +9519,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/group/{repositoryName}', 'PUT',
+            "/v1/repositories/rubygems/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8875,11 +9542,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository15(self, repository_name, **kwargs):  # noqa: E501
         """Update RubyGems hosted repository  # noqa: E501
@@ -8896,14 +9564,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository15_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository15_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository15_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository15_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository15_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository15_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update RubyGems hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -8919,31 +9593,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository15" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository15`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository15`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -8953,17 +9628,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/rubygems/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -8972,11 +9651,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository16(self, repository_name, **kwargs):  # noqa: E501
         """Update RubyGems proxy repository  # noqa: E501
@@ -8993,14 +9673,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository16_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository16_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository16_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository16_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository16_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository16_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update RubyGems proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9016,31 +9702,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository16" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository16`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository16`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9050,17 +9737,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/rubygems/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/rubygems/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9069,11 +9760,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository17(self, repository_name, **kwargs):  # noqa: E501
         """Update Yum group repository  # noqa: E501
@@ -9090,14 +9782,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository17_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository17_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository17_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository17_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository17_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository17_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Yum group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9113,31 +9811,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository17" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository17`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository17`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9147,17 +9846,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/group/{repositoryName}', 'PUT',
+            "/v1/repositories/yum/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9166,11 +9869,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository18(self, repository_name, **kwargs):  # noqa: E501
         """Update Yum hosted repository  # noqa: E501
@@ -9187,14 +9891,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository18_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository18_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository18_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository18_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository18_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository18_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Yum hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9210,31 +9920,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository18" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository18`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository18`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9244,17 +9955,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/yum/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9263,11 +9978,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository19(self, repository_name, **kwargs):  # noqa: E501
         """Update Yum proxy repository  # noqa: E501
@@ -9284,14 +10000,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository19_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository19_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository19_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository19_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository19_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository19_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Yum proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9307,31 +10029,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository19" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository19`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository19`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9341,17 +10064,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/yum/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/yum/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9360,11 +10087,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository2(self, repository_name, **kwargs):  # noqa: E501
         """Update Maven proxy repository  # noqa: E501
@@ -9381,14 +10109,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository2_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository2_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository2_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository2_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository2_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository2_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Maven proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9404,31 +10138,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository2" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository2`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository2`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9438,17 +10173,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/maven/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/maven/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9457,11 +10196,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository20(self, repository_name, **kwargs):  # noqa: E501
         """Update Docker group repository  # noqa: E501
@@ -9478,14 +10218,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository20_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository20_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository20_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository20_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository20_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository20_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Docker group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9501,31 +10247,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository20" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository20`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository20`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9535,17 +10282,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/group/{repositoryName}', 'PUT',
+            "/v1/repositories/docker/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9554,11 +10305,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository21(self, repository_name, **kwargs):  # noqa: E501
         """Update Docker hosted repository  # noqa: E501
@@ -9575,14 +10327,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository21_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository21_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository21_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository21_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository21_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository21_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Docker hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9598,31 +10356,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository21" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository21`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository21`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9632,17 +10391,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/docker/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9651,11 +10414,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository22(self, repository_name, **kwargs):  # noqa: E501
         """Update Docker group repository  # noqa: E501
@@ -9672,14 +10436,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository22_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository22_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository22_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository22_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository22_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository22_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Docker group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9695,31 +10465,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository22" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository22`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository22`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9729,17 +10500,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/docker/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/docker/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9748,11 +10523,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository23(self, repository_name, **kwargs):  # noqa: E501
         """Update PyPI group repository  # noqa: E501
@@ -9769,14 +10545,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository23_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository23_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository23_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository23_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository23_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository23_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update PyPI group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9792,31 +10574,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository23" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository23`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository23`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9826,17 +10609,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/group/{repositoryName}', 'PUT',
+            "/v1/repositories/pypi/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9845,11 +10632,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository24(self, repository_name, **kwargs):  # noqa: E501
         """Update PyPI hosted repository  # noqa: E501
@@ -9866,14 +10654,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository24_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository24_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository24_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository24_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository24_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository24_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update PyPI hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9889,31 +10683,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository24" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository24`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository24`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -9923,17 +10718,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/pypi/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -9942,11 +10741,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository25(self, repository_name, **kwargs):  # noqa: E501
         """Update PyPI proxy repository  # noqa: E501
@@ -9963,14 +10763,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository25_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository25_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository25_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository25_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository25_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository25_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update PyPI proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -9986,31 +10792,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository25" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository25`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository25`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10020,17 +10827,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/pypi/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/pypi/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10039,11 +10850,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository26(self, repository_name, **kwargs):  # noqa: E501
         """Update conda proxy repository  # noqa: E501
@@ -10060,14 +10872,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository26_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository26_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository26_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository26_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository26_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository26_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update conda proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10083,31 +10901,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository26" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository26`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository26`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10117,17 +10936,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conda/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/conda/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10136,11 +10959,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository27(self, repository_name, **kwargs):  # noqa: E501
         """Update Conan proxy repository  # noqa: E501
@@ -10157,14 +10981,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository27_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository27_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository27_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository27_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository27_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository27_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Conan proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10180,31 +11010,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository27" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository27`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository27`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10214,17 +11045,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/conan/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/conan/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10233,11 +11068,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository28(self, repository_name, **kwargs):  # noqa: E501
         """Update Git LFS hosted repository  # noqa: E501
@@ -10254,14 +11090,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository28_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository28_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository28_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository28_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository28_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository28_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Git LFS hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10277,31 +11119,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository28" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository28`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository28`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10311,17 +11154,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/gitlfs/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/gitlfs/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10330,11 +11177,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository29(self, repository_name, **kwargs):  # noqa: E501
         """Update R group repository  # noqa: E501
@@ -10351,14 +11199,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository29_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository29_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository29_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository29_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository29_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository29_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update R group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10374,31 +11228,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository29" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository29`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository29`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10408,17 +11263,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/group/{repositoryName}', 'PUT',
+            "/v1/repositories/r/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10427,11 +11286,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository3(self, repository_name, **kwargs):  # noqa: E501
         """Update APT hosted repository  # noqa: E501
@@ -10448,14 +11308,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository3_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository3_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository3_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository3_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository3_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository3_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update APT hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10471,31 +11337,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository3" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository3`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository3`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10505,17 +11372,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/apt/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10524,11 +11395,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository30(self, repository_name, **kwargs):  # noqa: E501
         """Update R hosted repository  # noqa: E501
@@ -10545,14 +11417,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository30_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository30_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository30_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository30_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository30_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository30_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update R hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10568,31 +11446,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository30" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository30`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository30`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10602,17 +11481,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/r/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10621,11 +11504,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository31(self, repository_name, **kwargs):  # noqa: E501
         """Update R proxy repository  # noqa: E501
@@ -10642,14 +11526,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository31_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository31_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository31_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository31_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository31_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository31_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update R proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10665,31 +11555,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository31" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository31`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository31`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10699,17 +11590,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/r/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/r/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10718,11 +11613,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository32(self, repository_name, **kwargs):  # noqa: E501
         """Update Cocoapods proxy repository  # noqa: E501
@@ -10739,14 +11635,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository32_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository32_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository32_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository32_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository32_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository32_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Cocoapods proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10762,31 +11664,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository32" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository32`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository32`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10796,17 +11699,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/cocoapods/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/cocoapods/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10815,11 +11722,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository33(self, repository_name, **kwargs):  # noqa: E501
         """Update a Go group repository  # noqa: E501
@@ -10836,14 +11744,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository33_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository33_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository33_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository33_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository33_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository33_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update a Go group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10859,31 +11773,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository33" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository33`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository33`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10893,17 +11808,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/group/{repositoryName}', 'PUT',
+            "/v1/repositories/go/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -10912,11 +11831,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository34(self, repository_name, **kwargs):  # noqa: E501
         """Update a Go proxy repository  # noqa: E501
@@ -10933,14 +11853,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository34_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository34_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository34_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository34_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository34_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository34_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update a Go proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10956,31 +11882,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository34" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository34`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository34`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -10990,17 +11917,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/go/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/go/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11009,11 +11940,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository35(self, repository_name, **kwargs):  # noqa: E501
         """Update p2 proxy repository  # noqa: E501
@@ -11030,14 +11962,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository35_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository35_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository35_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository35_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository35_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository35_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update p2 proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11053,31 +11991,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository35" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository35`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository35`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11087,17 +12026,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/p2/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/p2/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11106,11 +12049,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository36(self, repository_name, **kwargs):  # noqa: E501
         """Update Helm hosted repository  # noqa: E501
@@ -11127,14 +12071,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository36_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository36_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository36_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository36_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository36_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository36_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Helm hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11150,31 +12100,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository36" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository36`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository36`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11184,17 +12135,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/helm/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11203,11 +12158,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository37(self, repository_name, **kwargs):  # noqa: E501
         """Update Helm proxy repository  # noqa: E501
@@ -11224,14 +12180,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository37_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository37_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository37_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository37_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository37_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository37_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Helm proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11247,31 +12209,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository37" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository37`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository37`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11281,17 +12244,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/helm/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/helm/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11300,11 +12267,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository38(self, repository_name, **kwargs):  # noqa: E501
         """Update Bower group repository  # noqa: E501
@@ -11321,14 +12289,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository38_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository38_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository38_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository38_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository38_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository38_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Bower group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11344,31 +12318,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository38" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository38`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository38`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11378,17 +12353,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/group/{repositoryName}', 'PUT',
+            "/v1/repositories/bower/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11397,11 +12376,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository39(self, repository_name, **kwargs):  # noqa: E501
         """Update Bower hosted repository  # noqa: E501
@@ -11418,14 +12398,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository39_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository39_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository39_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository39_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository39_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository39_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Bower hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11441,31 +12427,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository39" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository39`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository39`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11475,17 +12462,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/bower/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11494,11 +12485,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository4(self, repository_name, **kwargs):  # noqa: E501
         """Update APT proxy repository  # noqa: E501
@@ -11515,14 +12507,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository4_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository4_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository4_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository4_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository4_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository4_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update APT proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11538,31 +12536,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository4" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository4`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository4`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11572,17 +12571,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/apt/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/apt/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11591,11 +12594,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository40(self, repository_name, **kwargs):  # noqa: E501
         """Update Bower proxy repository  # noqa: E501
@@ -11612,14 +12616,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository40_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository40_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository40_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository40_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository40_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository40_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update Bower proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11635,31 +12645,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository40" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository40`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository40`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11669,17 +12680,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/bower/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/bower/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11688,11 +12703,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository5(self, repository_name, **kwargs):  # noqa: E501
         """Update raw group repository  # noqa: E501
@@ -11709,14 +12725,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository5_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository5_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository5_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository5_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository5_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository5_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update raw group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11732,31 +12754,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository5" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository5`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository5`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11766,17 +12789,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/group/{repositoryName}', 'PUT',
+            "/v1/repositories/raw/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11785,11 +12812,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository6(self, repository_name, **kwargs):  # noqa: E501
         """Update raw hosted repository  # noqa: E501
@@ -11806,14 +12834,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository6_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository6_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository6_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository6_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository6_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository6_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update raw hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11829,31 +12863,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository6" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository6`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository6`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11863,17 +12898,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/raw/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11882,11 +12921,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository7(self, repository_name, **kwargs):  # noqa: E501
         """Update raw proxy repository  # noqa: E501
@@ -11903,14 +12943,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository7_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository7_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository7_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository7_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository7_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository7_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update raw proxy repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -11926,31 +12972,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository7" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository7`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository7`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -11960,17 +13007,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/raw/proxy/{repositoryName}', 'PUT',
+            "/v1/repositories/raw/proxy/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -11979,11 +13030,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository8(self, repository_name, **kwargs):  # noqa: E501
         """Update npm group repository  # noqa: E501
@@ -12000,14 +13052,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository8_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository8_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository8_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository8_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository8_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository8_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update npm group repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -12023,31 +13081,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository8" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository8`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository8`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -12057,17 +13116,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/group/{repositoryName}', 'PUT',
+            "/v1/repositories/npm/group/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -12076,11 +13139,12 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def update_repository9(self, repository_name, **kwargs):  # noqa: E501
         """Update npm hosted repository  # noqa: E501
@@ -12097,14 +13161,20 @@ class RepositoryManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_repository9_with_http_info(repository_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.update_repository9_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.update_repository9_with_http_info(repository_name, **kwargs)  # noqa: E501
+            (data) = self.update_repository9_with_http_info(
+                repository_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def update_repository9_with_http_info(self, repository_name, **kwargs):  # noqa: E501
+    def update_repository9_with_http_info(
+        self, repository_name, **kwargs
+    ):  # noqa: E501
         """Update npm hosted repository  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -12120,31 +13190,32 @@ class RepositoryManagementApi(object):
                  returns the request thread.
         """
 
-        all_params = ['repository_name', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["repository_name", "body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_repository9" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'repository_name' is set
-        if ('repository_name' not in params or
-                params['repository_name'] is None):
-            raise ValueError("Missing the required parameter `repository_name` when calling `update_repository9`")  # noqa: E501
+        if "repository_name" not in params or params["repository_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `repository_name` when calling `update_repository9`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'repository_name' in params:
-            path_params['repositoryName'] = params['repository_name']  # noqa: E501
+        if "repository_name" in params:
+            path_params["repositoryName"] = params["repository_name"]  # noqa: E501
 
         query_params = []
 
@@ -12154,17 +13225,21 @@ class RepositoryManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/repositories/npm/hosted/{repositoryName}', 'PUT',
+            "/v1/repositories/npm/hosted/{repositoryName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -12173,8 +13248,9 @@ class RepositoryManagementApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

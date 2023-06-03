@@ -1,10 +1,10 @@
 # PageTagXO
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**items** | [**list[TagXO]**](TagXO.md) |  | [optional] 
-**continuation_token** | **str** |  | [optional] 
+
+| Name                   | Type                        | Description | Notes      |
+| ---------------------- | --------------------------- | ----------- | ---------- |
+| **items**              | [**list[TagXO]**](TagXO.md) |             | [optional] |
+| **continuation_token** | **str**                     |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

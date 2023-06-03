@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.models.yum_signing_repositories_attributes import YumSigningRepositoriesAttributes  # noqa: E501
+from nexus_sdk.models.yum_signing_repositories_attributes import (  # noqa: E501
+    YumSigningRepositoriesAttributes,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestYumSigningRepositoriesAttributes(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

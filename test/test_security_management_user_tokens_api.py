@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_sdk
-from nexus_sdk.api.security_management_user_tokens_api import SecurityManagementUserTokensApi  # noqa: E501
+from nexus_sdk.api.security_management_user_tokens_api import (  # noqa: E501
+    SecurityManagementUserTokensApi,
+)
 from nexus_sdk.rest import ApiException
 
 
@@ -50,5 +52,5 @@ class TestSecurityManagementUserTokensApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

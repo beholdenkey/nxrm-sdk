@@ -45,11 +45,13 @@ class SecurityManagementSAMLApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.delete_saml_configuration_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.delete_saml_configuration_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.delete_saml_configuration_with_http_info(
+                **kwargs
+            )  # noqa: E501
             return data
 
     def delete_saml_configuration_with_http_info(self, **kwargs):  # noqa: E501
@@ -67,20 +69,20 @@ class SecurityManagementSAMLApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_saml_configuration" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -98,7 +100,8 @@ class SecurityManagementSAMLApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/saml', 'DELETE',
+            "/v1/security/saml",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -107,11 +110,12 @@ class SecurityManagementSAMLApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_metadata(self, **kwargs):  # noqa: E501
         """Get service provider metadata XML document  # noqa: E501
@@ -126,8 +130,8 @@ class SecurityManagementSAMLApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_metadata_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_metadata_with_http_info(**kwargs)  # noqa: E501
@@ -148,20 +152,20 @@ class SecurityManagementSAMLApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_metadata" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -179,7 +183,8 @@ class SecurityManagementSAMLApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/saml/metadata', 'GET',
+            "/v1/security/saml/metadata",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -188,11 +193,12 @@ class SecurityManagementSAMLApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_public_certificate_in_pem_format(self, **kwargs):  # noqa: E501
         """Get service provider signing certificate in PEM format  # noqa: E501
@@ -207,14 +213,20 @@ class SecurityManagementSAMLApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_public_certificate_in_pem_format_with_http_info(**kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_public_certificate_in_pem_format_with_http_info(
+                **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_public_certificate_in_pem_format_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_public_certificate_in_pem_format_with_http_info(
+                **kwargs
+            )  # noqa: E501
             return data
 
-    def get_public_certificate_in_pem_format_with_http_info(self, **kwargs):  # noqa: E501
+    def get_public_certificate_in_pem_format_with_http_info(
+        self, **kwargs
+    ):  # noqa: E501
         """Get service provider signing certificate in PEM format  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -229,20 +241,20 @@ class SecurityManagementSAMLApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_public_certificate_in_pem_format" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -260,7 +272,8 @@ class SecurityManagementSAMLApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/saml/pem', 'GET',
+            "/v1/security/saml/pem",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -269,11 +282,12 @@ class SecurityManagementSAMLApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_saml_configuration(self, **kwargs):  # noqa: E501
         """Get SAML configuration  # noqa: E501
@@ -288,8 +302,8 @@ class SecurityManagementSAMLApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_saml_configuration_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_saml_configuration_with_http_info(**kwargs)  # noqa: E501
@@ -310,20 +324,20 @@ class SecurityManagementSAMLApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_saml_configuration" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -341,7 +355,8 @@ class SecurityManagementSAMLApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/saml', 'GET',
+            "/v1/security/saml",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -350,11 +365,12 @@ class SecurityManagementSAMLApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def put_saml_configuration(self, **kwargs):  # noqa: E501
         """Create or update SAML configuration  # noqa: E501
@@ -370,8 +386,8 @@ class SecurityManagementSAMLApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.put_saml_configuration_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.put_saml_configuration_with_http_info(**kwargs)  # noqa: E501
@@ -392,21 +408,21 @@ class SecurityManagementSAMLApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method put_saml_configuration" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -420,17 +436,21 @@ class SecurityManagementSAMLApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/security/saml', 'PUT',
+            "/v1/security/saml",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -439,8 +459,9 @@ class SecurityManagementSAMLApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

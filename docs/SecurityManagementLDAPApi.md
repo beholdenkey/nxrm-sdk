@@ -1,22 +1,24 @@
 # swagger_client.SecurityManagementLDAPApi
 
-All URIs are relative to */service/rest/*
+All URIs are relative to _/service/rest/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**change_order**](SecurityManagementLDAPApi.md#change_order) | **POST** /v1/security/ldap/change-order | Change LDAP server order
-[**create_ldap_server**](SecurityManagementLDAPApi.md#create_ldap_server) | **POST** /v1/security/ldap | Create LDAP server
-[**delete_ldap_server**](SecurityManagementLDAPApi.md#delete_ldap_server) | **DELETE** /v1/security/ldap/{name} | Delete LDAP server
-[**get_ldap_server**](SecurityManagementLDAPApi.md#get_ldap_server) | **GET** /v1/security/ldap/{name} | Get LDAP server
-[**get_ldap_servers**](SecurityManagementLDAPApi.md#get_ldap_servers) | **GET** /v1/security/ldap | List LDAP servers
-[**update_ldap_server**](SecurityManagementLDAPApi.md#update_ldap_server) | **PUT** /v1/security/ldap/{name} | Update LDAP server
+| Method                                                                    | HTTP request                            | Description              |
+| ------------------------------------------------------------------------- | --------------------------------------- | ------------------------ |
+| [**change_order**](SecurityManagementLDAPApi.md#change_order)             | **POST** /v1/security/ldap/change-order | Change LDAP server order |
+| [**create_ldap_server**](SecurityManagementLDAPApi.md#create_ldap_server) | **POST** /v1/security/ldap              | Create LDAP server       |
+| [**delete_ldap_server**](SecurityManagementLDAPApi.md#delete_ldap_server) | **DELETE** /v1/security/ldap/{name}     | Delete LDAP server       |
+| [**get_ldap_server**](SecurityManagementLDAPApi.md#get_ldap_server)       | **GET** /v1/security/ldap/{name}        | Get LDAP server          |
+| [**get_ldap_servers**](SecurityManagementLDAPApi.md#get_ldap_servers)     | **GET** /v1/security/ldap               | List LDAP servers        |
+| [**update_ldap_server**](SecurityManagementLDAPApi.md#update_ldap_server) | **PUT** /v1/security/ldap/{name}        | Update LDAP server       |
 
 # **change_order**
+
 > change_order(body=body)
 
 Change LDAP server order
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -37,9 +39,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**list[str]**](str.md)| Ordered list of LDAP server names | [optional] 
+| Name     | Type                    | Description                       | Notes      |
+| -------- | ----------------------- | --------------------------------- | ---------- |
+| **body** | [**list[str]**](str.md) | Ordered list of LDAP server names | [optional] |
 
 ### Return type
 
@@ -51,17 +53,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ldap_server**
+
 > create_ldap_server(body=body)
 
 Create LDAP server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -82,9 +86,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CreateLdapServerXo**](CreateLdapServerXo.md)|  | [optional] 
+| Name     | Type                                            | Description | Notes      |
+| -------- | ----------------------------------------------- | ----------- | ---------- |
+| **body** | [**CreateLdapServerXo**](CreateLdapServerXo.md) |             | [optional] |
 
 ### Return type
 
@@ -96,17 +100,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ldap_server**
+
 > delete_ldap_server(name)
 
 Delete LDAP server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -127,9 +133,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the LDAP server to delete | 
+| Name     | Type    | Description                       | Notes |
+| -------- | ------- | --------------------------------- | ----- |
+| **name** | **str** | Name of the LDAP server to delete |
 
 ### Return type
 
@@ -141,17 +147,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ldap_server**
+
 > get_ldap_server(name)
 
 Get LDAP server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -172,9 +180,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the LDAP server to retrieve | 
+| Name     | Type    | Description                         | Notes |
+| -------- | ------- | ----------------------------------- | ----- |
+| **name** | **str** | Name of the LDAP server to retrieve |
 
 ### Return type
 
@@ -186,17 +194,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ldap_servers**
+
 > get_ldap_servers()
 
 List LDAP servers
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -215,6 +225,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -227,17 +238,19 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ldap_server**
+
 > update_ldap_server(name, body=body)
 
 Update LDAP server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -259,10 +272,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the LDAP server to update | 
- **body** | [**UpdateLdapServerXo**](UpdateLdapServerXo.md)| Updated values of LDAP server | [optional] 
+| Name     | Type                                            | Description                       | Notes      |
+| -------- | ----------------------------------------------- | --------------------------------- | ---------- |
+| **name** | **str**                                         | Name of the LDAP server to update |
+| **body** | [**UpdateLdapServerXo**](UpdateLdapServerXo.md) | Updated values of LDAP server     | [optional] |
 
 ### Return type
 
@@ -274,8 +287,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
