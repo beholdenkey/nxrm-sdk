@@ -1,9 +1,0 @@
-from nexus_sdk.paths.v1_repositories_bower_proxy_repository_name.get import ApiForget
-from nexus_sdk.paths.v1_repositories_bower_proxy_repository_name.put import ApiForput
-
-
-class V1RepositoriesBowerProxyRepositoryName(
-    ApiForget,
-    ApiForput,
-):
-    pass
