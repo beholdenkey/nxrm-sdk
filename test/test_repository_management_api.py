@@ -15,9 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import nxrm_sdk
-from nxrm_sdk.api.repository_management_api import (  # noqa: E501
-    RepositoryManagementApi,
-)
+from nxrm_sdk.api.repository_management_api import RepositoryManagementApi  # noqa: E501
 from nxrm_sdk.rest import ApiException
 
 
