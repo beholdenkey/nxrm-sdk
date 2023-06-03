@@ -15,9 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import nxrm_sdk
-from nxrm_sdk.api.security_certificates_api import (  # noqa: E501
-    SecurityCertificatesApi,
-)
+from nxrm_sdk.api.security_certificates_api import SecurityCertificatesApi  # noqa: E501
 from nxrm_sdk.rest import ApiException
 
 
