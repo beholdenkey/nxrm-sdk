@@ -1,6 +1,6 @@
-# Sonatype: Nexus Repository Manager 3 - Python SDK
+# Sonatype: Nexus Repository Manager Python SDK
 
-- [Sonatype: Nexus Repository Manager 3 - Python SDK](#sonatype-nexus-repository-manager-3---python-sdk)
+- [Sonatype: Nexus Repository Manager Python SDK](#sonatype-nexus-repository-manager-python-sdk)
   - [Overview](#overview)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -13,7 +13,7 @@
 
 The Sonatype Nexus Python SDK is a powerful tool designed to facilitate the interaction of Python developers with Sonatype Nexus IQ Server and Nexus Repository Manager APIs. In addition, this SDK aims to simplify and streamline integrating the Nexus IQ Server and Nexus Repository Manager into your CI/CD pipelines.
 
-**GitHub Repository**: [https://github.com/beholdenkey/nexus-sdk](https://github.com/beholdenkey/nexus-sdk)
+**GitHub Repository**: [https://github.com/beholdenkey/nxrm-sdk](https://github.com/beholdenkey/nxrm-sdk)
 
 ## Prerequisites
 
@@ -27,13 +27,13 @@ Ensure you have the following prerequisites before you proceed with the installa
 You can install the Sonatype Nexus Python SDK using pip. Run the following command in your terminal:
 
 ```bash
-pip install sonatype-nexus-sdk
+pip install sonatype-nxrm-sdk
 ```
 
 After successful installation, import the package in your Python script:
 
 ```python
-import nexus_sdk
+import nxrm_sdk
 ```
 
 ## Quick Start Guide
@@ -43,16 +43,16 @@ Below is a simple example of how to delete a single asset using the SDK.
 First, ensure that the package is correctly [installed](https://chat.openai.com/?model=gpt-4-browsing#installation) and then proceed as follows:
 
 ```python
-import nexus_sdk
-from nexus_sdk.apis.tags import assets_api
+import nxrm_sdk
+from nxrm_sdk.apis.tags import assets_api
 # Defining the host is optional and defaults to http://localhost/service/rest
 # Check configuration.py for a complete list of supported configuration parameters.
-configuration = nexus_sdk.Configuration(
+configuration = nxrm_sdk.Configuration(
     host = "http://localhost/service/rest"
 )
 
 # Enter a context with an instance of the API client
-with nexus_sdk.ApiClient(configuration) as api_client:
+with nxrm_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = assets_api.AssetsApi(api_client)
     asset_id = "id_example" # str | Id of the asset to delete
@@ -60,7 +60,7 @@ with nexus_sdk.ApiClient(configuration) as api_client:
     try:
         # Delete a single asset
         api_instance.delete_asset(asset_id)
-    except nexus_sdk.ApiException as e:
+    except nxrm_sdk.ApiException as e:
         print(f"Exception when calling AssetsApi->delete_asset: {e}")
 
 ```
@@ -69,7 +69,7 @@ Please replace "id_example" with the ID of the asset you want to delete.
 
 ## Detailed Documentation
 
-For more detailed documentation on the API and its usage, please visit the [Sonatype Nexus Python SDK GitHub Repository](https://github.com/beholdenkey/nexus-sdk).
+For more detailed documentation on the API and its usage, please visit the [Sonatype Nexus Python SDK GitHub Repository](https://github.com/beholdenkey/nxrm-sdk).
 
 ## Contribute
 
