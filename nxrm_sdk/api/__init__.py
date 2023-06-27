@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 # import apis into api package
 from nxrm_sdk.api.assets_api import AssetsApi
 from nxrm_sdk.api.azure_blob_store_api import AzureBlobStoreApi
