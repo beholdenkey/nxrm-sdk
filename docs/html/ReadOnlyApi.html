@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientreadonlyapi">swagger_client.ReadOnlyApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ReadOnlyApi.md#force_release"><strong>force_release</strong></a></td>
+<td><strong>POST</strong> /v1/read-only/force-release</td>
+<td>Forcibly release read-only</td>
+</tr>
+<tr>
+<td><a href="ReadOnlyApi.md#freeze"><strong>freeze</strong></a></td>
+<td><strong>POST</strong> /v1/read-only/freeze</td>
+<td>Enable read-only</td>
+</tr>
+<tr>
+<td><a href="ReadOnlyApi.md#get"><strong>get</strong></a></td>
+<td><strong>GET</strong> /v1/read-only</td>
+<td>Get read-only state</td>
+</tr>
+<tr>
+<td><a href="ReadOnlyApi.md#release"><strong>release</strong></a></td>
+<td><strong>POST</strong> /v1/read-only/release</td>
+<td>Release read-only</td>
+</tr>
+</tbody>
+</table>
+<h1 id="force_release"><strong>force_release</strong></h1>
+<blockquote>
+<p>force_release()</p>
+</blockquote>
+<p>Forcibly release read-only</p>
+<p>Forcibly release read-only status, including System initiated tasks. Warning: may result in data loss.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ReadOnlyApi()
+
+try:
+    # Forcibly release read-only
+    api_instance.force_release()
+except ApiException as e:
+    print(&quot;Exception when calling ReadOnlyApi-&gt;force_release: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="freeze"><strong>freeze</strong></h1>
+<blockquote>
+<p>freeze()</p>
+</blockquote>
+<p>Enable read-only</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ReadOnlyApi()
+
+try:
+    # Enable read-only
+    api_instance.freeze()
+except ApiException as e:
+    print(&quot;Exception when calling ReadOnlyApi-&gt;freeze: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get"><strong>get</strong></h1>
+<blockquote>
+<p>ReadOnlyState get()</p>
+</blockquote>
+<p>Get read-only state</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ReadOnlyApi()
+
+try:
+    # Get read-only state
+    api_response = api_instance.get()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ReadOnlyApi-&gt;get: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="ReadOnlyState.html"><strong>ReadOnlyState</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="release"><strong>release</strong></h1>
+<blockquote>
+<p>release()</p>
+</blockquote>
+<p>Release read-only</p>
+<p>Release administrator initiated read-only status. Will not release read-only caused by system tasks.</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ReadOnlyApi()
+
+try:
+    # Release read-only
+    api_instance.release()
+except ApiException as e:
+    print(&quot;Exception when calling ReadOnlyApi-&gt;release: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

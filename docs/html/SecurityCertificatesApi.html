@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritycertificatesapi">swagger_client.SecurityCertificatesApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityCertificatesApi.md#add_certificate"><strong>add_certificate</strong></a></td>
+<td><strong>POST</strong> /v1/security/ssl/truststore</td>
+<td>Add a certificate to the trust store.</td>
+</tr>
+<tr>
+<td><a href="SecurityCertificatesApi.md#get_trust_store_certificates"><strong>get<em>trust</em>store_certificates</strong></a></td>
+<td><strong>GET</strong> /v1/security/ssl/truststore</td>
+<td>Retrieve a list of certificates added to the trust store.</td>
+</tr>
+<tr>
+<td><a href="SecurityCertificatesApi.md#remove_certificate"><strong>remove_certificate</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/ssl/truststore/{id}</td>
+<td>Remove a certificate in the trust store.</td>
+</tr>
+<tr>
+<td><a href="SecurityCertificatesApi.md#retrieve_certificate"><strong>retrieve_certificate</strong></a></td>
+<td><strong>GET</strong> /v1/security/ssl</td>
+<td>Helper method to retrieve certificate details from a remote system.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="add_certificate"><strong>add_certificate</strong></h1>
+<blockquote>
+<p>ApiCertificate add_certificate(body=body)</p>
+</blockquote>
+<p>Add a certificate to the trust store.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityCertificatesApi()
+body = 'body_example' # str | The certificate to add encoded in PEM format (optional)
+
+try:
+    # Add a certificate to the trust store.
+    api_response = api_instance.add_certificate(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityCertificatesApi-&gt;add_certificate: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td>The certificate to add encoded in PEM format</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="ApiCertificate.html"><strong>ApiCertificate</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="gettruststore_certificates"><strong>get<em>trust</em>store_certificates</strong></h1>
+<blockquote>
+<p>list[ApiCertificate] get<em>trust</em>store_certificates()</p>
+</blockquote>
+<p>Retrieve a list of certificates added to the trust store.</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityCertificatesApi()
+
+try:
+    # Retrieve a list of certificates added to the trust store.
+    api_response = api_instance.get_trust_store_certificates()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityCertificatesApi-&gt;get_trust_store_certificates: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="ApiCertificate.html"><strong>list[ApiCertificate]</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="remove_certificate"><strong>remove_certificate</strong></h1>
+<blockquote>
+<p>remove_certificate(id)</p>
+</blockquote>
+<p>Remove a certificate in the trust store.</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityCertificatesApi()
+id = 'id_example' # str | The id of the certificate that should be removed.
+
+try:
+    # Remove a certificate in the trust store.
+    api_instance.remove_certificate(id)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityCertificatesApi-&gt;remove_certificate: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the certificate that should be removed.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="retrieve_certificate"><strong>retrieve_certificate</strong></h1>
+<blockquote>
+<p>ApiCertificate retrieve<em>certificate(host, port=port, protocol</em>hint=protocol_hint)</p>
+</blockquote>
+<p>Helper method to retrieve certificate details from a remote system.</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityCertificatesApi()
+host = 'host_example' # str | The remote system's host name
+port = 443 # int | The port on the remote system to connect to (optional) (default to 443)
+protocol_hint = 'protocol_hint_example' # str | An optional hint of the protocol to try for the connection (optional)
+
+try:
+    # Helper method to retrieve certificate details from a remote system.
+    api_response = api_instance.retrieve_certificate(host, port=port, protocol_hint=protocol_hint)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityCertificatesApi-&gt;retrieve_certificate: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>host</strong></td>
+<td><strong>str</strong></td>
+<td>The remote system&#x27;s host name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>port</strong></td>
+<td><strong>int</strong></td>
+<td>The port on the remote system to connect to</td>
+<td>[optional] [default to 443]</td>
+</tr>
+<tr>
+<td><strong>protocol_hint</strong></td>
+<td><strong>str</strong></td>
+<td>An optional hint of the protocol to try for the connection</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="ApiCertificate.html"><strong>ApiCertificate</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

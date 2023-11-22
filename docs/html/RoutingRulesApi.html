@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientroutingrulesapi">swagger_client.RoutingRulesApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="RoutingRulesApi.md#create_routing_rule"><strong>create<em>routing</em>rule</strong></a></td>
+<td><strong>POST</strong> /v1/routing-rules</td>
+<td>Create a single routing rule</td>
+</tr>
+<tr>
+<td><a href="RoutingRulesApi.md#delete_routing_rule"><strong>delete<em>routing</em>rule</strong></a></td>
+<td><strong>DELETE</strong> /v1/routing-rules/{name}</td>
+<td>Delete a single routing rule</td>
+</tr>
+<tr>
+<td><a href="RoutingRulesApi.md#get_routing_rule"><strong>get<em>routing</em>rule</strong></a></td>
+<td><strong>GET</strong> /v1/routing-rules/{name}</td>
+<td>Get a single routing rule</td>
+</tr>
+<tr>
+<td><a href="RoutingRulesApi.md#get_routing_rules"><strong>get<em>routing</em>rules</strong></a></td>
+<td><strong>GET</strong> /v1/routing-rules</td>
+<td>List routing rules</td>
+</tr>
+<tr>
+<td><a href="RoutingRulesApi.md#update_routing_rule"><strong>update<em>routing</em>rule</strong></a></td>
+<td><strong>PUT</strong> /v1/routing-rules/{name}</td>
+<td>Update a single routing rule</td>
+</tr>
+</tbody>
+</table>
+<h1 id="createroutingrule"><strong>create<em>routing</em>rule</strong></h1>
+<blockquote>
+<p>create<em>routing</em>rule(body)</p>
+</blockquote>
+<p>Create a single routing rule</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.RoutingRulesApi()
+body = swagger_client.RoutingRuleXO() # RoutingRuleXO | A routing rule configuration
+
+try:
+    # Create a single routing rule
+    api_instance.create_routing_rule(body)
+except ApiException as e:
+    print(&quot;Exception when calling RoutingRulesApi-&gt;create_routing_rule: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RoutingRuleXO.html"><strong>RoutingRuleXO</strong></a></td>
+<td>A routing rule configuration</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="deleteroutingrule"><strong>delete<em>routing</em>rule</strong></h1>
+<blockquote>
+<p>delete<em>routing</em>rule(name)</p>
+</blockquote>
+<p>Delete a single routing rule</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.RoutingRulesApi()
+name = 'name_example' # str | The name of the routing rule to delete
+
+try:
+    # Delete a single routing rule
+    api_instance.delete_routing_rule(name)
+except ApiException as e:
+    print(&quot;Exception when calling RoutingRulesApi-&gt;delete_routing_rule: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the routing rule to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getroutingrule"><strong>get<em>routing</em>rule</strong></h1>
+<blockquote>
+<p>RoutingRuleXO get<em>routing</em>rule(name)</p>
+</blockquote>
+<p>Get a single routing rule</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.RoutingRulesApi()
+name = 'name_example' # str | The name of the routing rule to get
+
+try:
+    # Get a single routing rule
+    api_response = api_instance.get_routing_rule(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling RoutingRulesApi-&gt;get_routing_rule: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the routing rule to get</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="RoutingRuleXO.html"><strong>RoutingRuleXO</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getroutingrules"><strong>get<em>routing</em>rules</strong></h1>
+<blockquote>
+<p>list[RoutingRuleXO] get<em>routing</em>rules()</p>
+</blockquote>
+<p>List routing rules</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.RoutingRulesApi()
+
+try:
+    # List routing rules
+    api_response = api_instance.get_routing_rules()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling RoutingRulesApi-&gt;get_routing_rules: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="RoutingRuleXO.html"><strong>list[RoutingRuleXO]</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updateroutingrule"><strong>update<em>routing</em>rule</strong></h1>
+<blockquote>
+<p>update<em>routing</em>rule(body, name)</p>
+</blockquote>
+<p>Update a single routing rule</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.RoutingRulesApi()
+body = swagger_client.RoutingRuleXO() # RoutingRuleXO | A routing rule configuration
+name = 'name_example' # str | The name of the routing rule to update
+
+try:
+    # Update a single routing rule
+    api_instance.update_routing_rule(body, name)
+except ApiException as e:
+    print(&quot;Exception when calling RoutingRulesApi-&gt;update_routing_rule: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RoutingRuleXO.html"><strong>RoutingRuleXO</strong></a></td>
+<td>A routing rule configuration</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the routing rule to update</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="samlconfigurationxo">SamlConfigurationXO</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>entity_id</strong></td>
+<td><strong>str</strong></td>
+<td>SAML Service Provider&#x27;s unique identifying URI</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>idp_metadata</strong></td>
+<td><strong>str</strong></td>
+<td>SAML Identity Provider Metadata XML</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>username_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>SAML attribute name for the username</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>first<em>name</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>SAML attribute name for the first name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>last<em>name</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>SAML attribute name for the last name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>email_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>SAML attribute name for email</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>groups_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>SAML attribute name for groups which maps the Identity Provider groups to a Nexus Repository Manager role</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>validate<em>response</em>signature</strong></td>
+<td><strong>bool</strong></td>
+<td>Validate signatures on responses from Identity Provider</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>validate<em>assertion</em>signature</strong></td>
+<td><strong>bool</strong></td>
+<td>Validate signatures on assertions from Identity Provider</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

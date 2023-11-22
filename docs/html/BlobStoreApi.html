@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientblobstoreapi">swagger_client.BlobStoreApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BlobStoreApi.md#convert_blob_store_to_group"><strong>convert<em>blob</em>store<em>to</em>group</strong></a></td>
+<td><strong>POST</strong> /v1/blobstores/group/convert/{name}/{newNameForOriginal}</td>
+<td>Convert a blob store to a group blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#create_blob_store"><strong>create<em>blob</em>store</strong></a></td>
+<td><strong>POST</strong> /v1/blobstores/s3</td>
+<td>Create an S3 blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#create_blob_store1"><strong>create<em>blob</em>store1</strong></a></td>
+<td><strong>POST</strong> /v1/blobstores/azure</td>
+<td>Create an Azure blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#create_file_blob_store"><strong>create<em>file</em>blob_store</strong></a></td>
+<td><strong>POST</strong> /v1/blobstores/file</td>
+<td>Create a file blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#create_group_blob_store"><strong>create<em>group</em>blob_store</strong></a></td>
+<td><strong>POST</strong> /v1/blobstores/group</td>
+<td>Create a group blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#delete_blob_store"><strong>delete<em>blob</em>store</strong></a></td>
+<td><strong>DELETE</strong> /v1/blobstores/{name}</td>
+<td>Delete a blob store by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#get_blob_store"><strong>get<em>blob</em>store</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores/s3/{name}</td>
+<td>Get a S3 blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#get_blob_store1"><strong>get<em>blob</em>store1</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores/azure/{name}</td>
+<td>Get an Azure blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#get_file_blob_store_configuration"><strong>get<em>file</em>blob<em>store</em>configuration</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores/file/{name}</td>
+<td>Get a file blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#get_group_blob_store_configuration"><strong>get<em>group</em>blob<em>store</em>configuration</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores/group/{name}</td>
+<td>Get a group blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#list_blob_stores"><strong>list<em>blob</em>stores</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores</td>
+<td>List the blob stores</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#quota_status"><strong>quota_status</strong></a></td>
+<td><strong>GET</strong> /v1/blobstores/{name}/quota-status</td>
+<td>Get quota status for a given blob store</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#update_blob_store"><strong>update<em>blob</em>store</strong></a></td>
+<td><strong>PUT</strong> /v1/blobstores/s3/{name}</td>
+<td>Update an S3 blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#update_blob_store1"><strong>update<em>blob</em>store1</strong></a></td>
+<td><strong>PUT</strong> /v1/blobstores/azure/{name}</td>
+<td>Update an Azure blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#update_file_blob_store"><strong>update<em>file</em>blob_store</strong></a></td>
+<td><strong>PUT</strong> /v1/blobstores/file/{name}</td>
+<td>Update a file blob store configuration by name</td>
+</tr>
+<tr>
+<td><a href="BlobStoreApi.md#update_group_blob_store"><strong>update<em>group</em>blob_store</strong></a></td>
+<td><strong>PUT</strong> /v1/blobstores/group/{name}</td>
+<td>Update a group blob store configuration by name</td>
+</tr>
+</tbody>
+</table>
+<h1 id="convertblobstoretogroup"><strong>convert<em>blob</em>store<em>to</em>group</strong></h1>
+<blockquote>
+<p>GroupBlobStoreApiModel convert<em>blob</em>store<em>to</em>group(name, new<em>name</em>for_original)</p>
+</blockquote>
+<p>Convert a blob store to a group blob store</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the group blob store
+new_name_for_original = 'new_name_for_original_example' # str | A new name to the original blob store
+
+try:
+    # Convert a blob store to a group blob store
+    api_response = api_instance.convert_blob_store_to_group(name, new_name_for_original)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;convert_blob_store_to_group: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the group blob store</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>new<em>name</em>for_original</strong></td>
+<td><strong>str</strong></td>
+<td>A new name to the original blob store</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="GroupBlobStoreApiModel.html"><strong>GroupBlobStoreApiModel</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="createblobstore"><strong>create<em>blob</em>store</strong></h1>
+<blockquote>
+<p>create<em>blob</em>store(body=body)</p>
+</blockquote>
+<p>Create an S3 blob store</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+body = swagger_client.S3BlobStoreApiModel() # S3BlobStoreApiModel |  (optional)
+
+try:
+    # Create an S3 blob store
+    api_instance.create_blob_store(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;create_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="S3BlobStoreApiModel.html"><strong>S3BlobStoreApiModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="createblobstore1"><strong>create<em>blob</em>store1</strong></h1>
+<blockquote>
+<p>create<em>blob</em>store1(body=body)</p>
+</blockquote>
+<p>Create an Azure blob store</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+body = swagger_client.AzureBlobStoreApiModel() # AzureBlobStoreApiModel |  (optional)
+
+try:
+    # Create an Azure blob store
+    api_instance.create_blob_store1(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;create_blob_store1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="AzureBlobStoreApiModel.html"><strong>AzureBlobStoreApiModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="createfileblob_store"><strong>create<em>file</em>blob_store</strong></h1>
+<blockquote>
+<p>create<em>file</em>blob_store(body=body)</p>
+</blockquote>
+<p>Create a file blob store</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+body = swagger_client.FileBlobStoreApiCreateRequest() # FileBlobStoreApiCreateRequest |  (optional)
+
+try:
+    # Create a file blob store
+    api_instance.create_file_blob_store(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;create_file_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="FileBlobStoreApiCreateRequest.html"><strong>FileBlobStoreApiCreateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="creategroupblob_store"><strong>create<em>group</em>blob_store</strong></h1>
+<blockquote>
+<p>create<em>group</em>blob_store(body=body)</p>
+</blockquote>
+<p>Create a group blob store</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+body = swagger_client.GroupBlobStoreApiCreateRequest() # GroupBlobStoreApiCreateRequest |  (optional)
+
+try:
+    # Create a group blob store
+    api_instance.create_group_blob_store(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;create_group_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="GroupBlobStoreApiCreateRequest.html"><strong>GroupBlobStoreApiCreateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="deleteblobstore"><strong>delete<em>blob</em>store</strong></h1>
+<blockquote>
+<p>delete<em>blob</em>store(name)</p>
+</blockquote>
+<p>Delete a blob store by name</p>
+<h3 id="example_5">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the blob store to delete
+
+try:
+    # Delete a blob store by name
+    api_instance.delete_blob_store(name)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;delete_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the blob store to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_5">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getblobstore"><strong>get<em>blob</em>store</strong></h1>
+<blockquote>
+<p>S3BlobStoreApiModel get<em>blob</em>store(name)</p>
+</blockquote>
+<p>Get a S3 blob store configuration by name</p>
+<h3 id="example_6">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | Name of the blob store configuration to fetch
+
+try:
+    # Get a S3 blob store configuration by name
+    api_response = api_instance.get_blob_store(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;get_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the blob store configuration to fetch</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_6">Return type</h3>
+<p><a href="S3BlobStoreApiModel.html"><strong>S3BlobStoreApiModel</strong></a></p>
+<h3 id="authorization_6">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_6">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getblobstore1"><strong>get<em>blob</em>store1</strong></h1>
+<blockquote>
+<p>AzureBlobStoreApiModel get<em>blob</em>store1(name)</p>
+</blockquote>
+<p>Get an Azure blob store configuration by name</p>
+<h3 id="example_7">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | Name of the blob store configuration to fetch
+
+try:
+    # Get an Azure blob store configuration by name
+    api_response = api_instance.get_blob_store1(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;get_blob_store1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the blob store configuration to fetch</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_7">Return type</h3>
+<p><a href="AzureBlobStoreApiModel.html"><strong>AzureBlobStoreApiModel</strong></a></p>
+<h3 id="authorization_7">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getfileblobstoreconfiguration"><strong>get<em>file</em>blob<em>store</em>configuration</strong></h1>
+<blockquote>
+<p>FileBlobStoreApiModel get<em>file</em>blob<em>store</em>configuration(name)</p>
+</blockquote>
+<p>Get a file blob store configuration by name</p>
+<h3 id="example_8">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the file blob store to read
+
+try:
+    # Get a file blob store configuration by name
+    api_response = api_instance.get_file_blob_store_configuration(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;get_file_blob_store_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the file blob store to read</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_8">Return type</h3>
+<p><a href="FileBlobStoreApiModel.html"><strong>FileBlobStoreApiModel</strong></a></p>
+<h3 id="authorization_8">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_8">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getgroupblobstoreconfiguration"><strong>get<em>group</em>blob<em>store</em>configuration</strong></h1>
+<blockquote>
+<p>GroupBlobStoreApiModel get<em>group</em>blob<em>store</em>configuration(name)</p>
+</blockquote>
+<p>Get a group blob store configuration by name</p>
+<h3 id="example_9">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the group blob store
+
+try:
+    # Get a group blob store configuration by name
+    api_response = api_instance.get_group_blob_store_configuration(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;get_group_blob_store_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the group blob store</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_9">Return type</h3>
+<p><a href="GroupBlobStoreApiModel.html"><strong>GroupBlobStoreApiModel</strong></a></p>
+<h3 id="authorization_9">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_9">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="listblobstores"><strong>list<em>blob</em>stores</strong></h1>
+<blockquote>
+<p>list[GenericBlobStoreApiResponse] list<em>blob</em>stores()</p>
+</blockquote>
+<p>List the blob stores</p>
+<h3 id="example_10">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+
+try:
+    # List the blob stores
+    api_response = api_instance.list_blob_stores()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;list_blob_stores: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_10">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_10">Return type</h3>
+<p><a href="GenericBlobStoreApiResponse.html"><strong>list[GenericBlobStoreApiResponse]</strong></a></p>
+<h3 id="authorization_10">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_10">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="quota_status"><strong>quota_status</strong></h1>
+<blockquote>
+<p>BlobStoreQuotaResultXO quota_status(name)</p>
+</blockquote>
+<p>Get quota status for a given blob store</p>
+<h3 id="example_11">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str |
+
+try:
+    # Get quota status for a given blob store
+    api_response = api_instance.quota_status(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;quota_status: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_11">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_11">Return type</h3>
+<p><a href="BlobStoreQuotaResultXO.html"><strong>BlobStoreQuotaResultXO</strong></a></p>
+<h3 id="authorization_11">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_11">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updateblobstore"><strong>update<em>blob</em>store</strong></h1>
+<blockquote>
+<p>update<em>blob</em>store(name, body=body)</p>
+</blockquote>
+<p>Update an S3 blob store configuration by name</p>
+<h3 id="example_12">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | Name of the blob store to update
+body = swagger_client.S3BlobStoreApiModel() # S3BlobStoreApiModel |  (optional)
+
+try:
+    # Update an S3 blob store configuration by name
+    api_instance.update_blob_store(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;update_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_12">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the blob store to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="S3BlobStoreApiModel.html"><strong>S3BlobStoreApiModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_12">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_12">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_12">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updateblobstore1"><strong>update<em>blob</em>store1</strong></h1>
+<blockquote>
+<p>update<em>blob</em>store1(name, body=body)</p>
+</blockquote>
+<p>Update an Azure blob store configuration by name</p>
+<h3 id="example_13">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | Name of the blob store to update
+body = swagger_client.AzureBlobStoreApiModel() # AzureBlobStoreApiModel |  (optional)
+
+try:
+    # Update an Azure blob store configuration by name
+    api_instance.update_blob_store1(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;update_blob_store1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_13">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the blob store to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="AzureBlobStoreApiModel.html"><strong>AzureBlobStoreApiModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_13">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_13">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_13">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updatefileblob_store"><strong>update<em>file</em>blob_store</strong></h1>
+<blockquote>
+<p>update<em>file</em>blob_store(name, body=body)</p>
+</blockquote>
+<p>Update a file blob store configuration by name</p>
+<h3 id="example_14">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the file blob store to update
+body = swagger_client.FileBlobStoreApiUpdateRequest() # FileBlobStoreApiUpdateRequest |  (optional)
+
+try:
+    # Update a file blob store configuration by name
+    api_instance.update_file_blob_store(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;update_file_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_14">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the file blob store to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="FileBlobStoreApiUpdateRequest.html"><strong>FileBlobStoreApiUpdateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_14">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_14">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_14">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updategroupblob_store"><strong>update<em>group</em>blob_store</strong></h1>
+<blockquote>
+<p>update<em>group</em>blob_store(name, body=body)</p>
+</blockquote>
+<p>Update a group blob store configuration by name</p>
+<h3 id="example_15">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.BlobStoreApi()
+name = 'name_example' # str | The name of the blob store to update
+body = swagger_client.GroupBlobStoreApiUpdateRequest() # GroupBlobStoreApiUpdateRequest |  (optional)
+
+try:
+    # Update a group blob store configuration by name
+    api_instance.update_group_blob_store(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling BlobStoreApi-&gt;update_group_blob_store: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_15">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the blob store to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="GroupBlobStoreApiUpdateRequest.html"><strong>GroupBlobStoreApiUpdateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_15">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_15">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_15">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientmanageiqserverconfigurationapi">swagger_client.ManageIQServerConfigurationApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ManageIQServerConfigurationApi.md#disable_iq"><strong>disable_iq</strong></a></td>
+<td><strong>POST</strong> /v1/iq/disable</td>
+<td>Disable IQ server</td>
+</tr>
+<tr>
+<td><a href="ManageIQServerConfigurationApi.md#enable_iq"><strong>enable_iq</strong></a></td>
+<td><strong>POST</strong> /v1/iq/enable</td>
+<td>Enable IQ server</td>
+</tr>
+<tr>
+<td><a href="ManageIQServerConfigurationApi.md#get_configuration"><strong>get_configuration</strong></a></td>
+<td><strong>GET</strong> /v1/iq</td>
+<td>Get IQ server configuration</td>
+</tr>
+<tr>
+<td><a href="ManageIQServerConfigurationApi.md#update_configuration"><strong>update_configuration</strong></a></td>
+<td><strong>PUT</strong> /v1/iq</td>
+<td>Update IQ server configuration</td>
+</tr>
+<tr>
+<td><a href="ManageIQServerConfigurationApi.md#verify_connection"><strong>verify_connection</strong></a></td>
+<td><strong>POST</strong> /v1/iq/verify-connection</td>
+<td>Verify IQ server connection</td>
+</tr>
+</tbody>
+</table>
+<h1 id="disable_iq"><strong>disable_iq</strong></h1>
+<blockquote>
+<p>disable_iq()</p>
+</blockquote>
+<p>Disable IQ server</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ManageIQServerConfigurationApi()
+
+try:
+    # Disable IQ server
+    api_instance.disable_iq()
+except ApiException as e:
+    print(&quot;Exception when calling ManageIQServerConfigurationApi-&gt;disable_iq: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="enable_iq"><strong>enable_iq</strong></h1>
+<blockquote>
+<p>enable_iq()</p>
+</blockquote>
+<p>Enable IQ server</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ManageIQServerConfigurationApi()
+
+try:
+    # Enable IQ server
+    api_instance.enable_iq()
+except ApiException as e:
+    print(&quot;Exception when calling ManageIQServerConfigurationApi-&gt;enable_iq: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_configuration"><strong>get_configuration</strong></h1>
+<blockquote>
+<p>get_configuration()</p>
+</blockquote>
+<p>Get IQ server configuration</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ManageIQServerConfigurationApi()
+
+try:
+    # Get IQ server configuration
+    api_instance.get_configuration()
+except ApiException as e:
+    print(&quot;Exception when calling ManageIQServerConfigurationApi-&gt;get_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_configuration"><strong>update_configuration</strong></h1>
+<blockquote>
+<p>update_configuration(body=body)</p>
+</blockquote>
+<p>Update IQ server configuration</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ManageIQServerConfigurationApi()
+body = swagger_client.IqConnectionXo() # IqConnectionXo |  (optional)
+
+try:
+    # Update IQ server configuration
+    api_instance.update_configuration(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling ManageIQServerConfigurationApi-&gt;update_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="IqConnectionXo.html"><strong>IqConnectionXo</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="verify_connection"><strong>verify_connection</strong></h1>
+<blockquote>
+<p>verify_connection()</p>
+</blockquote>
+<p>Verify IQ server connection</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ManageIQServerConfigurationApi()
+
+try:
+    # Verify IQ server connection
+    api_instance.verify_connection()
+except ApiException as e:
+    print(&quot;Exception when calling ManageIQServerConfigurationApi-&gt;verify_connection: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

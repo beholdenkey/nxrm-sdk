@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="iqconnectionxo">IqConnectionXo</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether to use IQ Server</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>show_link</strong></td>
+<td><strong>bool</strong></td>
+<td>Show IQ Server link in Browse menu when server is enabled</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>url</strong></td>
+<td><strong>str</strong></td>
+<td>The address of your IQ Server</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>authentication_type</strong></td>
+<td><strong>str</strong></td>
+<td>Authentication method</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>username</strong></td>
+<td><strong>str</strong></td>
+<td>User with access to IQ Server</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>password</strong></td>
+<td><strong>str</strong></td>
+<td>Credentials for the IQ Server User</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>use<em>trust</em>store<em>for</em>url</strong></td>
+<td><strong>bool</strong></td>
+<td>Use certificates stored in the Nexus Repository Manager truststore to connect to IQ Server</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>Seconds to wait for activity before stopping and retrying the connection. Leave blank to use the globally defined HTTP timeout.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>properties</strong></td>
+<td><strong>str</strong></td>
+<td>Additional properties to configure for IQ Server</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientproductlicensingapi">swagger_client.ProductLicensingApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ProductLicensingApi.md#get_license_status"><strong>get<em>license</em>status</strong></a></td>
+<td><strong>GET</strong> /v1/system/license</td>
+<td>Get the current license status.</td>
+</tr>
+<tr>
+<td><a href="ProductLicensingApi.md#remove_license"><strong>remove_license</strong></a></td>
+<td><strong>DELETE</strong> /v1/system/license</td>
+<td>Uninstall license if present.</td>
+</tr>
+<tr>
+<td><a href="ProductLicensingApi.md#set_license"><strong>set_license</strong></a></td>
+<td><strong>POST</strong> /v1/system/license</td>
+<td>Upload a new license file.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="getlicensestatus"><strong>get<em>license</em>status</strong></h1>
+<blockquote>
+<p>ApiLicenseDetailsXO get<em>license</em>status()</p>
+</blockquote>
+<p>Get the current license status.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ProductLicensingApi()
+
+try:
+    # Get the current license status.
+    api_response = api_instance.get_license_status()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ProductLicensingApi-&gt;get_license_status: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p><a href="ApiLicenseDetailsXO.html"><strong>ApiLicenseDetailsXO</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="remove_license"><strong>remove_license</strong></h1>
+<blockquote>
+<p>remove_license()</p>
+</blockquote>
+<p>Uninstall license if present.</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ProductLicensingApi()
+
+try:
+    # Uninstall license if present.
+    api_instance.remove_license()
+except ApiException as e:
+    print(&quot;Exception when calling ProductLicensingApi-&gt;remove_license: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="set_license"><strong>set_license</strong></h1>
+<blockquote>
+<p>ApiLicenseDetailsXO set_license(body=body)</p>
+</blockquote>
+<p>Upload a new license file.</p>
+<p>Server must be restarted to take effect</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ProductLicensingApi()
+body = swagger_client.InputStream() # InputStream |  (optional)
+
+try:
+    # Upload a new license file.
+    api_response = api_instance.set_license(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ProductLicensingApi-&gt;set_license: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="InputStream.html"><strong>InputStream</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="ApiLicenseDetailsXO.html"><strong>ApiLicenseDetailsXO</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/octet-stream</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

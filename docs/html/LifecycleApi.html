@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientlifecycleapi">swagger_client.LifecycleApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="LifecycleApi.md#bounce"><strong>bounce</strong></a></td>
+<td><strong>PUT</strong> /v1/lifecycle/bounce</td>
+<td>Bounce lifecycle phase</td>
+</tr>
+<tr>
+<td><a href="LifecycleApi.md#get_phase"><strong>get_phase</strong></a></td>
+<td><strong>GET</strong> /v1/lifecycle/phase</td>
+<td>Get current lifecycle phase</td>
+</tr>
+<tr>
+<td><a href="LifecycleApi.md#set_phase"><strong>set_phase</strong></a></td>
+<td><strong>PUT</strong> /v1/lifecycle/phase</td>
+<td>Move to new lifecycle phase</td>
+</tr>
+</tbody>
+</table>
+<h1 id="bounce"><strong>bounce</strong></h1>
+<blockquote>
+<p>bounce(body=body)</p>
+</blockquote>
+<p>Bounce lifecycle phase</p>
+<p>Re-runs all phases from the given phase to the current phase</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.LifecycleApi()
+body = 'body_example' # str | The phase to bounce (optional)
+
+try:
+    # Bounce lifecycle phase
+    api_instance.bounce(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling LifecycleApi-&gt;bounce: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td>The phase to bounce</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: text/plain</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_phase"><strong>get_phase</strong></h1>
+<blockquote>
+<p>str get_phase()</p>
+</blockquote>
+<p>Get current lifecycle phase</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.LifecycleApi()
+
+try:
+    # Get current lifecycle phase
+    api_response = api_instance.get_phase()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling LifecycleApi-&gt;get_phase: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p><strong>str</strong></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: text/plain</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="set_phase"><strong>set_phase</strong></h1>
+<blockquote>
+<p>set_phase(body=body)</p>
+</blockquote>
+<p>Move to new lifecycle phase</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.LifecycleApi()
+body = 'body_example' # str | The phase to move to (optional)
+
+try:
+    # Move to new lifecycle phase
+    api_instance.set_phase(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling LifecycleApi-&gt;set_phase: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td>The phase to move to</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: text/plain</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientscriptapi">swagger_client.ScriptApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ScriptApi.md#add"><strong>add</strong></a></td>
+<td><strong>POST</strong> /v1/script</td>
+<td>Add a new script</td>
+</tr>
+<tr>
+<td><a href="ScriptApi.md#browse"><strong>browse</strong></a></td>
+<td><strong>GET</strong> /v1/script</td>
+<td>List all stored scripts</td>
+</tr>
+<tr>
+<td><a href="ScriptApi.md#delete1"><strong>delete1</strong></a></td>
+<td><strong>DELETE</strong> /v1/script/{name}</td>
+<td>Delete stored script by name</td>
+</tr>
+<tr>
+<td><a href="ScriptApi.md#edit"><strong>edit</strong></a></td>
+<td><strong>PUT</strong> /v1/script/{name}</td>
+<td>Update stored script by name</td>
+</tr>
+<tr>
+<td><a href="ScriptApi.md#read1"><strong>read1</strong></a></td>
+<td><strong>GET</strong> /v1/script/{name}</td>
+<td>Read stored script by name</td>
+</tr>
+<tr>
+<td><a href="ScriptApi.md#run1"><strong>run1</strong></a></td>
+<td><strong>POST</strong> /v1/script/{name}/run</td>
+<td>Run stored script by name</td>
+</tr>
+</tbody>
+</table>
+<h1 id="add"><strong>add</strong></h1>
+<blockquote>
+<p>add(body=body)</p>
+</blockquote>
+<p>Add a new script</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+body = swagger_client.ScriptXO() # ScriptXO |  (optional)
+
+try:
+    # Add a new script
+    api_instance.add(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;add: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ScriptXO.html"><strong>ScriptXO</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="browse"><strong>browse</strong></h1>
+<blockquote>
+<p>list[ScriptXO] browse()</p>
+</blockquote>
+<p>List all stored scripts</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+
+try:
+    # List all stored scripts
+    api_response = api_instance.browse()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;browse: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="ScriptXO.html"><strong>list[ScriptXO]</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="delete1"><strong>delete1</strong></h1>
+<blockquote>
+<p>delete1(name)</p>
+</blockquote>
+<p>Delete stored script by name</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+name = 'name_example' # str |
+
+try:
+    # Delete stored script by name
+    api_instance.delete1(name)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;delete1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="edit"><strong>edit</strong></h1>
+<blockquote>
+<p>edit(name, body=body)</p>
+</blockquote>
+<p>Update stored script by name</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+name = 'name_example' # str |
+body = swagger_client.ScriptXO() # ScriptXO |  (optional)
+
+try:
+    # Update stored script by name
+    api_instance.edit(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;edit: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ScriptXO.html"><strong>ScriptXO</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="read1"><strong>read1</strong></h1>
+<blockquote>
+<p>ScriptXO read1(name)</p>
+</blockquote>
+<p>Read stored script by name</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+name = 'name_example' # str |
+
+try:
+    # Read stored script by name
+    api_response = api_instance.read1(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;read1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p><a href="ScriptXO.html"><strong>ScriptXO</strong></a></p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="run1"><strong>run1</strong></h1>
+<blockquote>
+<p>ScriptResultXO run1(name, body=body)</p>
+</blockquote>
+<p>Run stored script by name</p>
+<h3 id="example_5">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ScriptApi()
+name = 'name_example' # str |
+body = 'body_example' # str |  (optional)
+
+try:
+    # Run stored script by name
+    api_response = api_instance.run1(name, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ScriptApi-&gt;run1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type</h3>
+<p><a href="ScriptResultXO.html"><strong>ScriptResultXO</strong></a></p>
+<h3 id="authorization_5">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: text/plain, application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

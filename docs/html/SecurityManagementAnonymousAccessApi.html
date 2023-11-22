@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementanonymousaccessapi">swagger_client.SecurityManagementAnonymousAccessApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementAnonymousAccessApi.md#read"><strong>read</strong></a></td>
+<td><strong>GET</strong> /v1/security/anonymous</td>
+<td>Get Anonymous Access settings</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementAnonymousAccessApi.md#update"><strong>update</strong></a></td>
+<td><strong>PUT</strong> /v1/security/anonymous</td>
+<td>Update Anonymous Access settings</td>
+</tr>
+</tbody>
+</table>
+<h1 id="read"><strong>read</strong></h1>
+<blockquote>
+<p>AnonymousAccessSettingsXO read()</p>
+</blockquote>
+<p>Get Anonymous Access settings</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementAnonymousAccessApi()
+
+try:
+    # Get Anonymous Access settings
+    api_response = api_instance.read()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementAnonymousAccessApi-&gt;read: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p><a href="AnonymousAccessSettingsXO.html"><strong>AnonymousAccessSettingsXO</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update"><strong>update</strong></h1>
+<blockquote>
+<p>AnonymousAccessSettingsXO update(body=body)</p>
+</blockquote>
+<p>Update Anonymous Access settings</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementAnonymousAccessApi()
+body = swagger_client.AnonymousAccessSettingsXO() # AnonymousAccessSettingsXO |  (optional)
+
+try:
+    # Update Anonymous Access settings
+    api_response = api_instance.update(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementAnonymousAccessApi-&gt;update: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="AnonymousAccessSettingsXO.html"><strong>AnonymousAccessSettingsXO</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="AnonymousAccessSettingsXO.html"><strong>AnonymousAccessSettingsXO</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

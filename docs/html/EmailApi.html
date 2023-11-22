@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientemailapi">swagger_client.EmailApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="EmailApi.md#delete_email_configuration"><strong>delete<em>email</em>configuration</strong></a></td>
+<td><strong>DELETE</strong> /v1/email</td>
+<td>Disable and clear the email configuration</td>
+</tr>
+<tr>
+<td><a href="EmailApi.md#get_email_configuration"><strong>get<em>email</em>configuration</strong></a></td>
+<td><strong>GET</strong> /v1/email</td>
+<td>Retrieve the current email configuration</td>
+</tr>
+<tr>
+<td><a href="EmailApi.md#set_email_configuration"><strong>set<em>email</em>configuration</strong></a></td>
+<td><strong>PUT</strong> /v1/email</td>
+<td>Set the current email configuration</td>
+</tr>
+<tr>
+<td><a href="EmailApi.md#test_email_configuration"><strong>test<em>email</em>configuration</strong></a></td>
+<td><strong>POST</strong> /v1/email/verify</td>
+<td>Send a test email to the email address provided in the request body</td>
+</tr>
+</tbody>
+</table>
+<h1 id="deleteemailconfiguration"><strong>delete<em>email</em>configuration</strong></h1>
+<blockquote>
+<p>delete<em>email</em>configuration()</p>
+</blockquote>
+<p>Disable and clear the email configuration</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.EmailApi()
+
+try:
+    # Disable and clear the email configuration
+    api_instance.delete_email_configuration()
+except ApiException as e:
+    print(&quot;Exception when calling EmailApi-&gt;delete_email_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getemailconfiguration"><strong>get<em>email</em>configuration</strong></h1>
+<blockquote>
+<p>ApiEmailConfiguration get<em>email</em>configuration()</p>
+</blockquote>
+<p>Retrieve the current email configuration</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.EmailApi()
+
+try:
+    # Retrieve the current email configuration
+    api_response = api_instance.get_email_configuration()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling EmailApi-&gt;get_email_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="ApiEmailConfiguration.html"><strong>ApiEmailConfiguration</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="setemailconfiguration"><strong>set<em>email</em>configuration</strong></h1>
+<blockquote>
+<p>set<em>email</em>configuration(body)</p>
+</blockquote>
+<p>Set the current email configuration</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.EmailApi()
+body = swagger_client.ApiEmailConfiguration() # ApiEmailConfiguration |
+
+try:
+    # Set the current email configuration
+    api_instance.set_email_configuration(body)
+except ApiException as e:
+    print(&quot;Exception when calling EmailApi-&gt;set_email_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiEmailConfiguration.html"><strong>ApiEmailConfiguration</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="testemailconfiguration"><strong>test<em>email</em>configuration</strong></h1>
+<blockquote>
+<p>ApiEmailValidation test<em>email</em>configuration(body)</p>
+</blockquote>
+<p>Send a test email to the email address provided in the request body</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.EmailApi()
+body = 'body_example' # str | An email address to send a test email to
+
+try:
+    # Send a test email to the email address provided in the request body
+    api_response = api_instance.test_email_configuration(body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling EmailApi-&gt;test_email_configuration: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td>An email address to send a test email to</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="ApiEmailValidation.html"><strong>ApiEmailValidation</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: <em>/</em></li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

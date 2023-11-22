@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="apiemailconfiguration">ApiEmailConfiguration</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>enabled</strong></td>
+<td><strong>bool</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>host</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>port</strong></td>
+<td><strong>int</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>username</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>password</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>from_address</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>subject_prefix</strong></td>
+<td><strong>str</strong></td>
+<td>A prefix to add to all email subjects to aid in identifying automated emails</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>start<em>tls</em>enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Enable STARTTLS Support for Insecure Connections</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>start<em>tls</em>required</strong></td>
+<td><strong>bool</strong></td>
+<td>Require STARTTLS Support</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ssl<em>on</em>connect_enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Enable SSL/TLS Encryption upon Connection</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ssl<em>server</em>identity<em>check</em>enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Verify the server certificate when using TLS or SSL</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nexus<em>trust</em>store_enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Use the Nexus Repository Manager&#x27;s certificate truststore</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>
