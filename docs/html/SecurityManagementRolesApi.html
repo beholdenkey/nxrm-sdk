@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementrolesapi">swagger_client.SecurityManagementRolesApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementRolesApi.md#create"><strong>create</strong></a></td>
+<td><strong>POST</strong> /v1/security/roles</td>
+<td>Create role</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementRolesApi.md#delete"><strong>delete</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/roles/{id}</td>
+<td>Delete role</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementRolesApi.md#get_role"><strong>get_role</strong></a></td>
+<td><strong>GET</strong> /v1/security/roles/{id}</td>
+<td>Get role</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementRolesApi.md#get_roles"><strong>get_roles</strong></a></td>
+<td><strong>GET</strong> /v1/security/roles</td>
+<td>List roles</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementRolesApi.md#update1"><strong>update1</strong></a></td>
+<td><strong>PUT</strong> /v1/security/roles/{id}</td>
+<td>Update role</td>
+</tr>
+</tbody>
+</table>
+<h1 id="create"><strong>create</strong></h1>
+<blockquote>
+<p>RoleXOResponse create(body)</p>
+</blockquote>
+<p>Create role</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementRolesApi()
+body = swagger_client.RoleXORequest() # RoleXORequest | A role configuration
+
+try:
+    # Create role
+    api_response = api_instance.create(body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementRolesApi-&gt;create: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RoleXORequest.html"><strong>RoleXORequest</strong></a></td>
+<td>A role configuration</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="RoleXOResponse.html"><strong>RoleXOResponse</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="delete"><strong>delete</strong></h1>
+<blockquote>
+<p>delete(id)</p>
+</blockquote>
+<p>Delete role</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementRolesApi()
+id = 'id_example' # str | The id of the role to delete
+
+try:
+    # Delete role
+    api_instance.delete(id)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementRolesApi-&gt;delete: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the role to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_role"><strong>get_role</strong></h1>
+<blockquote>
+<p>RoleXOResponse get_role(id, source=source)</p>
+</blockquote>
+<p>Get role</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementRolesApi()
+id = 'id_example' # str | The id of the role to get
+source = 'default' # str | The id of the user source to filter the roles by. Available sources can be fetched using the 'User Sources' endpoint. (optional) (default to default)
+
+try:
+    # Get role
+    api_response = api_instance.get_role(id, source=source)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementRolesApi-&gt;get_role: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the role to get</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the user source to filter the roles by. Available sources can be fetched using the &#x27;User Sources&#x27; endpoint.</td>
+<td>[optional] [default to default]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="RoleXOResponse.html"><strong>RoleXOResponse</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_roles"><strong>get_roles</strong></h1>
+<blockquote>
+<p>list[RoleXOResponse] get_roles(source=source)</p>
+</blockquote>
+<p>List roles</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementRolesApi()
+source = 'source_example' # str | The id of the user source to filter the roles by, if supplied. Otherwise roles from all user sources will be returned. (optional)
+
+try:
+    # List roles
+    api_response = api_instance.get_roles(source=source)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementRolesApi-&gt;get_roles: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the user source to filter the roles by, if supplied. Otherwise roles from all user sources will be returned.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="RoleXOResponse.html"><strong>list[RoleXOResponse]</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update1"><strong>update1</strong></h1>
+<blockquote>
+<p>update1(body, id)</p>
+</blockquote>
+<p>Update role</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementRolesApi()
+body = swagger_client.RoleXORequest() # RoleXORequest | A role configuration
+id = 'id_example' # str | The id of the role to update
+
+try:
+    # Update role
+    api_instance.update1(body, id)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementRolesApi-&gt;update1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RoleXORequest.html"><strong>RoleXORequest</strong></a></td>
+<td>A role configuration</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the role to update</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

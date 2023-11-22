@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementusersapi">swagger_client.SecurityManagementUsersApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#change_password"><strong>change_password</strong></a></td>
+<td><strong>PUT</strong> /v1/security/users/{userId}/change-password</td>
+<td>Change a user&#x27;s password.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#create_user"><strong>create_user</strong></a></td>
+<td><strong>POST</strong> /v1/security/users</td>
+<td>Create a new user in the default source.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#delete_user"><strong>delete_user</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/users/{userId}</td>
+<td>Delete a user.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#get_users"><strong>get_users</strong></a></td>
+<td><strong>GET</strong> /v1/security/users</td>
+<td>Retrieve a list of users. Note if the source is not &#x27;default&#x27; the response is limited to 100 users.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#reset"><strong>reset</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/users/{userId}/{realm}/user-token-reset</td>
+<td>Reset the user token for the given user.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUsersApi.md#update_user"><strong>update_user</strong></a></td>
+<td><strong>PUT</strong> /v1/security/users/{userId}</td>
+<td>Update an existing user.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="change_password"><strong>change_password</strong></h1>
+<blockquote>
+<p>change<em>password(user</em>id, body=body)</p>
+</blockquote>
+<p>Change a user&rsquo;s password.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+user_id = 'user_id_example' # str | The userid the request should apply to.
+body = 'body_example' # str | The new password to use. (optional)
+
+try:
+    # Change a user's password.
+    api_instance.change_password(user_id, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;change_password: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>The userid the request should apply to.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>str</strong></a></td>
+<td>The new password to use.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: text/plain</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_user"><strong>create_user</strong></h1>
+<blockquote>
+<p>ApiUser create_user(body=body)</p>
+</blockquote>
+<p>Create a new user in the default source.</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+body = swagger_client.ApiCreateUser() # ApiCreateUser | A representation of the user to create. (optional)
+
+try:
+    # Create a new user in the default source.
+    api_response = api_instance.create_user(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;create_user: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiCreateUser.html"><strong>ApiCreateUser</strong></a></td>
+<td>A representation of the user to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="ApiUser.html"><strong>ApiUser</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="delete_user"><strong>delete_user</strong></h1>
+<blockquote>
+<p>delete<em>user(user</em>id)</p>
+</blockquote>
+<p>Delete a user.</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+user_id = 'user_id_example' # str | The userid the request should apply to.
+
+try:
+    # Delete a user.
+    api_instance.delete_user(user_id)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;delete_user: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>The userid the request should apply to.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_users"><strong>get_users</strong></h1>
+<blockquote>
+<p>list[ApiUser] get<em>users(user</em>id=user_id, source=source)</p>
+</blockquote>
+<p>Retrieve a list of users. Note if the source is not &lsquo;default&rsquo; the response is limited to 100 users.</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+user_id = 'user_id_example' # str | An optional term to search userids for. (optional)
+source = 'source_example' # str | An optional user source to restrict the search to. (optional)
+
+try:
+    # Retrieve a list of users. Note if the source is not 'default' the response is limited to 100 users.
+    api_response = api_instance.get_users(user_id=user_id, source=source)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;get_users: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>An optional term to search userids for.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>An optional user source to restrict the search to.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="ApiUser.html"><strong>list[ApiUser]</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="reset"><strong>reset</strong></h1>
+<blockquote>
+<p>reset(user_id, realm)</p>
+</blockquote>
+<p>Reset the user token for the given user.</p>
+<p>Resetting the user token will invalidate the current token and force a new token to be created the next time it is accessed.</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+user_id = 'user_id_example' # str | The userId of the user to reset the token for
+realm = 'realm_example' # str | The realm of the user to reset the token for
+
+try:
+    # Reset the user token for the given user.
+    api_instance.reset(user_id, realm)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;reset: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>The userId of the user to reset the token for</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>realm</strong></td>
+<td><strong>str</strong></td>
+<td>The realm of the user to reset the token for</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_user"><strong>update_user</strong></h1>
+<blockquote>
+<p>update<em>user(user</em>id, body=body)</p>
+</blockquote>
+<p>Update an existing user.</p>
+<h3 id="example_5">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUsersApi()
+user_id = 'user_id_example' # str | The userid the request should apply to.
+body = swagger_client.ApiUser() # ApiUser | A representation of the user to update. (optional)
+
+try:
+    # Update an existing user.
+    api_instance.update_user(user_id, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUsersApi-&gt;update_user: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>The userid the request should apply to.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiUser.html"><strong>ApiUser</strong></a></td>
+<td>A representation of the user to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_5">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

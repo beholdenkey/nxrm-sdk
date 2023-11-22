@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementusertokensapi">swagger_client.SecurityManagementUserTokensApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementUserTokensApi.md#reset_all_user_tokens"><strong>reset<em>all</em>user_tokens</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/user-tokens</td>
+<td>Invalidate all existing user tokens.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUserTokensApi.md#service_status"><strong>service_status</strong></a></td>
+<td><strong>GET</strong> /v1/security/user-tokens</td>
+<td>Show if the user token capability is enabled or not</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementUserTokensApi.md#set_service_status"><strong>set<em>service</em>status</strong></a></td>
+<td><strong>PUT</strong> /v1/security/user-tokens</td>
+<td>Enable/Disable the user token capability</td>
+</tr>
+</tbody>
+</table>
+<h1 id="resetalluser_tokens"><strong>reset<em>all</em>user_tokens</strong></h1>
+<blockquote>
+<p>reset<em>all</em>user_tokens()</p>
+</blockquote>
+<p>Invalidate all existing user tokens.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUserTokensApi()
+
+try:
+    # Invalidate all existing user tokens.
+    api_instance.reset_all_user_tokens()
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUserTokensApi-&gt;reset_all_user_tokens: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="service_status"><strong>service_status</strong></h1>
+<blockquote>
+<p>UserTokensApiModel service_status()</p>
+</blockquote>
+<p>Show if the user token capability is enabled or not</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUserTokensApi()
+
+try:
+    # Show if the user token capability is enabled or not
+    api_response = api_instance.service_status()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUserTokensApi-&gt;service_status: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="UserTokensApiModel.html"><strong>UserTokensApiModel</strong></a></p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="setservicestatus"><strong>set<em>service</em>status</strong></h1>
+<blockquote>
+<p>UserTokensApiModel set<em>service</em>status(body=body)</p>
+</blockquote>
+<p>Enable/Disable the user token capability</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementUserTokensApi()
+body = swagger_client.UserTokensApiModel() # UserTokensApiModel |  (optional)
+
+try:
+    # Enable/Disable the user token capability
+    api_response = api_instance.set_service_status(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementUserTokensApi-&gt;set_service_status: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="UserTokensApiModel.html"><strong>UserTokensApiModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="UserTokensApiModel.html"><strong>UserTokensApiModel</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

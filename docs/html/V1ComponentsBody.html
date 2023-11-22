@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="v1componentsbody">V1ComponentsBody</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>helm_tag</strong></td>
+<td><strong>str</strong></td>
+<td>helm Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>helm_asset</strong></td>
+<td><strong>str</strong></td>
+<td>helm Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>r_tag</strong></td>
+<td><strong>str</strong></td>
+<td>r Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>r_asset</strong></td>
+<td><strong>str</strong></td>
+<td>r Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>r<em>asset</em>path_id</strong></td>
+<td><strong>str</strong></td>
+<td>r Asset Package Path</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_tag</strong></td>
+<td><strong>str</strong></td>
+<td>pypi Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_asset</strong></td>
+<td><strong>str</strong></td>
+<td>pypi Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker_tag</strong></td>
+<td><strong>str</strong></td>
+<td>docker Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker_asset</strong></td>
+<td><strong>str</strong></td>
+<td>docker Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_directory</strong></td>
+<td><strong>str</strong></td>
+<td>yum Directory</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_tag</strong></td>
+<td><strong>str</strong></td>
+<td>yum Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_asset</strong></td>
+<td><strong>str</strong></td>
+<td>yum Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum<em>asset</em>filename</strong></td>
+<td><strong>str</strong></td>
+<td>yum Asset Filename</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_tag</strong></td>
+<td><strong>str</strong></td>
+<td>rubygems Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_asset</strong></td>
+<td><strong>str</strong></td>
+<td>rubygems Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_tag</strong></td>
+<td><strong>str</strong></td>
+<td>nuget Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_asset</strong></td>
+<td><strong>str</strong></td>
+<td>nuget Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>npm_tag</strong></td>
+<td><strong>str</strong></td>
+<td>npm Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>npm_asset</strong></td>
+<td><strong>str</strong></td>
+<td>npm Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw_directory</strong></td>
+<td><strong>str</strong></td>
+<td>raw Directory</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw_tag</strong></td>
+<td><strong>str</strong></td>
+<td>raw Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw_asset1</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 1</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw<em>asset1</em>filename</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 1 Filename</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw_asset2</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 2</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw<em>asset2</em>filename</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 2 Filename</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw_asset3</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 3</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>raw<em>asset3</em>filename</strong></td>
+<td><strong>str</strong></td>
+<td>raw Asset 3 Filename</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>apt_tag</strong></td>
+<td><strong>str</strong></td>
+<td>apt Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>apt_asset</strong></td>
+<td><strong>str</strong></td>
+<td>apt Asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>group</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Group ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>artifact</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Artifact ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_version</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>generate</em>pom</strong></td>
+<td><strong>bool</strong></td>
+<td>maven2 Generate a POM file with these coordinates</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_packaging</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Packaging</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_tag</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_asset1</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 1</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset1</em>classifier</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 1 Classifier</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset1</em>extension</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 1 Extension</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_asset2</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 2</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset2</em>classifier</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 2 Classifier</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset2</em>extension</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 2 Extension</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2_asset3</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 3</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset3</em>classifier</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 3 Classifier</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven2<em>asset3</em>extension</strong></td>
+<td><strong>str</strong></td>
+<td>maven2 Asset 3 Extension</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

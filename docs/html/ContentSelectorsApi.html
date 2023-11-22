@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientcontentselectorsapi">swagger_client.ContentSelectorsApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ContentSelectorsApi.md#create_content_selector"><strong>create<em>content</em>selector</strong></a></td>
+<td><strong>POST</strong> /v1/security/content-selectors</td>
+<td>Create a new content selector</td>
+</tr>
+<tr>
+<td><a href="ContentSelectorsApi.md#delete_content_selector"><strong>delete<em>content</em>selector</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/content-selectors/{name}</td>
+<td>Delete a content selector</td>
+</tr>
+<tr>
+<td><a href="ContentSelectorsApi.md#get_content_selector"><strong>get<em>content</em>selector</strong></a></td>
+<td><strong>GET</strong> /v1/security/content-selectors/{name}</td>
+<td>Get a content selector by name</td>
+</tr>
+<tr>
+<td><a href="ContentSelectorsApi.md#get_content_selectors"><strong>get<em>content</em>selectors</strong></a></td>
+<td><strong>GET</strong> /v1/security/content-selectors</td>
+<td>List content selectors</td>
+</tr>
+<tr>
+<td><a href="ContentSelectorsApi.md#update_content_selector"><strong>update<em>content</em>selector</strong></a></td>
+<td><strong>PUT</strong> /v1/security/content-selectors/{name}</td>
+<td>Update a content selector</td>
+</tr>
+</tbody>
+</table>
+<h1 id="createcontentselector"><strong>create<em>content</em>selector</strong></h1>
+<blockquote>
+<p>create<em>content</em>selector(body=body)</p>
+</blockquote>
+<p>Create a new content selector</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ContentSelectorsApi()
+body = swagger_client.ContentSelectorApiCreateRequest() # ContentSelectorApiCreateRequest |  (optional)
+
+try:
+    # Create a new content selector
+    api_instance.create_content_selector(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling ContentSelectorsApi-&gt;create_content_selector: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ContentSelectorApiCreateRequest.html"><strong>ContentSelectorApiCreateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="deletecontentselector"><strong>delete<em>content</em>selector</strong></h1>
+<blockquote>
+<p>delete<em>content</em>selector(name)</p>
+</blockquote>
+<p>Delete a content selector</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ContentSelectorsApi()
+name = 'name_example' # str |
+
+try:
+    # Delete a content selector
+    api_instance.delete_content_selector(name)
+except ApiException as e:
+    print(&quot;Exception when calling ContentSelectorsApi-&gt;delete_content_selector: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getcontentselector"><strong>get<em>content</em>selector</strong></h1>
+<blockquote>
+<p>ContentSelectorApiResponse get<em>content</em>selector(name)</p>
+</blockquote>
+<p>Get a content selector by name</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ContentSelectorsApi()
+name = 'name_example' # str | The content selector name
+
+try:
+    # Get a content selector by name
+    api_response = api_instance.get_content_selector(name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ContentSelectorsApi-&gt;get_content_selector: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The content selector name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="ContentSelectorApiResponse.html"><strong>ContentSelectorApiResponse</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getcontentselectors"><strong>get<em>content</em>selectors</strong></h1>
+<blockquote>
+<p>list[ContentSelectorApiResponse] get<em>content</em>selectors()</p>
+</blockquote>
+<p>List content selectors</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ContentSelectorsApi()
+
+try:
+    # List content selectors
+    api_response = api_instance.get_content_selectors()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling ContentSelectorsApi-&gt;get_content_selectors: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_3">Return type</h3>
+<p><a href="ContentSelectorApiResponse.html"><strong>list[ContentSelectorApiResponse]</strong></a></p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updatecontentselector"><strong>update<em>content</em>selector</strong></h1>
+<blockquote>
+<p>update<em>content</em>selector(name, body=body)</p>
+</blockquote>
+<p>Update a content selector</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.ContentSelectorsApi()
+name = 'name_example' # str | The content selector name
+body = swagger_client.ContentSelectorApiUpdateRequest() # ContentSelectorApiUpdateRequest |  (optional)
+
+try:
+    # Update a content selector
+    api_instance.update_content_selector(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling ContentSelectorsApi-&gt;update_content_selector: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The content selector name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ContentSelectorApiUpdateRequest.html"><strong>ContentSelectorApiUpdateRequest</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

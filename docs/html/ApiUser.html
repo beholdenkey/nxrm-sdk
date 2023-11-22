@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="apiuser">ApiUser</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>user_id</strong></td>
+<td><strong>str</strong></td>
+<td>The userid which is required for login. This value cannot be changed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>first_name</strong></td>
+<td><strong>str</strong></td>
+<td>The first name of the user.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>last_name</strong></td>
+<td><strong>str</strong></td>
+<td>The last name of the user.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>email_address</strong></td>
+<td><strong>str</strong></td>
+<td>The email address associated with the user.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>The user source which is the origin of this user. This value cannot be changed.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td><strong>str</strong></td>
+<td>The user&#x27;s status, e.g. active or disabled.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>read_only</strong></td>
+<td><strong>bool</strong></td>
+<td>Indicates whether the user&#x27;s properties could be modified by the Nexus Repository Manager. When false only roles are considered during update.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>roles</strong></td>
+<td><strong>list[str]</strong></td>
+<td>The roles which the user has been assigned within Nexus.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>external_roles</strong></td>
+<td><strong>list[str]</strong></td>
+<td>The roles which the user has been assigned in an external source, e.g. LDAP group. These cannot be changed within the Nexus Repository Manager.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

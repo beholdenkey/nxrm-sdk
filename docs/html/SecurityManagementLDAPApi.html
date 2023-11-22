@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementldapapi">swagger_client.SecurityManagementLDAPApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#change_order"><strong>change_order</strong></a></td>
+<td><strong>POST</strong> /v1/security/ldap/change-order</td>
+<td>Change LDAP server order</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#create_ldap_server"><strong>create<em>ldap</em>server</strong></a></td>
+<td><strong>POST</strong> /v1/security/ldap</td>
+<td>Create LDAP server</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#delete_ldap_server"><strong>delete<em>ldap</em>server</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/ldap/{name}</td>
+<td>Delete LDAP server</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#get_ldap_server"><strong>get<em>ldap</em>server</strong></a></td>
+<td><strong>GET</strong> /v1/security/ldap/{name}</td>
+<td>Get LDAP server</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#get_ldap_servers"><strong>get<em>ldap</em>servers</strong></a></td>
+<td><strong>GET</strong> /v1/security/ldap</td>
+<td>List LDAP servers</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementLDAPApi.md#update_ldap_server"><strong>update<em>ldap</em>server</strong></a></td>
+<td><strong>PUT</strong> /v1/security/ldap/{name}</td>
+<td>Update LDAP server</td>
+</tr>
+</tbody>
+</table>
+<h1 id="change_order"><strong>change_order</strong></h1>
+<blockquote>
+<p>change_order(body=body)</p>
+</blockquote>
+<p>Change LDAP server order</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+body = ['body_example'] # list[str] | Ordered list of LDAP server names (optional)
+
+try:
+    # Change LDAP server order
+    api_instance.change_order(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;change_order: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="str.html"><strong>list[str]</strong></a></td>
+<td>Ordered list of LDAP server names</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="createldapserver"><strong>create<em>ldap</em>server</strong></h1>
+<blockquote>
+<p>create<em>ldap</em>server(body=body)</p>
+</blockquote>
+<p>Create LDAP server</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+body = swagger_client.CreateLdapServerXo() # CreateLdapServerXo |  (optional)
+
+try:
+    # Create LDAP server
+    api_instance.create_ldap_server(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;create_ldap_server: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="CreateLdapServerXo.html"><strong>CreateLdapServerXo</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="deleteldapserver"><strong>delete<em>ldap</em>server</strong></h1>
+<blockquote>
+<p>delete<em>ldap</em>server(name)</p>
+</blockquote>
+<p>Delete LDAP server</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+name = 'name_example' # str | Name of the LDAP server to delete
+
+try:
+    # Delete LDAP server
+    api_instance.delete_ldap_server(name)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;delete_ldap_server: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the LDAP server to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getldapserver"><strong>get<em>ldap</em>server</strong></h1>
+<blockquote>
+<p>get<em>ldap</em>server(name)</p>
+</blockquote>
+<p>Get LDAP server</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+name = 'name_example' # str | Name of the LDAP server to retrieve
+
+try:
+    # Get LDAP server
+    api_instance.get_ldap_server(name)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;get_ldap_server: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the LDAP server to retrieve</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="getldapservers"><strong>get<em>ldap</em>servers</strong></h1>
+<blockquote>
+<p>get<em>ldap</em>servers()</p>
+</blockquote>
+<p>List LDAP servers</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+
+try:
+    # List LDAP servers
+    api_instance.get_ldap_servers()
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;get_ldap_servers: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="updateldapserver"><strong>update<em>ldap</em>server</strong></h1>
+<blockquote>
+<p>update<em>ldap</em>server(name, body=body)</p>
+</blockquote>
+<p>Update LDAP server</p>
+<h3 id="example_5">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementLDAPApi()
+name = 'name_example' # str | Name of the LDAP server to update
+body = swagger_client.UpdateLdapServerXo() # UpdateLdapServerXo | Updated values of LDAP server (optional)
+
+try:
+    # Update LDAP server
+    api_instance.update_ldap_server(name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementLDAPApi-&gt;update_ldap_server: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Name of the LDAP server to update</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="UpdateLdapServerXo.html"><strong>UpdateLdapServerXo</strong></a></td>
+<td>Updated values of LDAP server</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_5">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

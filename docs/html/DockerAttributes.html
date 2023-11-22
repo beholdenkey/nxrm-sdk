@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="dockerattributes">DockerAttributes</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v1_enabled</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether to allow clients to use the V1 API to interact with this repository</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>force<em>basic</em>auth</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether to force authentication (Docker Bearer Token Realm required if false)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>http_port</strong></td>
+<td><strong>int</strong></td>
+<td>Create an HTTP connector at specified port</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>https_port</strong></td>
+<td><strong>int</strong></td>
+<td>Create an HTTPS connector at specified port</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>subdomain</strong></td>
+<td><strong>str</strong></td>
+<td>Allows to use subdomain</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

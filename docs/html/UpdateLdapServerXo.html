@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="updateldapserverxo">UpdateLdapServerXo</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP server name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>protocol</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP server connection Protocol to use</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>use<em>trust</em>store</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether to use certificates stored in Nexus Repository Manager&#x27;s truststore</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>host</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP server connection hostname</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>port</strong></td>
+<td><strong>int</strong></td>
+<td>LDAP server connection port to use</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>search_base</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP location to be added to the connection URL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>auth_scheme</strong></td>
+<td><strong>str</strong></td>
+<td>Authentication scheme used for connecting to LDAP server</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>auth_realm</strong></td>
+<td><strong>str</strong></td>
+<td>The SASL realm to bind to. Required if authScheme is CRAM<em>MD5 or DIGEST</em>MD5</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>auth_username</strong></td>
+<td><strong>str</strong></td>
+<td>This must be a fully qualified username if simple authentication is used. Required if authScheme other than none.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>connection<em>timeout</em>seconds</strong></td>
+<td><strong>int</strong></td>
+<td>How long to wait before timeout</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>connection<em>retry</em>delay_seconds</strong></td>
+<td><strong>int</strong></td>
+<td>How long to wait before retrying</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>max<em>incidents</em>count</strong></td>
+<td><strong>int</strong></td>
+<td>How many retry attempts</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>user<em>base</em>dn</strong></td>
+<td><strong>str</strong></td>
+<td>The relative DN where user objects are found (e.g. ou&#x3D;people). This value will have the Search base DN value appended to form the full User search base DN.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user_subtree</strong></td>
+<td><strong>bool</strong></td>
+<td>Are users located in structures below the user base DN?</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>object</em>class</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP class for user objects</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>ldap</em>filter</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP search filter to limit user search</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>id</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>This is used to find a user given its user ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>real</em>name_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>This is used to find a real name given the user ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>email</em>address_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>This is used to find an email address given the user ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>password</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>If this field is blank the user will be authenticated against a bind with the LDAP server</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ldap<em>groups</em>as_roles</strong></td>
+<td><strong>bool</strong></td>
+<td>Denotes whether LDAP assigned roles are used as Nexus Repository Manager roles</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group_type</strong></td>
+<td><strong>str</strong></td>
+<td>Defines a type of groups used: static (a group contains a list of users) or dynamic (a user contains a list of groups). Required if ldapGroupsAsRoles is true.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>group<em>base</em>dn</strong></td>
+<td><strong>str</strong></td>
+<td>The relative DN where group objects are found (e.g. ou&#x3D;Group). This value will have the Search base DN value appended to form the full Group search base DN.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group_subtree</strong></td>
+<td><strong>bool</strong></td>
+<td>Are groups located in structures below the group base DN</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group<em>object</em>class</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP class for group objects. Required if groupType is static</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group<em>id</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>This field specifies the attribute of the Object class that defines the Group ID. Required if groupType is static</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group<em>member</em>attribute</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP attribute containing the usernames for the group. Required if groupType is static</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group<em>member</em>format</strong></td>
+<td><strong>str</strong></td>
+<td>The format of user ID stored in the group member attribute. Required if groupType is static</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>user<em>member</em>of_attribute</strong></td>
+<td><strong>str</strong></td>
+<td>Set this to the attribute used to store the attribute which holds groups DN in the user object. Required if groupType is dynamic</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>auth_password</strong></td>
+<td><strong>str</strong></td>
+<td>The password to bind with. Required if authScheme other than none.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>LDAP server ID</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

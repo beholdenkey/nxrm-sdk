@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="replicationconnectionxo">ReplicationConnectionXO</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>Connection Id</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Replication Connection Name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>source<em>repository</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>Source Repository Name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>destination<em>instance</em>url</strong></td>
+<td><strong>str</strong></td>
+<td>Destination Instance URL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>destination<em>instance</em>username</strong></td>
+<td><strong>str</strong></td>
+<td>Destination Instance Username</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>destination<em>instance</em>password</strong></td>
+<td><strong>str</strong></td>
+<td>Destination Instance Password</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>destination<em>repository</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>Destination Repository Name</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>content_regexes</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Regular expressions used to filter the repository content that is replicated</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>include<em>existing</em>content</strong></td>
+<td><strong>bool</strong></td>
+<td>Boolean used to configure if a replication connection should include existing content</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>use<em>trust</em>store</strong></td>
+<td><strong>bool</strong></td>
+<td>Boolean used to configure if a replication connection should use the Nexus Repository Truststore</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

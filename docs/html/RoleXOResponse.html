@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="rolexoresponse">RoleXOResponse</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>The id of the role.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>The user source which is the origin of this role.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the role.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td><strong>str</strong></td>
+<td>The description of this role.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>read_only</strong></td>
+<td><strong>bool</strong></td>
+<td>Indicates whether the role can be changed. The system will ignore any supplied external values.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>privileges</strong></td>
+<td><strong>list[str]</strong></td>
+<td>The list of privileges assigned to this role.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>roles</strong></td>
+<td><strong>list[str]</strong></td>
+<td>The list of roles assigned to this role.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

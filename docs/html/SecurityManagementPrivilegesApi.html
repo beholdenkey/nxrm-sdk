@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsecuritymanagementprivilegesapi">swagger_client.SecurityManagementPrivilegesApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege"><strong>create_privilege</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/application</td>
+<td>Create an application type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege1"><strong>create_privilege1</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/wildcard</td>
+<td>Create a wildcard type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege2"><strong>create_privilege2</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/repository-content-selector</td>
+<td>Create a repository content selector type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege3"><strong>create_privilege3</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/repository-admin</td>
+<td>Create a repository admin type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege4"><strong>create_privilege4</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/repository-view</td>
+<td>Create a repository view type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#create_privilege5"><strong>create_privilege5</strong></a></td>
+<td><strong>POST</strong> /v1/security/privileges/script</td>
+<td>Create a script type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#delete_privilege"><strong>delete_privilege</strong></a></td>
+<td><strong>DELETE</strong> /v1/security/privileges/{privilegeName}</td>
+<td>Delete a privilege by name.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#get_privilege"><strong>get_privilege</strong></a></td>
+<td><strong>GET</strong> /v1/security/privileges/{privilegeName}</td>
+<td>Retrieve a privilege by name.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#get_privileges"><strong>get_privileges</strong></a></td>
+<td><strong>GET</strong> /v1/security/privileges</td>
+<td>Retrieve a list of privileges.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege"><strong>update_privilege</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/application/{privilegeName}</td>
+<td>Update an application type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege1"><strong>update_privilege1</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/wildcard/{privilegeName}</td>
+<td>Update a wildcard type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege2"><strong>update_privilege2</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/repository-view/{privilegeName}</td>
+<td>Update a repository view type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege3"><strong>update_privilege3</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/repository-content-selector/{privilegeName}</td>
+<td>Update a repository content selector type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege4"><strong>update_privilege4</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/repository-admin/{privilegeName}</td>
+<td>Update a repository admin type privilege.</td>
+</tr>
+<tr>
+<td><a href="SecurityManagementPrivilegesApi.md#update_privilege5"><strong>update_privilege5</strong></a></td>
+<td><strong>PUT</strong> /v1/security/privileges/script/{privilegeName}</td>
+<td>Update a script type privilege.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="create_privilege"><strong>create_privilege</strong></h1>
+<blockquote>
+<p>create_privilege(body=body)</p>
+</blockquote>
+<p>Create an application type privilege.</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeApplicationRequest() # ApiPrivilegeApplicationRequest | The privilege to create. (optional)
+
+try:
+    # Create an application type privilege.
+    api_instance.create_privilege(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeApplicationRequest.html"><strong>ApiPrivilegeApplicationRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_privilege1"><strong>create_privilege1</strong></h1>
+<blockquote>
+<p>create_privilege1(body=body)</p>
+</blockquote>
+<p>Create a wildcard type privilege.</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeWildcardRequest() # ApiPrivilegeWildcardRequest | The privilege to create. (optional)
+
+try:
+    # Create a wildcard type privilege.
+    api_instance.create_privilege1(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeWildcardRequest.html"><strong>ApiPrivilegeWildcardRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_privilege2"><strong>create_privilege2</strong></h1>
+<blockquote>
+<p>create_privilege2(body=body)</p>
+</blockquote>
+<p>Create a repository content selector type privilege.</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeRepositoryContentSelectorRequest() # ApiPrivilegeRepositoryContentSelectorRequest | The privilege to create. (optional)
+
+try:
+    # Create a repository content selector type privilege.
+    api_instance.create_privilege2(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege2: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryContentSelectorRequest.html"><strong>ApiPrivilegeRepositoryContentSelectorRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_privilege3"><strong>create_privilege3</strong></h1>
+<blockquote>
+<p>create_privilege3(body=body)</p>
+</blockquote>
+<p>Create a repository admin type privilege.</p>
+<h3 id="example_3">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeRepositoryAdminRequest() # ApiPrivilegeRepositoryAdminRequest | The privilege to create. (optional)
+
+try:
+    # Create a repository admin type privilege.
+    api_instance.create_privilege3(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege3: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryAdminRequest.html"><strong>ApiPrivilegeRepositoryAdminRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_3">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_3">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_privilege4"><strong>create_privilege4</strong></h1>
+<blockquote>
+<p>create_privilege4(body=body)</p>
+</blockquote>
+<p>Create a repository view type privilege.</p>
+<h3 id="example_4">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeRepositoryViewRequest() # ApiPrivilegeRepositoryViewRequest | The privilege to create. (optional)
+
+try:
+    # Create a repository view type privilege.
+    api_instance.create_privilege4(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege4: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryViewRequest.html"><strong>ApiPrivilegeRepositoryViewRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_4">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_4">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="create_privilege5"><strong>create_privilege5</strong></h1>
+<blockquote>
+<p>create_privilege5(body=body)</p>
+</blockquote>
+<p>Create a script type privilege.</p>
+<h3 id="example_5">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+body = swagger_client.ApiPrivilegeScriptRequest() # ApiPrivilegeScriptRequest | The privilege to create. (optional)
+
+try:
+    # Create a script type privilege.
+    api_instance.create_privilege5(body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;create_privilege5: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeScriptRequest.html"><strong>ApiPrivilegeScriptRequest</strong></a></td>
+<td>The privilege to create.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_5">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_5">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="delete_privilege"><strong>delete_privilege</strong></h1>
+<blockquote>
+<p>delete<em>privilege(privilege</em>name)</p>
+</blockquote>
+<p>Delete a privilege by name.</p>
+<h3 id="example_6">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to delete.
+
+try:
+    # Delete a privilege by name.
+    api_instance.delete_privilege(privilege_name)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;delete_privilege: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to delete.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_6">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_6">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_6">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_privilege"><strong>get_privilege</strong></h1>
+<blockquote>
+<p>ApiPrivilege get<em>privilege(privilege</em>name)</p>
+</blockquote>
+<p>Retrieve a privilege by name.</p>
+<h3 id="example_7">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to retrieve.
+
+try:
+    # Retrieve a privilege by name.
+    api_response = api_instance.get_privilege(privilege_name)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;get_privilege: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to retrieve.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_7">Return type</h3>
+<p><a href="ApiPrivilege.html"><strong>ApiPrivilege</strong></a></p>
+<h3 id="authorization_7">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="get_privileges"><strong>get_privileges</strong></h1>
+<blockquote>
+<p>list[ApiPrivilege] get_privileges()</p>
+</blockquote>
+<p>Retrieve a list of privileges.</p>
+<h3 id="example_8">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+
+try:
+    # Retrieve a list of privileges.
+    api_response = api_instance.get_privileges()
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;get_privileges: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_8">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type_8">Return type</h3>
+<p><a href="ApiPrivilege.html"><strong>list[ApiPrivilege]</strong></a></p>
+<h3 id="authorization_8">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_8">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege"><strong>update_privilege</strong></h1>
+<blockquote>
+<p>update<em>privilege(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update an application type privilege.</p>
+<h3 id="example_9">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeApplicationRequest() # ApiPrivilegeApplicationRequest | The privilege to update. (optional)
+
+try:
+    # Update an application type privilege.
+    api_instance.update_privilege(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeApplicationRequest.html"><strong>ApiPrivilegeApplicationRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_9">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_9">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_9">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege1"><strong>update_privilege1</strong></h1>
+<blockquote>
+<p>update<em>privilege1(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update a wildcard type privilege.</p>
+<h3 id="example_10">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeWildcardRequest() # ApiPrivilegeWildcardRequest | The privilege to update. (optional)
+
+try:
+    # Update a wildcard type privilege.
+    api_instance.update_privilege1(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege1: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_10">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeWildcardRequest.html"><strong>ApiPrivilegeWildcardRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_10">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_10">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_10">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege2"><strong>update_privilege2</strong></h1>
+<blockquote>
+<p>update<em>privilege2(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update a repository view type privilege.</p>
+<h3 id="example_11">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeRepositoryViewRequest() # ApiPrivilegeRepositoryViewRequest | The privilege to update. (optional)
+
+try:
+    # Update a repository view type privilege.
+    api_instance.update_privilege2(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege2: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_11">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryViewRequest.html"><strong>ApiPrivilegeRepositoryViewRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_11">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_11">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_11">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege3"><strong>update_privilege3</strong></h1>
+<blockquote>
+<p>update<em>privilege3(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update a repository content selector type privilege.</p>
+<h3 id="example_12">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeRepositoryContentSelectorRequest() # ApiPrivilegeRepositoryContentSelectorRequest | The privilege to update. (optional)
+
+try:
+    # Update a repository content selector type privilege.
+    api_instance.update_privilege3(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege3: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_12">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryContentSelectorRequest.html"><strong>ApiPrivilegeRepositoryContentSelectorRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_12">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_12">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_12">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege4"><strong>update_privilege4</strong></h1>
+<blockquote>
+<p>update<em>privilege4(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update a repository admin type privilege.</p>
+<h3 id="example_13">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeRepositoryAdminRequest() # ApiPrivilegeRepositoryAdminRequest | The privilege to update. (optional)
+
+try:
+    # Update a repository admin type privilege.
+    api_instance.update_privilege4(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege4: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_13">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeRepositoryAdminRequest.html"><strong>ApiPrivilegeRepositoryAdminRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_13">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_13">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_13">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="update_privilege5"><strong>update_privilege5</strong></h1>
+<blockquote>
+<p>update<em>privilege5(privilege</em>name, body=body)</p>
+</blockquote>
+<p>Update a script type privilege.</p>
+<h3 id="example_14">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SecurityManagementPrivilegesApi()
+privilege_name = 'privilege_name_example' # str | The name of the privilege to update.
+body = swagger_client.ApiPrivilegeScriptRequest() # ApiPrivilegeScriptRequest | The privilege to update. (optional)
+
+try:
+    # Update a script type privilege.
+    api_instance.update_privilege5(privilege_name, body=body)
+except ApiException as e:
+    print(&quot;Exception when calling SecurityManagementPrivilegesApi-&gt;update_privilege5: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_14">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>privilege_name</strong></td>
+<td><strong>str</strong></td>
+<td>The name of the privilege to update.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ApiPrivilegeScriptRequest.html"><strong>ApiPrivilegeScriptRequest</strong></a></td>
+<td>The privilege to update.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_14">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_14">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_14">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>

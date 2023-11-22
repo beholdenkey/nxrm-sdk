@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+<h1 id="swagger_clientsearchapi">swagger_client.SearchApi</h1>
+<p>All URIs are relative to <em>/service/rest/</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SearchApi.md#search"><strong>search</strong></a></td>
+<td><strong>GET</strong> /v1/search</td>
+<td>Search components</td>
+</tr>
+<tr>
+<td><a href="SearchApi.md#search_and_download_assets"><strong>search<em>and</em>download_assets</strong></a></td>
+<td><strong>GET</strong> /v1/search/assets/download</td>
+<td>Search and download asset</td>
+</tr>
+<tr>
+<td><a href="SearchApi.md#search_assets"><strong>search_assets</strong></a></td>
+<td><strong>GET</strong> /v1/search/assets</td>
+<td>Search assets</td>
+</tr>
+</tbody>
+</table>
+<h1 id="search"><strong>search</strong></h1>
+<blockquote>
+<p>PageComponentXO search(continuation<em>token=continuation</em>token, sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan<em>base</em>version=conan<em>base</em>version, conan<em>channel=conan</em>channel, docker<em>image</em>name=docker<em>image</em>name, docker<em>image</em>tag=docker<em>image</em>tag, docker<em>layer</em>id=docker<em>layer</em>id, docker<em>content</em>digest=docker<em>content</em>digest, maven<em>group</em>id=maven<em>group</em>id, maven<em>artifact</em>id=maven<em>artifact</em>id, maven<em>base</em>version=maven<em>base</em>version, maven<em>extension=maven</em>extension, maven<em>classifier=maven</em>classifier, npm<em>scope=npm</em>scope, nuget<em>id=nuget</em>id, nuget<em>tags=nuget</em>tags, p2<em>plugin</em>name=p2<em>plugin</em>name, pypi<em>classifiers=pypi</em>classifiers, pypi<em>description=pypi</em>description, pypi<em>keywords=pypi</em>keywords, pypi<em>summary=pypi</em>summary, rubygems<em>description=rubygems</em>description, rubygems<em>platform=rubygems</em>platform, rubygems<em>summary=rubygems</em>summary, tag=tag, yum<em>architecture=yum</em>architecture)</p>
+</blockquote>
+<p>Search components</p>
+<h3 id="example">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SearchApi()
+continuation_token = 'continuation_token_example' # str | A token returned by a prior request. If present, the next page of results are returned (optional)
+sort = 'sort_example' # str | The field to sort the results against, if left empty, a sort based on match weight will be used. (optional)
+direction = 'direction_example' # str | The direction to sort records in, defaults to ascending ('asc') for all sort fields, except version, which defaults to descending ('desc') (optional)
+timeout = 56 # int | How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used. (optional)
+q = 'q_example' # str | Query by keyword (optional)
+repository = 'repository_example' # str | Repository name (optional)
+format = 'format_example' # str | Query by format (optional)
+group = 'group_example' # str | Component group (optional)
+name = 'name_example' # str | Component name (optional)
+version = 'version_example' # str | Component version (optional)
+prerelease = 'prerelease_example' # str | Prerelease version flag (optional)
+md5 = 'md5_example' # str | Specific MD5 hash of component's asset (optional)
+sha1 = 'sha1_example' # str | Specific SHA-1 hash of component's asset (optional)
+sha256 = 'sha256_example' # str | Specific SHA-256 hash of component's asset (optional)
+sha512 = 'sha512_example' # str | Specific SHA-512 hash of component's asset (optional)
+conan_base_version = 'conan_base_version_example' # str | Conan base version (optional)
+conan_channel = 'conan_channel_example' # str | Conan channel (optional)
+docker_image_name = 'docker_image_name_example' # str | Docker image name (optional)
+docker_image_tag = 'docker_image_tag_example' # str | Docker image tag (optional)
+docker_layer_id = 'docker_layer_id_example' # str | Docker layer ID (optional)
+docker_content_digest = 'docker_content_digest_example' # str | Docker content digest (optional)
+maven_group_id = 'maven_group_id_example' # str | Maven groupId (optional)
+maven_artifact_id = 'maven_artifact_id_example' # str | Maven artifactId (optional)
+maven_base_version = 'maven_base_version_example' # str | Maven base version (optional)
+maven_extension = 'maven_extension_example' # str | Maven extension of component's asset (optional)
+maven_classifier = 'maven_classifier_example' # str | Maven classifier of component's asset (optional)
+npm_scope = 'npm_scope_example' # str | npm scope (optional)
+nuget_id = 'nuget_id_example' # str | NuGet id (optional)
+nuget_tags = 'nuget_tags_example' # str | NuGet tags (optional)
+p2_plugin_name = 'p2_plugin_name_example' # str | p2 plugin name (optional)
+pypi_classifiers = 'pypi_classifiers_example' # str | PyPI classifiers (optional)
+pypi_description = 'pypi_description_example' # str | PyPI description (optional)
+pypi_keywords = 'pypi_keywords_example' # str | PyPI keywords (optional)
+pypi_summary = 'pypi_summary_example' # str | PyPI summary (optional)
+rubygems_description = 'rubygems_description_example' # str | RubyGems description (optional)
+rubygems_platform = 'rubygems_platform_example' # str | RubyGems platform (optional)
+rubygems_summary = 'rubygems_summary_example' # str | RubyGems summary (optional)
+tag = 'tag_example' # str | Component tag (optional)
+yum_architecture = 'yum_architecture_example' # str | Yum architecture (optional)
+
+try:
+    # Search components
+    api_response = api_instance.search(continuation_token=continuation_token, sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan_base_version=conan_base_version, conan_channel=conan_channel, docker_image_name=docker_image_name, docker_image_tag=docker_image_tag, docker_layer_id=docker_layer_id, docker_content_digest=docker_content_digest, maven_group_id=maven_group_id, maven_artifact_id=maven_artifact_id, maven_base_version=maven_base_version, maven_extension=maven_extension, maven_classifier=maven_classifier, npm_scope=npm_scope, nuget_id=nuget_id, nuget_tags=nuget_tags, p2_plugin_name=p2_plugin_name, pypi_classifiers=pypi_classifiers, pypi_description=pypi_description, pypi_keywords=pypi_keywords, pypi_summary=pypi_summary, rubygems_description=rubygems_description, rubygems_platform=rubygems_platform, rubygems_summary=rubygems_summary, tag=tag, yum_architecture=yum_architecture)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SearchApi-&gt;search: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>continuation_token</strong></td>
+<td><strong>str</strong></td>
+<td>A token returned by a prior request. If present, the next page of results are returned</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sort</strong></td>
+<td><strong>str</strong></td>
+<td>The field to sort the results against, if left empty, a sort based on match weight will be used.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>direction</strong></td>
+<td><strong>str</strong></td>
+<td>The direction to sort records in, defaults to ascending (&#x27;asc&#x27;) for all sort fields, except version, which defaults to descending (&#x27;desc&#x27;)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout</strong></td>
+<td><strong>int</strong></td>
+<td>How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>q</strong></td>
+<td><strong>str</strong></td>
+<td>Query by keyword</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>repository</strong></td>
+<td><strong>str</strong></td>
+<td>Repository name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>format</strong></td>
+<td><strong>str</strong></td>
+<td>Query by format</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group</strong></td>
+<td><strong>str</strong></td>
+<td>Component group</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Component name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>version</strong></td>
+<td><strong>str</strong></td>
+<td>Component version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>prerelease</strong></td>
+<td><strong>str</strong></td>
+<td>Prerelease version flag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>md5</strong></td>
+<td><strong>str</strong></td>
+<td>Specific MD5 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha1</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-1 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha256</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-256 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha512</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-512 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Conan base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan_channel</strong></td>
+<td><strong>str</strong></td>
+<td>Conan channel</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>layer</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Docker layer ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>content</em>digest</strong></td>
+<td><strong>str</strong></td>
+<td>Docker content digest</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>group</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven groupId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>artifact</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven artifactId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Maven base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_extension</strong></td>
+<td><strong>str</strong></td>
+<td>Maven extension of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_classifier</strong></td>
+<td><strong>str</strong></td>
+<td>Maven classifier of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>npm_scope</strong></td>
+<td><strong>str</strong></td>
+<td>npm scope</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_id</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet id</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_tags</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet tags</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>p2<em>plugin</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>p2 plugin name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_classifiers</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI classifiers</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_description</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_keywords</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI keywords</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_summary</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_description</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_platform</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems platform</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_summary</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Component tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_architecture</strong></td>
+<td><strong>str</strong></td>
+<td>Yum architecture</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="PageComponentXO.html"><strong>PageComponentXO</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="searchanddownload_assets"><strong>search<em>and</em>download_assets</strong></h1>
+<blockquote>
+<p>search<em>and</em>download<em>assets(sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan</em>base<em>version=conan</em>base<em>version, conan</em>channel=conan<em>channel, docker</em>image<em>name=docker</em>image<em>name, docker</em>image<em>tag=docker</em>image<em>tag, docker</em>layer<em>id=docker</em>layer<em>id, docker</em>content<em>digest=docker</em>content<em>digest, maven</em>group<em>id=maven</em>group<em>id, maven</em>artifact<em>id=maven</em>artifact<em>id, maven</em>base<em>version=maven</em>base<em>version, maven</em>extension=maven<em>extension, maven</em>classifier=maven<em>classifier, npm</em>scope=npm<em>scope, nuget</em>id=nuget<em>id, nuget</em>tags=nuget<em>tags, p2</em>plugin<em>name=p2</em>plugin<em>name, pypi</em>classifiers=pypi<em>classifiers, pypi</em>description=pypi<em>description, pypi</em>keywords=pypi<em>keywords, pypi</em>summary=pypi<em>summary, rubygems</em>description=rubygems<em>description, rubygems</em>platform=rubygems<em>platform, rubygems</em>summary=rubygems<em>summary, tag=tag, yum</em>architecture=yum_architecture)</p>
+</blockquote>
+<p>Search and download asset</p>
+<p>Returns a 302 Found with location header field set to download URL. Unless a sort parameter is supplied, the search must return a single asset to receive download URL.</p>
+<h3 id="example_1">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SearchApi()
+sort = 'sort_example' # str | The field to sort the results against, if left empty and more than 1 result is returned, the request will fail. (optional)
+direction = 'direction_example' # str | The direction to sort records in, defaults to ascending ('asc') for all sort fields, except version, which defaults to descending ('desc') (optional)
+timeout = 56 # int | How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used. (optional)
+q = 'q_example' # str | Query by keyword (optional)
+repository = 'repository_example' # str | Repository name (optional)
+format = 'format_example' # str | Query by format (optional)
+group = 'group_example' # str | Component group (optional)
+name = 'name_example' # str | Component name (optional)
+version = 'version_example' # str | Component version (optional)
+prerelease = 'prerelease_example' # str | Prerelease version flag (optional)
+md5 = 'md5_example' # str | Specific MD5 hash of component's asset (optional)
+sha1 = 'sha1_example' # str | Specific SHA-1 hash of component's asset (optional)
+sha256 = 'sha256_example' # str | Specific SHA-256 hash of component's asset (optional)
+sha512 = 'sha512_example' # str | Specific SHA-512 hash of component's asset (optional)
+conan_base_version = 'conan_base_version_example' # str | Conan base version (optional)
+conan_channel = 'conan_channel_example' # str | Conan channel (optional)
+docker_image_name = 'docker_image_name_example' # str | Docker image name (optional)
+docker_image_tag = 'docker_image_tag_example' # str | Docker image tag (optional)
+docker_layer_id = 'docker_layer_id_example' # str | Docker layer ID (optional)
+docker_content_digest = 'docker_content_digest_example' # str | Docker content digest (optional)
+maven_group_id = 'maven_group_id_example' # str | Maven groupId (optional)
+maven_artifact_id = 'maven_artifact_id_example' # str | Maven artifactId (optional)
+maven_base_version = 'maven_base_version_example' # str | Maven base version (optional)
+maven_extension = 'maven_extension_example' # str | Maven extension of component's asset (optional)
+maven_classifier = 'maven_classifier_example' # str | Maven classifier of component's asset (optional)
+npm_scope = 'npm_scope_example' # str | npm scope (optional)
+nuget_id = 'nuget_id_example' # str | NuGet id (optional)
+nuget_tags = 'nuget_tags_example' # str | NuGet tags (optional)
+p2_plugin_name = 'p2_plugin_name_example' # str | p2 plugin name (optional)
+pypi_classifiers = 'pypi_classifiers_example' # str | PyPI classifiers (optional)
+pypi_description = 'pypi_description_example' # str | PyPI description (optional)
+pypi_keywords = 'pypi_keywords_example' # str | PyPI keywords (optional)
+pypi_summary = 'pypi_summary_example' # str | PyPI summary (optional)
+rubygems_description = 'rubygems_description_example' # str | RubyGems description (optional)
+rubygems_platform = 'rubygems_platform_example' # str | RubyGems platform (optional)
+rubygems_summary = 'rubygems_summary_example' # str | RubyGems summary (optional)
+tag = 'tag_example' # str | Component tag (optional)
+yum_architecture = 'yum_architecture_example' # str | Yum architecture (optional)
+
+try:
+    # Search and download asset
+    api_instance.search_and_download_assets(sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan_base_version=conan_base_version, conan_channel=conan_channel, docker_image_name=docker_image_name, docker_image_tag=docker_image_tag, docker_layer_id=docker_layer_id, docker_content_digest=docker_content_digest, maven_group_id=maven_group_id, maven_artifact_id=maven_artifact_id, maven_base_version=maven_base_version, maven_extension=maven_extension, maven_classifier=maven_classifier, npm_scope=npm_scope, nuget_id=nuget_id, nuget_tags=nuget_tags, p2_plugin_name=p2_plugin_name, pypi_classifiers=pypi_classifiers, pypi_description=pypi_description, pypi_keywords=pypi_keywords, pypi_summary=pypi_summary, rubygems_description=rubygems_description, rubygems_platform=rubygems_platform, rubygems_summary=rubygems_summary, tag=tag, yum_architecture=yum_architecture)
+except ApiException as e:
+    print(&quot;Exception when calling SearchApi-&gt;search_and_download_assets: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sort</strong></td>
+<td><strong>str</strong></td>
+<td>The field to sort the results against, if left empty and more than 1 result is returned, the request will fail.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>direction</strong></td>
+<td><strong>str</strong></td>
+<td>The direction to sort records in, defaults to ascending (&#x27;asc&#x27;) for all sort fields, except version, which defaults to descending (&#x27;desc&#x27;)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout</strong></td>
+<td><strong>int</strong></td>
+<td>How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>q</strong></td>
+<td><strong>str</strong></td>
+<td>Query by keyword</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>repository</strong></td>
+<td><strong>str</strong></td>
+<td>Repository name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>format</strong></td>
+<td><strong>str</strong></td>
+<td>Query by format</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group</strong></td>
+<td><strong>str</strong></td>
+<td>Component group</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Component name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>version</strong></td>
+<td><strong>str</strong></td>
+<td>Component version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>prerelease</strong></td>
+<td><strong>str</strong></td>
+<td>Prerelease version flag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>md5</strong></td>
+<td><strong>str</strong></td>
+<td>Specific MD5 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha1</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-1 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha256</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-256 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha512</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-512 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Conan base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan_channel</strong></td>
+<td><strong>str</strong></td>
+<td>Conan channel</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>layer</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Docker layer ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>content</em>digest</strong></td>
+<td><strong>str</strong></td>
+<td>Docker content digest</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>group</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven groupId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>artifact</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven artifactId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Maven base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_extension</strong></td>
+<td><strong>str</strong></td>
+<td>Maven extension of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_classifier</strong></td>
+<td><strong>str</strong></td>
+<td>Maven classifier of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>npm_scope</strong></td>
+<td><strong>str</strong></td>
+<td>npm scope</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_id</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet id</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_tags</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet tags</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>p2<em>plugin</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>p2 plugin name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_classifiers</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI classifiers</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_description</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_keywords</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI keywords</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_summary</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_description</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_platform</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems platform</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_summary</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Component tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_architecture</strong></td>
+<td><strong>str</strong></td>
+<td>Yum architecture</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization_1">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+<h1 id="search_assets"><strong>search_assets</strong></h1>
+<blockquote>
+<p>PageAssetXO search<em>assets(continuation</em>token=continuation<em>token, sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan</em>base<em>version=conan</em>base<em>version, conan</em>channel=conan<em>channel, docker</em>image<em>name=docker</em>image<em>name, docker</em>image<em>tag=docker</em>image<em>tag, docker</em>layer<em>id=docker</em>layer<em>id, docker</em>content<em>digest=docker</em>content<em>digest, maven</em>group<em>id=maven</em>group<em>id, maven</em>artifact<em>id=maven</em>artifact<em>id, maven</em>base<em>version=maven</em>base<em>version, maven</em>extension=maven<em>extension, maven</em>classifier=maven<em>classifier, npm</em>scope=npm<em>scope, nuget</em>id=nuget<em>id, nuget</em>tags=nuget<em>tags, p2</em>plugin<em>name=p2</em>plugin<em>name, pypi</em>classifiers=pypi<em>classifiers, pypi</em>description=pypi<em>description, pypi</em>keywords=pypi<em>keywords, pypi</em>summary=pypi<em>summary, rubygems</em>description=rubygems<em>description, rubygems</em>platform=rubygems<em>platform, rubygems</em>summary=rubygems<em>summary, tag=tag, yum</em>architecture=yum_architecture)</p>
+</blockquote>
+<p>Search assets</p>
+<h3 id="example_2">Example</h3>
+<pre class="codehilite"><code class="language-python">from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SearchApi()
+continuation_token = 'continuation_token_example' # str | A token returned by a prior request. If present, the next page of results are returned (optional)
+sort = 'sort_example' # str | The field to sort the results against, if left empty, a sort based on match weight will be used. (optional)
+direction = 'direction_example' # str | The direction to sort records in, defaults to ascending ('asc') for all sort fields, except version, which defaults to descending ('desc') (optional)
+timeout = 56 # int | How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used. (optional)
+q = 'q_example' # str | Query by keyword (optional)
+repository = 'repository_example' # str | Repository name (optional)
+format = 'format_example' # str | Query by format (optional)
+group = 'group_example' # str | Component group (optional)
+name = 'name_example' # str | Component name (optional)
+version = 'version_example' # str | Component version (optional)
+prerelease = 'prerelease_example' # str | Prerelease version flag (optional)
+md5 = 'md5_example' # str | Specific MD5 hash of component's asset (optional)
+sha1 = 'sha1_example' # str | Specific SHA-1 hash of component's asset (optional)
+sha256 = 'sha256_example' # str | Specific SHA-256 hash of component's asset (optional)
+sha512 = 'sha512_example' # str | Specific SHA-512 hash of component's asset (optional)
+conan_base_version = 'conan_base_version_example' # str | Conan base version (optional)
+conan_channel = 'conan_channel_example' # str | Conan channel (optional)
+docker_image_name = 'docker_image_name_example' # str | Docker image name (optional)
+docker_image_tag = 'docker_image_tag_example' # str | Docker image tag (optional)
+docker_layer_id = 'docker_layer_id_example' # str | Docker layer ID (optional)
+docker_content_digest = 'docker_content_digest_example' # str | Docker content digest (optional)
+maven_group_id = 'maven_group_id_example' # str | Maven groupId (optional)
+maven_artifact_id = 'maven_artifact_id_example' # str | Maven artifactId (optional)
+maven_base_version = 'maven_base_version_example' # str | Maven base version (optional)
+maven_extension = 'maven_extension_example' # str | Maven extension of component's asset (optional)
+maven_classifier = 'maven_classifier_example' # str | Maven classifier of component's asset (optional)
+npm_scope = 'npm_scope_example' # str | npm scope (optional)
+nuget_id = 'nuget_id_example' # str | NuGet id (optional)
+nuget_tags = 'nuget_tags_example' # str | NuGet tags (optional)
+p2_plugin_name = 'p2_plugin_name_example' # str | p2 plugin name (optional)
+pypi_classifiers = 'pypi_classifiers_example' # str | PyPI classifiers (optional)
+pypi_description = 'pypi_description_example' # str | PyPI description (optional)
+pypi_keywords = 'pypi_keywords_example' # str | PyPI keywords (optional)
+pypi_summary = 'pypi_summary_example' # str | PyPI summary (optional)
+rubygems_description = 'rubygems_description_example' # str | RubyGems description (optional)
+rubygems_platform = 'rubygems_platform_example' # str | RubyGems platform (optional)
+rubygems_summary = 'rubygems_summary_example' # str | RubyGems summary (optional)
+tag = 'tag_example' # str | Component tag (optional)
+yum_architecture = 'yum_architecture_example' # str | Yum architecture (optional)
+
+try:
+    # Search assets
+    api_response = api_instance.search_assets(continuation_token=continuation_token, sort=sort, direction=direction, timeout=timeout, q=q, repository=repository, format=format, group=group, name=name, version=version, prerelease=prerelease, md5=md5, sha1=sha1, sha256=sha256, sha512=sha512, conan_base_version=conan_base_version, conan_channel=conan_channel, docker_image_name=docker_image_name, docker_image_tag=docker_image_tag, docker_layer_id=docker_layer_id, docker_content_digest=docker_content_digest, maven_group_id=maven_group_id, maven_artifact_id=maven_artifact_id, maven_base_version=maven_base_version, maven_extension=maven_extension, maven_classifier=maven_classifier, npm_scope=npm_scope, nuget_id=nuget_id, nuget_tags=nuget_tags, p2_plugin_name=p2_plugin_name, pypi_classifiers=pypi_classifiers, pypi_description=pypi_description, pypi_keywords=pypi_keywords, pypi_summary=pypi_summary, rubygems_description=rubygems_description, rubygems_platform=rubygems_platform, rubygems_summary=rubygems_summary, tag=tag, yum_architecture=yum_architecture)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling SearchApi-&gt;search_assets: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>continuation_token</strong></td>
+<td><strong>str</strong></td>
+<td>A token returned by a prior request. If present, the next page of results are returned</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sort</strong></td>
+<td><strong>str</strong></td>
+<td>The field to sort the results against, if left empty, a sort based on match weight will be used.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>direction</strong></td>
+<td><strong>str</strong></td>
+<td>The direction to sort records in, defaults to ascending (&#x27;asc&#x27;) for all sort fields, except version, which defaults to descending (&#x27;desc&#x27;)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>timeout</strong></td>
+<td><strong>int</strong></td>
+<td>How long to wait for search results in seconds. If this value is not provided, the system default timeout will be used.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>q</strong></td>
+<td><strong>str</strong></td>
+<td>Query by keyword</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>repository</strong></td>
+<td><strong>str</strong></td>
+<td>Repository name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>format</strong></td>
+<td><strong>str</strong></td>
+<td>Query by format</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>group</strong></td>
+<td><strong>str</strong></td>
+<td>Component group</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td>Component name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>version</strong></td>
+<td><strong>str</strong></td>
+<td>Component version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>prerelease</strong></td>
+<td><strong>str</strong></td>
+<td>Prerelease version flag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>md5</strong></td>
+<td><strong>str</strong></td>
+<td>Specific MD5 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha1</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-1 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha256</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-256 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sha512</strong></td>
+<td><strong>str</strong></td>
+<td>Specific SHA-512 hash of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Conan base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>conan_channel</strong></td>
+<td><strong>str</strong></td>
+<td>Conan channel</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>image</em>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Docker image tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>layer</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Docker layer ID</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>docker<em>content</em>digest</strong></td>
+<td><strong>str</strong></td>
+<td>Docker content digest</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>group</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven groupId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>artifact</em>id</strong></td>
+<td><strong>str</strong></td>
+<td>Maven artifactId</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven<em>base</em>version</strong></td>
+<td><strong>str</strong></td>
+<td>Maven base version</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_extension</strong></td>
+<td><strong>str</strong></td>
+<td>Maven extension of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maven_classifier</strong></td>
+<td><strong>str</strong></td>
+<td>Maven classifier of component&#x27;s asset</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>npm_scope</strong></td>
+<td><strong>str</strong></td>
+<td>npm scope</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_id</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet id</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>nuget_tags</strong></td>
+<td><strong>str</strong></td>
+<td>NuGet tags</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>p2<em>plugin</em>name</strong></td>
+<td><strong>str</strong></td>
+<td>p2 plugin name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_classifiers</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI classifiers</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_description</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_keywords</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI keywords</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pypi_summary</strong></td>
+<td><strong>str</strong></td>
+<td>PyPI summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_description</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems description</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_platform</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems platform</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rubygems_summary</strong></td>
+<td><strong>str</strong></td>
+<td>RubyGems summary</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tag</strong></td>
+<td><strong>str</strong></td>
+<td>Component tag</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>yum_architecture</strong></td>
+<td><strong>str</strong></td>
+<td>Yum architecture</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="PageAssetXO.html"><strong>PageAssetXO</strong></a></p>
+<h3 id="authorization_2">Authorization</h3>
+<p>No authorization required</p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../../README.md#documentation-for-api-endpoints">[Back to API list]</a> <a href="../../README.md#documentation-for-models">[Back to Model list]</a> <a href="../../README.html">[Back to README]</a></p>
+</body>
+</html>
